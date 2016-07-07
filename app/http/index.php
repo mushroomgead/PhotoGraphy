@@ -9,7 +9,7 @@
 <!--  test -->
 <?php require_once('category.php'); ?>
 <!--  -->
-<title> CAT :3 </title>
+<title> VV PHOTOGRAPHY </title>
 <div class="ui grid container">
   <div class="row border-head">
     <div class="column">HEADER</div>
