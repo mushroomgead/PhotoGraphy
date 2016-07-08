@@ -1,13 +1,5 @@
 <!-- <div class="demo"> -->
 <div class="demo">
-    <!-- <ul id="lightSlider">
-        <li data-thumb="http://sachinchoolur.github.io/lightslider/img/thumb/cS-1.jpg">
-            <img src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" />
-        </li>
-        <li data-thumb="http://sachinchoolur.github.io/lightslider/img/thumb/cS-2.jpg">
-            <img src="http://sachinchoolur.github.io/lightslider/img/cS-2.jpg" />
-        </li>
-      </ul> -->
   <ul id="imageGallery">
     <li data-thumb="http://sachinchoolur.github.io/lightslider/img/thumb/cS-1.jpg">
         <img src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" />

@@ -11,7 +11,7 @@
 <script src="../includes/lightGallery/dist/js/lightGallery.js"></script>
 <!-- responsiveslides  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="responsiveslides.min.js"></script>
+<script src="../includes/ResponsiveSlides.js/responsiveslides.min.js"></script>
 
 
 <?php require_once('../includes/style.css'); ?>
@@ -35,8 +35,7 @@
     <div class="column">contact</div>
   </div>
   <div class="row border-head">
-    <div class="column">BODY
-      <?php //require_once('page3.php'); ?>
+    <div class="column">
       <?php require_once('ResponsiveSlides.php'); ?>
     </div>
   </div>
