@@ -1,18 +1,7 @@
 <style type="text/css">
-	/*.index-header{
-	  background-color: #ffffff;
-	  padding-bottom: 2%;
+	.txt-nav {
+		color:red;
 	}
-	.index-body{
-
-	}
-	.text-header{
-		padding-top: 2%;
-	}*/
-	/*.test{
-		width: 100px;
-		height: 500px;
-	}*/
 
 	.rslides {
 	  position: relative;
@@ -45,9 +34,9 @@
 	  width: 100%;
 	  border: 0;
 	  }
-	/**/
+
 	.border-head{
-		border:1px solid #000000;
+		border-bottom:1px solid #000000;
 	}
 	.demo {
 	    width:420px;

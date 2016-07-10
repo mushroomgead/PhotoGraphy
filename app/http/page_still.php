@@ -1,12 +1,19 @@
-<!-- <div class="demo"> -->
 <div class="demo">
   <ul id="imageGallery">
-    <li data-thumb="http://sachinchoolur.github.io/lightslider/img/thumb/cS-1.jpg">
-        <img src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" />
+
+    <li data-thumb="app/img/WEB/STILL/_MG_0060.jpg">
+        <img src="app/img/WEB/STILL/_MG_0060.jpg"/>
     </li>
-    <li data-thumb="http://sachinchoolur.github.io/lightslider/img/thumb/cS-2.jpg">
-        <img src="http://sachinchoolur.github.io/lightslider/img/cS-2.jpg" />
+    <li data-thumb="app/img/WEB/STILL/_MG_4580GG.jpg">
+        <img src="app/img/WEB/STILL/_MG_4580GG.jpg"/>
     </li>
+    <li data-thumb="app/img/WEB/STILL/AAA.jpg">
+        <img src="app/img/WEB/STILL/AAA.jpg"/>
+    </li>
+    <li data-thumb="app/img/WEB/STILL/COLA.jpg">
+        <img src="app/img/WEB/STILL/COLA.jpg"/>
+    </li>
+
   </ul>
 </div>
 
