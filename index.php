@@ -57,7 +57,12 @@
 
       <div class="clearfix section-header">
         <title> VV PHOTOGRAPHER </title>
-        <div class="pull-left"><img src="app/img/header.svg"></div>
+        <a href="?page=index">
+        <div class="pull-left">
+        <img src="app/img/header.svg">
+        </div>
+        </a>
+
           <div class="clearfix section-nav">
           <div class="nav-column pull-left">news</div>
           <a href="?page=men"><div class="nav-column pull-left">men</div></a>
@@ -77,13 +82,13 @@
           <?php 
           switch(isset($_GET['page']) ? $_GET['page'] : ''){
 
-            case 'men' : require_once('app/http/page_men.php');
+            case 'men' : require_once('app/http/page_men_main.php');
               break;
 
             case 'still' : require_once('app/http/page_still.php');
               break;
 
-            case 'women' : require_once('app/http/page_women.php');
+            case 'women' : require_once('app/http/page_women_main.php');
               break;
 
             case 'portrait' : require_once('app/http/page_portrait.php');
@@ -96,7 +101,6 @@
               break;
 
             default:
-              // require_once('app/http/ResponsiveSlides.php');
               require_once('app/http/page_home.php');
           }
           ?>
