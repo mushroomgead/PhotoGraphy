@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-  <!-- Section include -->
-  <script src="app/includes/jquery-3.0.0.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="/semantic/dist/semantic.min.js"></script>
-  <!-- lightslider -->
-  <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
-  <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
-  <!-- lightGallery -->
-  <link type="text/css" rel="stylesheet" href="app/includes/lightGallery/dist/css/lightGallery.css" />
-  <script src="app/includes/lightGallery/dist/js/lightGallery.js"></script>
-  <!-- responsiveslides  -->
-  <script src="app/includes/ResponsiveSlides.js/responsiveslides.min.js"></script>
+  <div class="clearfix container font-style">
+  <head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="app/includes/style.css">
+    <!-- Section include -->
+    <script src="app/includes/jquery-3.0.0.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css"> -->
+    <!-- <script src="/semantic/dist/semantic.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- lightslider -->
+<!--     <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
+    <script src="app/includes/lightslider/dist/js/lightslider.js"></script> -->
 
-  <?php require_once('app/includes/style.css'); ?>
-  <title> VV PHOTOGRAPHY </title>
+    <!-- lightGallery -->
+    <link type="text/css" rel="stylesheet" href="app/includes/lightGallery/dist/css/lightGallery.css" />
+    <script src="app/includes/lightGallery/dist/js/lightGallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
+    <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
 
-</head>
-  <body>
-    <div class="ui grid container">
-      <div class="row border-head">
-        <div class="column"><img src="app/img/header.svg"></div>
+    <!-- responsiveslides  -->
+    <!-- <script src="app/includes/ResponsiveSlides.js/responsiveslides.min.js"></script> -->
+
+      <div class="clearfix section-header">
+        <title> VV PHOTOGRAPHER </title>
+        <div class="pull-left"><img src="app/img/header.svg"></div>
+          <div class="clearfix section-nav">
+          <div class="nav-column pull-left">news</div>
+          <a href="?page=men"><div class="nav-column pull-left">men</div></a>
+          <a href="?page=still"><div class="nav-column pull-left">still</div></a>
+          <a href="?page=women"><div class="nav-column pull-left">women</div></a>
+          <a href="?page=portrait"><div class="nav-column pull-left">portrait</div></a>
+          <a href="?page=personal"><div class="nav-column pull-left">personal</div></a>
+          <a href="?page=etc"><div class="nav-column pull-left">etc</div></a>
+          <div class="nav-column pull-left">bio</div>
+          <div class="nav-column pull-left">contact</div>
+        </div>
       </div>
+    </head>
 
-      <!-- <div class="doubling nine column row border-head"> -->
-      <div class="ui nine column row doubling stackable grid container txt-nav">
-        <div class="column">news</div>
-        <div class="column"><a href="?page=men">men</a></div>
-        <div class="column"><a href="?page=still">still</a></div>
-        <div class="column"><a href="?page=women">women</a></div>
-        <div class="column"><a href="?page=portrait">portrait</a></div>
-        <div class="column"><a href="?page=personal">personal</a></div>
-        <div class="column"><a href="?page=etc">etc</a></div>
-        <div class="column">bio</div>
-        <div class="column">contact</div>
-      </div>
-      <div class="row border-head">
-        <div class="column">
+    <body>
+      <div class="clearfix section-body">
           <?php 
           switch(isset($_GET['page']) ? $_GET['page'] : ''){
 
@@ -61,14 +66,22 @@
               break;
 
             default:
-              require_once('app/http/ResponsiveSlides.php');
+              // require_once('app/http/ResponsiveSlides.php');
+              require_once('app/http/page_home.php');
           }
-
-         
-
           ?>
-        </div>
+      </div>
+    </body>
+    <!-- footer  -->
+    <div class="clearfix section-footer">
+      <div class="section-left">COPYRIGHT 2015 BY VV PHOTOGRAPHER</div>
+      <div class="section-right">
+        <div class="pull-left"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;Twitter&nbsp;|&nbsp;</div>
+        <div class="pull-left"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;Facebook&nbsp;|&nbsp;</div>
+        <div class="pull-left"><i class="fa fa-flickr" aria-hidden="true"></i>&nbsp;Flickr&nbsp;|&nbsp;</div>
+        <div class="pull-left"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;e-mail@hotmail.com</div>
       </div>
     </div>
-  </body>
+    <!--  -->
+  </div>
 </html>
