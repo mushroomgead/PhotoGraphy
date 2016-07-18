@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- lightslider -->
-<!--     <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
-    <script src="app/includes/lightslider/dist/js/lightslider.js"></script> -->
+    <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
+    <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
 
     <!-- lightGallery -->
     <link type="text/css" rel="stylesheet" href="app/includes/lightGallery/dist/css/lightGallery.css" />
@@ -21,6 +21,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+    //   var img_height1 = $("#1").height();
+    //   var img_width1  = $("#1").width();
+
+    //   var img_height2 = $("#2").height(); 
+    //   var img_width2  = $("#2").width();
+
+    //   console.log(img_height1);
+    //   console.log(img_width1);
+    //   console.log(img_height2);
+    //   console.log(img_width2);
+
+      $('#aniimated-thumbnials').lightGallery({
+          thumbnail:true,
+          download:false,
+          showThumbByDefault: false
+      }); 
+    });
+    
+    // document.onmousedown=disableclick;
+    // function disableclick(event)
+    // {
+    //   if(event.button==2)
+    //    {
+    //      return false;
+    //    }
+    // }
+    </script>
 
     <!-- responsiveslides  -->
     <!-- <script src="app/includes/ResponsiveSlides.js/responsiveslides.min.js"></script> -->

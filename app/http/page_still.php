@@ -1,4 +1,4 @@
-<div class="photo-list" id="aniimated-thumbnials">
+<div class="photo-list" id="aniimated-thumbnials" oncontextmenu="return false">
     <a class="img-entry-vert" href="app/img/WEB/STILL/_MG_7088.jpg">
       <img src="app/img/WEB/STILL/_MG_7088.jpg" />
     </a>
@@ -36,23 +36,3 @@
     </div>
   </div>
 </div> -->
-
-<script type="text/javascript">
-$(document).ready(function() {
-//   var img_height1 = $("#1").height();
-//   var img_width1  = $("#1").width();
-
-//   var img_height2 = $("#2").height(); 
-//   var img_width2  = $("#2").width();
-
-//   console.log(img_height1);
-//   console.log(img_width1);
-//   console.log(img_height2);
-//   console.log(img_width2);
-
-  $('#aniimated-thumbnials').lightGallery({
-      thumbnail:true,
-      showThumbByDefault: false
-  }); 
-}); 
-</script>
