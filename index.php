@@ -1,3 +1,4 @@
+<?php require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
   <div class="clearfix container font-style">
@@ -8,9 +9,9 @@
     <script src="app/includes/jquery-3.0.0.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css"> -->
     <!-- <script src="/semantic/dist/semantic.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- lightslider -->
     <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
     <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
@@ -21,7 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
-
     <script type="text/javascript">
     $(document).ready(function() {
     //   var img_height1 = $("#1").height();
@@ -57,7 +57,7 @@
 
       <div class="clearfix section-header">
         <title> VV PHOTOGRAPHER </title>
-        <a href="?page=index">
+        <a href="/">
         <div class="pull-left">
         <img src="app/img/header.svg">
         </div>
