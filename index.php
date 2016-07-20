@@ -1,4 +1,4 @@
-<?php require_once('app/database/conn_db.php'); ?>
+<?php //require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
   <div class="clearfix container font-style">
@@ -27,7 +27,7 @@
     //   var img_height1 = $("#1").height();
     //   var img_width1  = $("#1").width();
 
-    //   var img_height2 = $("#2").height(); 
+    //   var img_height2 = $("#2").height();
     //   var img_width2  = $("#2").width();
 
     //   console.log(img_height1);
@@ -39,9 +39,9 @@
           thumbnail:true,
           download:false,
           showThumbByDefault: false
-      }); 
+      });
     });
-    
+
     // document.onmousedown=disableclick;
     // function disableclick(event)
     // {
@@ -79,7 +79,7 @@
 
     <body>
       <div class="clearfix section-body">
-          <?php 
+          <?php
           switch(isset($_GET['page']) ? $_GET['page'] : ''){
 
             case 'men' : require_once('app/http/page_men_main.php');
