@@ -24,9 +24,9 @@
 
 	/*header*/
 	.font-style{
-    	/*font: 16px "Lucida Console", Monaco, monospace;*/
-    	font-family: 'Alegreya Sans', sans-serif;
-    	font-size: 16px;
+    	font: 16px "Lucida Console", Monaco, monospace;
+    	/*font-family: 'Alegreya Sans', sans-serif;*/
+    	/*font-size: 16px;*/
 	}
 	.nav-column{
 		width: 11%;
@@ -51,7 +51,7 @@
 		top: 5px;
 		margin-bottom: 9px;
 	}
-	.img-entry-horiz img{       
+	.img-entry-horiz img{
 	    /*width: 49%;*/
 	    height: 358px;
 	    top: 5px;
