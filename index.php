@@ -57,9 +57,10 @@
 
       <div class="clearfix section-header">
         <title> VV PHOTOGRAPHER </title>
-        <a href="/">
+        <a href="?page=index">
         <div class="pull-left">
         <img src="app/img/header.svg">
+
         </div>
         </a>
 
