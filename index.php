@@ -1,10 +1,11 @@
 <?php //require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
-  <div class="clearfix container font-style">
+  <div class="clearfix font-style">
   <head>
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="app/includes/style.css">
+    <link type="text/css" rel="stylesheet" href="app/includes/responsive.css">
     <!-- Section include -->
     <script src="app/includes/jquery-3.0.0.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css"> -->
@@ -42,6 +43,16 @@
       });
     });
 
+    $(window).scroll(function() {
+      // console.log($(this).scrollTop());
+    if ($(this).scrollTop() > 1){  
+        $('#section-header,.layout-left,.layout-right,.font-size-header').addClass("sticky");
+      }
+      else{
+        $('#section-header,.layout-left,.layout-right,.font-size-header').removeClass("sticky");
+      }
+    });
+
     // document.onmousedown=disableclick;
     // function disableclick(event)
     // {
@@ -55,16 +66,16 @@
     <!-- responsiveslides  -->
     <!-- <script src="app/includes/ResponsiveSlides.js/responsiveslides.min.js"></script> -->
 
-      <div class="clearfix section-header">
+      <div class="clearfix section-header" id="section-header">
         <title> VV PHOTOGRAPHER </title>
-        <a href="?page=index">
-        <div class="pull-left">
-        <img src="app/img/header.svg">
-
+        <!-- <a href="?page=index"> -->
+        <div class="clearifx font-size-header layout-left">
+        <!-- <img src="app/img/header.svg"> -->
+          VV PHOTOGRAPHER
         </div>
-        </a>
+        <!-- </a> -->
 
-          <div class="clearfix section-nav">
+        <div class="clearfix font-size-body layout-right">
           <div class="nav-column pull-left">news</div>
           <a href="?page=men"><div class="nav-column pull-left">men</div></a>
           <a href="?page=still"><div class="nav-column pull-left">still</div></a>
@@ -79,7 +90,7 @@
     </head>
 
     <body>
-      <div class="clearfix section-body">
+      <div class="clearfix section-body container font-size-body">
           <?php
           switch(isset($_GET['page']) ? $_GET['page'] : ''){
 

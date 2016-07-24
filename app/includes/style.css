@@ -1,41 +1,49 @@
-	/*test*/
-/*	.outer_layout{
-	}
-	.sub_outer_layout{
-		display: block;
-		position: absolute;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-color: #fff;
-		background-size: cover;
-	}
-	.inner_layout{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		transition: opacity 200ms linear;
-	}
-	.sub_inner_layout{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		cursor: pointer;
-	}*/
-
 	/*header*/
 	.font-style{
-    	font: 16px "Lucida Console", Monaco, monospace;
-    	/*font-family: 'Alegreya Sans', sans-serif;*/
-    	/*font-size: 16px;*/
+    	font-family: "Lucida Console", Monaco, monospace;
+	}
+	.font-size-header{
+		font-size:34px;
+	}
+	.font-size-header.sticky{
+		font-size:24px;
+	}
+	.font-size-body{
+		font-size:16px;
+	}
+	.layout-left.sticky{
+		float: left;
+		padding-left: 26px;
+	}
+	.layout-right.sticky{
+		float: right;
+		width: 67%;
+	}
+	.section-header{
+		width: 100%;
+		text-align: center;
+		line-height: 70px;
+    	/*padding: 11px;*/
+		color: #000000;
+		/*border-bottom: 1px solid #555;*/
+	  background:#fff;
+	}
+	.section-header.sticky {
+		position: fixed;
+	  font-size: 16px;
+	  width: 100%;
+	  border-bottom: 1px solid #fff;
+	  /*transition: all 0.4s ease;*/
+	  background:#fff;
 	}
 	.nav-column{
 		width: 11%;
 		text-align: center;
-		padding: 15px;
 		color: #000000;
 	}
 	.nav-column:hover{
 		color: #ffffff;
+		/*text-decoration: underline;*/
 		background: #000000;
 	}
 	.nav-column:active {
@@ -46,16 +54,14 @@
 		width: 100%;
 	}
 	.img-entry-vert img{
-		/*width: 24%;*/
 		height: 358px;
 		top: 5px;
 		margin-bottom: 9px;
 	}
 	.img-entry-horiz img{
-	    /*width: 49%;*/
-	    height: 358px;
-	    top: 5px;
-	    margin-bottom: 9px;
+		height: 358px;
+		top: 5px;
+		margin-bottom: 9px;
 	}
 	.rslides {
 	  position: relative;
@@ -95,11 +101,13 @@
 	}
 	.section-body{
 		min-height: 400px;
+		position: relative;
+		z-index: -99;
 	}
 	.section-footer{
-	    border-top: 1px solid #000000;
+	    border-top: 1px solid #555;
 	    margin: 15px 0 15px 0;
-	    padding-top: 10px;
+	    padding: 10px;
 	}
 	.section-left{
 		float: left;
@@ -122,9 +130,4 @@
 	    float: left;
 	    margin-right: 6px;
 	    cursor:pointer;
-	}
-	img {
-	    /*display: block;*/
-	    /*height: auto;*/
-	    /*max-width: 100%;*/
 	}
