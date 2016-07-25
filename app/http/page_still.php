@@ -1,4 +1,4 @@
-<div class="photo-list" id="aniimated-thumbnials" oncontextmenu="return false">
+<div class="photo-list container" id="aniimated-thumbnials" oncontextmenu="return false">
     <a class="img-entry-vert" href="app/img/WEB/STILL/_MG_7088.jpg">
       <img src="app/img/WEB/STILL/_MG_7088.jpg" />
     </a>

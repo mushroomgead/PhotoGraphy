@@ -56,3 +56,12 @@ $(document).ready(function() {
   });
 });
 </script>
+
+<!--  <div class="photo-list container" id="aniimated-thumbnials" oncontextmenu="return false">
+    <a class="img-entry-vert" href="aapp/img/WEB/WOMEN/4/_MG_2540.jpg">
+      <img src="aapp/img/WEB/WOMEN/4/_MG_2540.jpg" />
+    </a>
+    <a class="img-entry-horiz" href="app/img/8496636515_ca9ef2a464_o.jpg">
+      <img src="app/img/8496636515_ca9ef2a464_o.jpg" />
+    </a>
+</div> -->
