@@ -1,3 +1,4 @@
+<!-- test git -->
 <?php //require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
-    
+
   <div class="clearfix container font-style">
     <script type="text/javascript">
 
@@ -47,7 +48,7 @@
     });
 
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 1){  
+      if ($(this).scrollTop() > 1){
           $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
         }
         else{
