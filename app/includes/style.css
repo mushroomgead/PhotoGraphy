@@ -1,139 +1,153 @@
-	/*header*/
-	.font-style{
-    	font-family: "Lucida Console", Monaco, monospace;
-	}
-	.font-size-header{
-		font-size:34px;
-	}
-	.font-size-header.sticky{
-		font-size:24px;
-	}
-	.font-size-body{
-		font-size:16px;
-	}
-	.layout-left.sticky{
-		float: left;
-		padding-left: 26px;
-	}
-	.layout-right.sticky{
-		float: right;
-		width: 80%;
-	}
-	.section-header{
-		width: 100%;
-		text-align: center;
-		line-height: 70px;
-    	/*padding: 11px;*/
-		color: #000000;
-		/*border-bottom: 1px solid #555;*/
-	  background:#fff;
-	  z-index: 1;
-	}
-	.section-header.sticky {
-		position: fixed;
-	  font-size: 16px;
-	  width: 100%;
-	  border-bottom: 1px solid #fff;
-	  /*transition: all 0.4s ease;*/
-	  background:#fff;
-	}
-	.nav-column{
-		width: 11%;
-		text-align: center;
-		color: #000000;
-	}
-	.nav-column.sticky{
-		width: 9%;
-		text-align: center;
-		color: #000000;
-	}
-	.nav-column:hover{
-		color: #ffffff;
-		/*text-decoration: underline;*/
-		background: #000000;
-	}
-	.nav-column:active {
-		color: #ffffff;
-		background: #000000;
-	}
-	.photo-list{
-		width: 100%;
-	}
-	.img-entry-vert img{
-		height: 358px;
-		top: 5px;
-		margin-bottom: 9px;
-	}
-	.img-entry-horiz img{
-		height: 358px;
-		top: 5px;
-		margin-bottom: 9px;
-	}
-	.rslides {
-	  position: relative;
-	  list-style: none;
-	  overflow: hidden;
-	  width: 100%;
-	  padding: 0;
-	  margin: 0;
-	  }
+/*-Page Style Index*/
+/*-- Section*/
+.section-nav{
+	border-bottom:1px solid #000000;
+	margin-bottom: 17px !important;
+}
+.section-body{
+	min-height: 400px;
+	position: relative;
+}
+.section-footer{
+	border-top: 1px solid #555;
+	margin: 15px 0 5px 0;
+	padding: 10px;
+}
+.section-left{
+	float: left;
+}
+.section-right{
+	float: right;
+	text-align: right;
+}
+.section-header{
+	width: 1141px;
+	text-align: center;
+	line-height: 70px;
+	color: #000000;
+	background:#fff;
+	z-index: 1;
+}
+/*-- Font*/
+.font-style{
+	font-family: "Lucida Console", Monaco, monospace;
+}
+.font-size-header{
+	font-size:34px;
+}
 
-	.rslides li {
-	  -webkit-backface-visibility: hidden;
-	  position: absolute;
-	  display: none;
-	  width: 100%;
-	  left: 0;
-	  top: 0;
-	  }
+.font-size-body{
+	font-size:16px;
+}
 
-	.rslides li:first-child {
-	  position: relative;
-	  display: block;
-	  float: left;
-	  }
+/*-- Sticky*/
+.layout-left.sticky{
+	float: left;
+	width: 30%;
+	text-align: left;
+}
+.layout-right.sticky{
+	float: right;
+	width: 70%;
+}
+.font-size-header.sticky{
+	font-size:24px;
+}
+.section-header.sticky {
+	position: fixed;
+	font-size: 16px;
+	width: 1141px;
+	border-bottom: 1px solid #fff;
+	background:#fff;
+	box-shadow: 0px 6px 4px -4px RGBA(0, 0, 0, 0.25);
+}
 
-	.rslides img {
-	  display: block;
-	  height: auto;
-	  float: left;
-	  width: 100%;
-	  border: 0;
-	  }
+/*-- Top Navigate*/
+#page_index{
+	transition: margin-left .5s;
+	padding: 16px;
+}
+.nav-menu{
+	display: none;
+}
 
-	.section-nav{
-		border-bottom:1px solid #000000;
-		margin-bottom: 17px !important;
-	}
-	.section-body{
-		min-height: 400px;
-		position: relative;
-	}
-	.section-footer{
-	    border-top: 1px solid #555;
-	    margin: 15px 0 15px 0;
-	    padding: 10px;
-	}
-	.section-left{
-		float: left;
-	}
-	.section-right{
-		float: right;
-		text-align: right;
-	}
-	.demo img{
-	    width: 100%;
-	    /*height: 100%;*/
-	}
-	ul {
-	    list-style: none outside none;
-	    padding-left: 0;
-	    margin-bottom:0;
-	}
-	li {
-	    display: block;
-	    float: left;
-	    margin-right: 6px;
-	    cursor:pointer;
-	}
+ul.topnav{
 
+}
+ul.topnav li{
+	float: left;
+	width: 10.58%;
+}
+ul.topnav li a{
+	display: inline-block;
+	color: #000000;	
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+li .nav-column{
+	width: 11%;
+	text-align: center;
+	color: #000000;
+}
+li .nav-column.sticky{
+	width: 11%;
+	text-align: center;
+}
+
+ul.topnav li.icon{
+	display: none;
+}
+ul li.nav-column:hover{
+	color: #ffffff;
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+}
+ul.topnav li a:hover{
+	color: #ffffff !important;
+	text-decoration: none;
+}
+li .nav-column :active {
+	color: #ffffff;
+}
+
+/*- Hamberger Menu*/
+.menutop-nav{
+	width:125px;
+}
+.index-nav{
+	margin-left: 250px;
+	background:rgba(0,0,0,0.4);
+}
+
+/*- Page Style Detail*/
+.photo-list{
+	width: 100%;
+}
+.img-entry-vert img{
+	height: 358px;
+	top: 5px;
+	margin-bottom: 9px;
+}
+.img-entry-horiz img{
+	height: 358px;
+	top: 5px;
+	margin-bottom: 9px;
+}
+
+/*- Style Plugin*/
+/*-- Gellery silder*/
+.demo img{
+	width: 100%;
+}
+ul {
+	list-style: none outside none;
+	padding-left: 0;
+	margin-bottom:0;
+}
+li {
+	display: block;
+	margin-right: 6px;
+	cursor:pointer;
+}

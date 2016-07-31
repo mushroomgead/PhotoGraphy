@@ -1,21 +1,117 @@
 /* Large desktops and laptops */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+}
 
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.font-size-header {
+		font-size: 28px;
+	}
+	.section-header{
+		width: 100%;
+		text-align: center;
+		color: #000000;
+		background:#fff;
+	}
+	ul li.nav-column {
+		float: left;
+		width: 10.47%;
+		text-align: center;
+	}
+}
 
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+	.font-size-header {
+		font-size: 28px;
+	}
+	.section-header{
+		width: 100%;
+		text-align: center;
+		color: #000000;
+		background:#fff;
+	}
+
+	ul li.nav-column {
+		float: left;
+		width: 10.24%;
+		text-align: center;
+	}
+	.section-right{
+		float: left;
+		padding-top: 5px;
+	}
+}
 
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+	.nav-menu{
+		display: inline-block;
+	}
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+	.nav-column{
+		width: 100%;
+		text-align: left;
+	}
+	.font-size-header {
+		font-size: 23px;
+	}
+	.section-header{
+		width: 100%;
+		text-align: center;
+		color: #000000;
+		background:#fff;
+	}
+	.section-right{
+		float: left;
+		padding-top: 5px;
+	}
+	.section-left {
+		font-size: 13px;
+	}
+	.section-right {
+		font-size: 12px;
+	}
+}
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 	.img-entry-horiz img{
 		width: 100% !important;
+		height: 185px;
 	}
 	.img-entry-vert img{
 		width: 100% !important;
+		height: 307px;
+	}
+	.section-header{
+		width: 100%;
+		text-align: center;
+		color: #000000;
+		background:#fff;
+	}
+	.font-size-header {
+    	font-size: 23px;
+	}
+	.nav-column {
+	    width: 100%;
+	    width: 100%;
+	    text-align: center;
+	    color: #000000;
+	}
+	.section-left {
+	    font-size: 11.80px;
+	}
+	.section-right {
+	    float: left;
+	    padding-top: 5px;
+	    font-size: 11.8px;
 	}
 }
