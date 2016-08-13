@@ -1,5 +1,6 @@
 <!-- test git -->
 <?php //require_once('app/database/conn_db.php'); ?>
+<?php echo "Hello"?>
 <!DOCTYPE html>
 <html>
   <head>
