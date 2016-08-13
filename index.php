@@ -1,5 +1,6 @@
 <!-- test git -->
 <?php //require_once('app/database/conn_db.php'); ?>
+<?php echo "Hello"?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -147,3 +148,4 @@
     <!--  -->
   </div>
 </html>
+>>>>>>> 3402ab4498090100e0779f8a6024a985a93473d6
