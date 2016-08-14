@@ -23,31 +23,65 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+	.menutop-nav{
+
+	}
 	.font-size-header {
 		font-size: 28px;
 	}
-	.section-header{
+/*	.section-header{
 		width: 100%;
 		text-align: center;
 		color: #000000;
 		background:#fff;
+	}*/
+	.section-header{
+		width:100%;
 	}
-
+	.layout-left{
+		float: left;
+		width: 40%;
+	}
 	ul li.nav-column {
 		float: left;
-		width: 10.24%;
+		width: 14.24%;
 		text-align: center;
 	}
 	.section-right{
 		float: left;
 		padding-top: 5px;
 	}
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	#icon_close{
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	.layout-left{
+		float: left;
+		width: 40%;
+	}
+	ul li.nav-column {
+		float: left;
+		width: 22.24%;
+		text-align: center;
+	}
 	.nav-menu{
 		display: inline-block;
+	}
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	#icon_close{
+		display: none;
 	}
 	ul.topnav li:not(:first-child){
 		display: none;
@@ -61,7 +95,7 @@
 		text-align: left;
 	}
 	.font-size-header {
-		font-size: 23px;
+		font-size: 18px;
 	}
 	.section-header{
 		width: 100%;
@@ -83,6 +117,9 @@
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+		.font-size-header {
+		font-size: 19px;
+	}
 	.img-entry-horiz img{
 		width: 100% !important;
 		height: 185px;
@@ -98,7 +135,7 @@
 		background:#fff;
 	}
 	.font-size-header {
-    	font-size: 23px;
+    	font-size: 15px;
 	}
 	.nav-column {
 	    width: 100%;
@@ -113,5 +150,35 @@
 	    float: left;
 	    padding-top: 5px;
 	    font-size: 11.8px;
+	}
+	ul.topnav li{
+		float: left;
+		width: 28.58%;
+	}
+	.layout-left{
+		float: left;
+		width: 50%;
+	}
+	ul li.nav-column {
+		float: left;
+		width: 34.24%;
+		text-align: center;
+		font-size: 10px;
+	}
+	.nav-menu{
+		display: inline-block;
+	}
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	#icon_close{
+		display: none;
+	}
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
 	}
 }

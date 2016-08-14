@@ -61,15 +61,15 @@
     // console.log($(this).width());
     // > 480
     $(window).scroll(function() {
-      // if ($(this).scrollTop() > 1){
-      //   if($(this).width() > 360){
-      //             $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
-      //   }
+      if ($(this).scrollTop() > 1){
+        if($(this).width() > 360){
+                  $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
+        }
 
-      //   }
-      //   else{
-      //     $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
-      //   }
+        }
+        else{
+          $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
+        }
     });
     document.onmousedown=disableclick;
     function disableclick(event)
@@ -87,8 +87,8 @@
         </div>
 
         <ul class="clearfix font-size-body layout-right topnav" id="MenuTopNav">
-            <li class="icon nav-column nav-menu"><a href="javascript:void(0);" onclick="getMenuResp()">ICON MENU</a></li>
-            <li class="icon nav-column" id="icon_close"><a href="javascript:void(0);" onclick="closeMenuResp()">X</a></li>
+            <li class="icon nav-column pull-left nav-menu"><a href="javascript:void(0);" onclick="getMenuResp()">ICON MENU</a></li>
+            <li class="icon nav-column pull-left"><a href="javascript:void(0);" onclick="closeMenuResp()">X</a></li>
             <li class="nav-column pull-left"><a href="#">news</a></li>
             <li class="nav-column pull-left"><a href="?page=men">men</a></li>
             <li class="nav-column pull-left"><a href="?page=still">still</a></li>
@@ -115,7 +115,7 @@
             case 'still' : require_once('app/http/page_still.php');
               break;
 
-            case 'women' : require_once('app/http/page_women_main.php');
+            case 'women' : require_once('app/http/page_women_1.php');
               break;
 
             case 'portrait' : require_once('app/http/page_portrait.php');
