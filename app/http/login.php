@@ -1,12 +1,18 @@
-	<div>
-	<form>
-		<input type="text" name="username" id="text">
-		<input type="password" name="pwd" id="password">
-		<div>
-		<input type="button" name="Login" value="Login" onclick="_Login()">
+<div class="page-login">
+		<form>
+		<div class="head-login"><label><h3>Login</h3></label></div>
+		<hr>
+		<div class="clearfix">
+			<input type="text" class="login-txtbox" name="username" id="text">
 		</div>
-	</form>
-	</div>
+		<div class="clearfix">
+			<input type="password" class="login-txtbox" name="pwd" id="password">
+		</div>
+		<div class="clearfix layout-btn">
+			<input type="button" class="btn-login" name="Login" value="Login" onclick="_Login()">
+		</div>
+		</form>
+</div>
 
 <script type="text/javascript">
 function Login_(){

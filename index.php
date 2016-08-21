@@ -61,15 +61,15 @@
     // console.log($(this).width());
     // > 480
     $(window).scroll(function() {
-      // if ($(this).scrollTop() > 1){
-      //   if($(this).width() > 360){
-      //             $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
-      //   }
+      if ($(this).scrollTop() > 1){
+        if($(this).width() > 360){
+                  $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
+        }
 
-      //   }
-      //   else{
-      //     $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
-      //   }
+        }
+        else{
+          $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
+        }
     });
     document.onmousedown=disableclick;
     function disableclick(event)
