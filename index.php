@@ -1,4 +1,6 @@
-<?php //require_once('app/database/conn_db.php'); ?>
+<?php 
+session_start();
+//require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,17 +30,6 @@
   <div class="clearfix container font-style" id="page_index">
     <script type="text/javascript">
 
-    function getMenuResp(){
-      $('#MenuTopNav').addClass('menutop-nav');
-      // $('#page_index').addClass('index-nav');
-      // $('#section-body').addClass('body-nav');
-      // document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
-    }
-
-    function closeMenuResp(){
-      alert('close');
-    }
-
     $(document).ready(function() {
     //   var img_height1 = $("#1").height();
     //   var img_width1  = $("#1").width();
@@ -60,35 +51,49 @@
 //         $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
     // console.log($(this).width());
     // > 480
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 1){
-        if($(this).width() > 360){
-                  $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
-        }
 
-        }
-        else{
-          $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
-        }
-    });
-    document.onmousedown=disableclick;
-    function disableclick(event)
-    {
-      if(event.button==2)
-       {
-         return false;
-       }
-    }
+
+    // $(window).scroll(function() {
+    //   if ($(this).scrollTop() > 1){
+    //     if($(this).width() > 360){
+    //               $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
+    //     }
+
+    //     }
+    //     else{
+    //       $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
+    //     }
+    // });
+
+
+    // document.onmousedown=disableclick;
+    // function disableclick(event)
+    // {
+    //   if(event.button==2)
+    //    {
+    //      return false;
+    //    }
+    // }
     </script>
+
+    <?php 
+    if(isset($_SESSION['UserData']['username'])){
+      echo 'MODE:'.$_SESSION['UserData']['username']; ?>
+      
+      <a href="admin/logout.php">Click to Logout</a>
+    <?php } ?>
+
       <div class="clearfix section-header" id="section-header">
         <title> VV PHOTOGRAPHER </title>
-        <div class="clearifx font-size-header layout-left">
+<!--         <div class="clearifx font-size-header layout-left">
           VV PHOTOGRAPHER
-        </div>
+        </div> -->
 
-        <ul class="clearfix font-size-body layout-right topnav" id="MenuTopNav">
-            <li class="icon nav-column nav-menu"><a href="javascript:void(0);" onclick="getMenuResp()">ICON MENU</a></li>
-            <li class="icon nav-column" id="icon_close"><a href="javascript:void(0);" onclick="closeMenuResp()">X</a></li>
+        <ul class="clearfix font-size-body layout-right topnav" id="myTopnav">
+            <li class="icon">
+              <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+            </li>
+            <li class="nav-column pull-left font-size-header ">VV PHOTOGRAPHER</li>
             <li class="nav-column pull-left"><a href="#">news</a></li>
             <li class="nav-column pull-left"><a href="?page=men">men</a></li>
             <li class="nav-column pull-left"><a href="?page=still">still</a></li>
@@ -101,6 +106,16 @@
         </ul>
       </div>
 
+      <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById('myTopnav');
+          if (x.className === 'topnav'){
+              x.className += ' responsive';
+          } else {
+            x.className = 'topnav';
+          }
+        }  
+      </script>
 
     </head>
 
@@ -135,12 +150,12 @@
     </body>
     <!-- footer  -->
     <div class="clearfix section-footer">
-      <div class="section-left">COPYRIGHT 2015 BY VV PHOTOGRAPHER</div>
+      <div class="section-left">© COPYRIGHT 2015 BY VV PHOTOGRAPHER</div>
       <div class="section-right">
-        <div class="pull-left nav-footer"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;Twitter&nbsp;|&nbsp;</div>
-        <div class="pull-left nav-footer"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;Facebook&nbsp;|&nbsp;</div>
-        <div class="pull-left nav-footer"><i class="fa fa-flickr" aria-hidden="true"></i>&nbsp;Flickr&nbsp;|&nbsp;</div>
-        <div class="pull-left nav-footer"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;e-mail@hotmail.com</div>
+        <div class="pull-left nav-footer"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;<span id="text-footer">Twitter&nbsp;</span>|&nbsp;</div>
+        <div class="pull-left nav-footer"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;<span id="text-footer">Facebook&nbsp;</span>|&nbsp;</div>
+        <div class="pull-left nav-footer"><i class="fa fa-flickr" aria-hidden="true"></i>&nbsp;<span id="text-footer">Flickr&nbsp;</span>|&nbsp;</div>
+        <div class="pull-left nav-footer"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;<span id="text-footer">e-mail@hotmail.com</div>
       </div>
     </div>
     <!--  -->

@@ -10,9 +10,10 @@
 }
 .section-footer{
 	position: relative;
-	border-top: 1px solid #555;
+	border-top: 1px solid #9c9b9b;
 	margin: 15px 0 5px 0;
 	padding: 10px;
+	color: #565656;
 }
 .section-left{
 	float: left;
@@ -75,19 +76,27 @@
 	display: none;
 }
 
-ul.topnav{
-
+ul.topnav {	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/*background-color: #333;*/
 }
 ul.topnav li{
 	float: left;
-	width: 9.58%;
+	/*width: 9.58%;*/
 }
 ul.topnav li a{
 	display: inline-block;
 	color: #000000;
 	text-align: center;
-	height: 100%;
-	width: 100%;
+	/*height: 100%;*/
+	/*width: 100%;*/
+	padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  /*font-size: 17px;*/
 }
 li .nav-column{
 	width: 11%;
@@ -99,10 +108,11 @@ li .nav-column.sticky{
 	text-align: center;
 }
 
-ul.topnav li.icon{
+/*ul.topnav li.icon{
 	display: none;
 	float: left;
-}
+}*/
+ul.topnav li.icon {display: none;}
 ul li.nav-column:hover{
 	color: #000;
 	border-bottom: 1px solid #000;
@@ -119,13 +129,13 @@ li .nav-column :active {
 }
 
 /*- Hamberger Menu*/
-.menutop-nav{
+/*.menutop-nav{
 	width:125px;
 }
 .index-nav{
 	margin-left: 250px;
 	background:rgba(0,0,0,0.4);
-}
+}*/
 
 /*- Page Style Detail*/
 .photo-list{
@@ -136,11 +146,16 @@ li .nav-column :active {
 	top: 5px;
 	margin-bottom: 9px;
 }
+.img-entry-vert, .img-entry-horiz, 
+.img-entry-vert:hover, .img-entry-horiz:hover{
+	text-decoration: none;
+}
 .img-entry-horiz img{
 	height: 358px;
 	top: 5px;
 	margin-bottom: 9px;
 }
+
 /*Admin Login*/
 
 .page-login{

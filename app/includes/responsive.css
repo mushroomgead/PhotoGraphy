@@ -69,6 +69,14 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+
 	.layout-left{
 		float: left;
 		width: 40%;
@@ -81,18 +89,8 @@
 	.nav-menu{
 		display: inline-block;
 	}
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
 	#icon_close{
 		display: none;
-	}
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
-	ul.topnav li.icon {
-		float: right;
-		display: inline-block;
 	}
 	.nav-column{
 		width: 100%;
@@ -144,7 +142,7 @@
 		background:#fff;
 	}
 	.section-body{
-		min-height: 400px;
+		min-height: 354px;
 		padding-top: 30px;
 	}
 	.font-size-header {
@@ -162,7 +160,7 @@
 	.section-right {
 	    float: left;
 	    padding-top: 5px;
-	    font-size: 11.8px;
+	    font-size: 14.8px;
 	}
 	ul.topnav li{
 		float: left;
@@ -174,24 +172,48 @@
 	}
 	ul li.nav-column {
 		float: left;
-		width: 34.24%;
+		width: 100%;
 		text-align: center;
-		font-size: 10px;
+		font-size: 13px;
 	}
 	.nav-menu{
 		display: inline-block;
 	}
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
 	#icon_close{
 		display: none;
 	}
+	/* When the screen is less than 480 pixels wide, 
+	hide all list items, except for the first one ("Home"). 
+	Show the list item that contains the link to open 
+	and close the topnav (li.icon) */
 	ul.topnav li:not(:first-child){
 		display: none;
 	}
 	ul.topnav li.icon {
 		float: right;
 		display: inline-block;
+		padding: 0;
+	}
+	li.icon a{
+		float: right;
+	}
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+	#text-footer{
+		display: none;
 	}
 }

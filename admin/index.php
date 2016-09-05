@@ -9,41 +9,26 @@
     <link rel="stylesheet" type="text/css" href="../app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
-    <!-- lightslider -->
-    <link type="text/css" rel="stylesheet" href="../app/includes/lightslider/dist/css/lightslider.css" />
-    <script src="../app/includes/lightslider/dist/js/lightslider.js"></script>
-
-    <!-- lightGallery -->
-    <link type="text/css" rel="stylesheet" href="../app/includes/lightGallery/dist/css/lightGallery.css" />
-    <script src="../app/includes/lightGallery/dist/js/lightGallery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="../app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
-    <script src="../app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
-
     <script src="../app/includes/script.js"></script>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-
-      $('#aniimated-thumbnials').lightGallery({
-          thumbnail:true,
-          download:false,
-          showThumbByDefault: false
-      }); 
-    });
-
-    </script>
     </head>
-
     <body>
-      <div class="clearfix section-body">
-          <?php 
-          switch(isset($_GET['page']) ? $_GET['page'] : ''){
+      <?php session_start(); 
+      if(isset($_SESSION['UserData']['username'])){ ?>
+        <div class="clearfix section-body">
+        Login success
+        <div class="clearfix block-index">
+          <a href="adminupload.php">
+          UPLOAD
+          </a>
+        <div>
+        <div class="clearfix block-index">
+          <a href="../index.php">GO TO HOME PAGE</a>
+        <div>
 
-            default:
-              require_once('../app/http/login.php');
-          }
-          ?>
+        <div class="clearfix block-index">
+          <a href="logout.php">Click to Logout</a>
+        <div>
+      <?php } else { header('location:login.php'); } ?>
       </div>
     </body>
 

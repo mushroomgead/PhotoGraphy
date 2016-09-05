@@ -1,6 +1,5 @@
 <div class="demo">
   <ul id="imageGallery">
-
     <li data-thumb="">
         <img src="app/img/WEB/WOMEN/4/_MG_2540.jpg"/>
     </li>
@@ -42,17 +41,11 @@ $(document).ready(function() {
       slideMargin:5,
       enableDrag: true,
       currentPagerPosition:'left',
-      // keyPress: true,
       pager: false,
       pauseOnHover: true,
       auto: true,
       slideEndAnimation: true,
 
-      // onSliderLoad: function(el) {
-      //     el.lightGallery({
-      //         selector: '#imageGallery .lslide'
-      //     });
-      // }
   });
 });
 </script>
