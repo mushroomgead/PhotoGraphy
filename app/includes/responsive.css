@@ -5,6 +5,7 @@
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+
 	.font-size-header {
 		font-size: 28px;
 	}
@@ -23,18 +24,60 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-	.menutop-nav{
-
+	ul.topnav li{
+		float: left;
+		width: 28.58%;
+	}
+	.layout-left{
+		float: left;
+		width: 50%;
+	}
+	ul li.nav-column {
+		float: left;
+		width: 100%;
+		text-align: center;
+		font-size: 13px;
+	}
+	.nav-menu{
+		display: inline-block;
+	}
+	#icon_close{
+		display: none;
+	}
+	/* When the screen is less than 480 pixels wide, 
+	hide all list items, except for the first one ("Home"). 
+	Show the list item that contains the link to open 
+	and close the topnav (li.icon) */
+	ul.topnav li:not(:first-child){
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+		padding: 0;
+	}
+	li.icon a{
+		float: right;
+	}
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: left;
+		display: inline-table;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
 	}
 	.font-size-header {
 		font-size: 28px;
 	}
-/*	.section-header{
-		width: 100%;
-		text-align: center;
-		color: #000000;
-		background:#fff;
-	}*/
 
 	.section-body{
 		min-height: 400px;
@@ -48,49 +91,54 @@
 	}
 	ul li.nav-column {
 		float: left;
-		width: 14.24%;
+		width: 100%;
 		text-align: center;
+		font-size: 13px;
 	}
 	.section-right{
 		float: left;
 		padding-top: 5px;
 	}
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
-	#icon_close{
-		display: none;
-	}
-	ul.topnav li.icon {
-		float: right;
-		display: inline-block;
-	}
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	/* When the screen is less than 480 pixels wide, 
+	hide all list items, except for the first one ("Home"). 
+	Show the list item that contains the link to open 
+	and close the topnav (li.icon) */
 	ul.topnav li:not(:first-child){
 		display: none;
 	}
 	ul.topnav li.icon {
 		float: right;
 		display: inline-block;
+		padding: 0;
 	}
-
-	.layout-left{
+	li.icon a{
+		float: right;
+	}
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
 		float: left;
-		width: 40%;
+		display: inline-table;
 	}
-	ul li.nav-column {
-		float: left;
-		width: 22.24%;
-		text-align: center;
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
 	}
-	.nav-menu{
-		display: inline-block;
-	}
-	#icon_close{
+	#text-footer{
 		display: none;
+	}
+	#icon-hambg{
+		color:#777;
 	}
 	.nav-column{
 		width: 100%;
@@ -124,7 +172,7 @@
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-		.font-size-header {
+	.font-size-header {
 		font-size: 19px;
 	}
 	.img-entry-horiz img{
@@ -206,8 +254,8 @@
 		top: 0;
 	}
 	ul.topnav.responsive li {
-		float: none;
-		display: inline;
+		float: left;
+		display: inline-table;
 	}
 	ul.topnav.responsive li a {
 		display: block;
@@ -215,5 +263,14 @@
 	}
 	#text-footer{
 		display: none;
+	}
+	#icon-hambg{
+		color:#777;
+	}
+	.nav-column-logo{
+		display: block;
+		text-align: center;
+		font-size: 19px;
+		width: 50% !important;
 	}
 }
