@@ -44,9 +44,9 @@
 	#icon_close{
 		display: none;
 	}
-	/* When the screen is less than 480 pixels wide, 
-	hide all list items, except for the first one ("Home"). 
-	Show the list item that contains the link to open 
+	/* When the screen is less than 480 pixels wide,
+	hide all list items, except for the first one ("Home").
+	Show the list item that contains the link to open
 	and close the topnav (li.icon) */
 	ul.topnav li:not(:first-child){
 		display: none;
@@ -103,9 +103,9 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-	/* When the screen is less than 480 pixels wide, 
-	hide all list items, except for the first one ("Home"). 
-	Show the list item that contains the link to open 
+	/* When the screen is less than 480 pixels wide,
+	hide all list items, except for the first one ("Home").
+	Show the list item that contains the link to open
 	and close the topnav (li.icon) */
 	ul.topnav li:not(:first-child){
 		display: none;
@@ -204,6 +204,7 @@
 	}
 	.section-left {
 	    font-size: 11.80px;
+	    width: 100%;
 	}
 	.section-right {
 	    float: left;
@@ -230,9 +231,9 @@
 	#icon_close{
 		display: none;
 	}
-	/* When the screen is less than 480 pixels wide, 
-	hide all list items, except for the first one ("Home"). 
-	Show the list item that contains the link to open 
+	/* When the screen is less than 480 pixels wide,
+	hide all list items, except for the first one ("Home").
+	Show the list item that contains the link to open
 	and close the topnav (li.icon) */
 	ul.topnav li:not(:first-child){
 		display: none;
@@ -260,6 +261,8 @@
 	ul.topnav.responsive li a {
 		display: block;
 		text-align: left;
+		/*text-align: center;*/
+		padding: 5px 17px;
 	}
 	#text-footer{
 		display: none;
@@ -270,7 +273,8 @@
 	.nav-column-logo{
 		display: block;
 		text-align: center;
-		font-size: 19px;
+		font-size: 15px;
 		width: 50% !important;
+		padding-top: 13px;
 	}
 }

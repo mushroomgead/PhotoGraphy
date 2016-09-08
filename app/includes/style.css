@@ -6,7 +6,7 @@
 }
 .section-body{
 	position: relative;
-	
+
 }
 .section-footer{
 	position: relative;
@@ -75,7 +75,7 @@
 	display: none;
 }
 
-ul.topnav {	
+ul.topnav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -114,7 +114,8 @@ li .nav-column.sticky{
 ul.topnav li.icon {display: none;}
 ul li.nav-column:hover{
 	color: #000;
-	border-bottom: 1px solid #000;
+	font-weight: bold;
+	/*border-bottom: 1px solid #000;*/
 	/*background: #000000;*/
 	text-decoration: none;
 	color: #000;
@@ -145,7 +146,7 @@ li .nav-column :active {
 	top: 5px;
 	margin-bottom: 9px;
 }
-.img-entry-vert, .img-entry-horiz, 
+.img-entry-vert, .img-entry-horiz,
 .img-entry-vert:hover, .img-entry-horiz:hover{
 	text-decoration: none;
 }
@@ -164,7 +165,7 @@ li .nav-column :active {
 }
 .head-login{
 	padding: 16px 16px 0 16px;
-	color: #ffffff;
+	color: #4a4848;
 }
 .login-txtbox{
 	border: none;
@@ -219,7 +220,7 @@ a.img-entry-horiz .image:after {
     content:'\A';
     height: 358px;
     width: 537px;
-    top:10px; 
+    top:10px;
     left:5px;
     cursor: pointer;
     background:rgba(0, 0, 0, 0.36);
@@ -228,7 +229,7 @@ a.img-entry-vert .image:after {
     content:'\A';
     height: 358px;
     width: 238px;
-    top:10px; 
+    top:10px;
     left:5px;
     cursor: pointer;
     background:rgba(0, 0, 0, 0.36);
@@ -248,4 +249,10 @@ a.img-entry-vert .image:after {
 }
 .img-entry-vert, .img-entry-horiz{
 	/*margin: 15px;*/
+}
+/**/
+.block-index{
+    width: 50%;
+    min-height: 100px;
+    padding: 34px;
 }
