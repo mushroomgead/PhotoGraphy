@@ -164,7 +164,7 @@ li .nav-column :active {
 }
 .head-login{
 	padding: 16px 16px 0 16px;
-	color: #ffffff;
+	color: #564848;
 }
 .login-txtbox{
 	border: none;
@@ -248,4 +248,11 @@ a.img-entry-vert .image:after {
 }
 .img-entry-vert, .img-entry-horiz{
 	/*margin: 15px;*/
+}
+.block-index{
+	width: 30%;
+	height:50px;
+	/*border: 1px solid #000;*/
+	padding: 15px 0;
+	float: left;
 }

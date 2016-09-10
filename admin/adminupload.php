@@ -23,19 +23,29 @@
 
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <div class="block-upload">
-            <input class="pull-left" type="file" name="fileToUpload[]" id="fileToUpload"><?php createdropdownlist(); ?>
+            <input class="pull-left" type="file" name="fileToUpload[]" id="fileToUpload">
+            <label>select folder</label>
+            <?php createdropdownlist(); ?>
         </div>
         <div class="block-upload">
-            <input type="file" name="fileToUpload[]" id="fileToUpload"><?php createdropdownlist(); ?>
+            <input type="file" name="fileToUpload[]" id="fileToUpload">
+            <label>select folder</label>
+            <?php createdropdownlist(); ?>
         </div>
         <div class="block-upload">
-            <input type="file" name="fileToUpload[]" id="fileToUpload"><?php createdropdownlist(); ?>
+            <input type="file" name="fileToUpload[]" id="fileToUpload">
+            <label>select folder</label>
+            <?php createdropdownlist(); ?>
         </div>
         <div class="block-upload">
-            <input type="file" name="fileToUpload[]" id="fileToUpload"><?php createdropdownlist(); ?>
+            <input type="file" name="fileToUpload[]" id="fileToUpload">
+            <label>select folder</label>
+            <?php createdropdownlist(); ?>
         </div>
         <div class="block-upload">
-            <input type="file" name="fileToUpload[]" id="fileToUpload"><?php createdropdownlist(); ?>
+            <input type="file" name="fileToUpload[]" id="fileToUpload">
+            <label>select folder</label>
+            <?php createdropdownlist(); ?>
         </div>
             <input type="submit" value="Upload Image" name="submit">
     </form>

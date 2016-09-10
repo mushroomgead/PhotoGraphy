@@ -15,20 +15,28 @@
       <?php session_start(); 
       if(isset($_SESSION['UserData']['username'])){ ?>
         <div class="clearfix section-body">
-        Login success
-        <div class="clearfix block-index">
-          <a href="adminupload.php">
-          UPLOAD
-          </a>
-        <div>
-        <div class="clearfix block-index">
-          <a href="../index.php">GO TO HOME PAGE</a>
-        <div>
+        <div>Login success</div>
+        <a href="adminupload.php">
+          <div class="clearfix block-index">
+            UPLOAD
+          </div>
+        </a>
 
-        <div class="clearfix block-index">
-          <a href="logout.php">Click to Logout</a>
-        <div>
-      <?php } else { header('location:login.php'); } ?>
+        <a href="../index.php">
+          <div class="clearfix block-index">
+            GO TO HOME PAGE
+          </div>
+        </a>
+        
+        <a href="logout.php">
+          <div class="clearfix block-index">
+            Click to Logout
+          </div>
+        </a>
+      <?php } else { 
+        // header('location:login.php'); 
+        require_once('login.php');
+        } ?>
       </div>
     </body>
 

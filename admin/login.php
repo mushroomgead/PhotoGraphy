@@ -1,21 +1,33 @@
+<style type="text/css">
+	body {
+		background: #c6cdd0;
+	}
+	.layout-text{
+		margin-bottom: 15px;
+	}
+	.btn-login{
+		background: #5a5a5a;
+		color: #fff;
+	}
+</style>
+
 <div class="page-login">
 	<form action="" method="post" name="login_form">
 		<div class="head-login"><label><h3>Login</h3></label></div>
 		<hr>
 		<div class="clearfix">
-			<input type="text" class="login-txtbox" name="username" id="text">
+			<input type="text" class="layout-text form-control" name="username" id="text" placeholder="username">
 		</div>
 		<div class="clearfix">
-			<input type="password" class="login-txtbox" name="password" id="password">
+			<input type="password" class="layout-text form-control" name="password" id="password" placeholder="password">
 		</div>
 		<div class="clearfix layout-btn">
-			<input type="submit" class="btn-login" name="submit" value="Login" onclick="">
+			<input type="submit" class="btn btn-login" name="submit" value="Login" onclick="">
 		</div>
 	</form>
 </div>
-
 <?php 
-session_start();
+// session_start();
 
 // Check Login form submitted
 if(isset($_POST['submit'])){
