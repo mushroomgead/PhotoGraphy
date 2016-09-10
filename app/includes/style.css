@@ -165,11 +165,7 @@ li .nav-column :active {
 }
 .head-login{
 	padding: 16px 16px 0 16px;
-<<<<<<< HEAD
 	color: #564848;
-=======
-	color: #4a4848;
->>>>>>> 473bc6823419dfbccf1e7d629d7af4f8b657f106
 }
 .login-txtbox{
 	border: none;
@@ -259,4 +255,10 @@ a.img-entry-vert .image:after {
     width: 50%;
     min-height: 100px;
     padding: 34px;
+}
+.nav-column-logo{
+	width: 100%;
+}
+.ul li.nav-column{
+	width: 10%;
 }

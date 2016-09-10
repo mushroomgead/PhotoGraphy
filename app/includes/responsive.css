@@ -1,6 +1,10 @@
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
-
+	ul li.nav-column {
+		float: left;
+		width: 10%;
+		text-align: center;
+	}
 }
 
 /* Landscape tablets and medium desktops */
@@ -8,6 +12,7 @@
 
 	.font-size-header {
 		font-size: 28px;
+		width: 100%;
 	}
 	.section-header{
 		width: 100%;
@@ -26,7 +31,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
 	ul.topnav li{
 		float: left;
-		width: 28.58%;
+		width: 35.58%;
 	}
 	.layout-left{
 		float: left;
@@ -168,6 +173,10 @@
 		min-height: 400px;
 		padding-top: 30px;
 	}
+	.nav-column-logo {
+     width: 50%; 
+	}
+
 }
 
 /* Portrait phones and smaller */
@@ -176,11 +185,11 @@
 		font-size: 19px;
 	}
 	.img-entry-horiz img{
-		width: 100% !important;
+		/*width: 100% !important;*/
 		height: 185px;
 	}
 	.img-entry-vert img{
-		width: 100% !important;
+		/*width: 100% !important;*/
 		height: 307px;
 	}
 	.section-header{
@@ -276,5 +285,62 @@
 		font-size: 15px;
 		width: 50% !important;
 		padding-top: 13px;
+	}
+	/*test*/
+	a.img-entry-vert .image:after {
+	    /*content:'\A';*/
+	    height: 307px;
+	    width: 205px;
+	    top:10px;
+	    left:5px;
+	    cursor: pointer;
+	    background:rgba(0, 0, 0, 0.36);
+	}
+	a.img-entry-horiz .image:after {
+	    content:'\A';
+        height: 185px;
+	    width: 277.5px;
+	    top:10px;
+	    left:5px;
+	    cursor: pointer;
+	    background:rgba(0, 0, 0, 0.36);
+	}
+	a.img-entry-horiz .image:before {
+	    content: attr(data-content);
+	    width:100px;
+	    color:#fff;
+	    z-index:1;
+	    font-size: 20px;
+	    top: 90px;
+	    left: 90px;
+	    margin: 0 auto;
+	    text-align:center;
+	    -moz-box-sizing:border-box;
+	}
+	a.img-entry-vert .image:before {
+	    content: attr(data-content);
+	    width:100px;
+	    color:#fff;
+	    z-index:1;
+	    font-size: 20px;
+	    top: 130px;
+	    left: 55px;
+	    text-align:center;
+	    -moz-box-sizing:border-box;
+	}
+	.image {
+	    position:relative;
+	    width:auto;
+	    height:auto;
+	    padding: 5px;
+	}
+	.image:after, .image:before {
+	    position:absolute;
+	    opacity:0;
+	    transition: all 0.5s;
+	    -webkit-transition: all 0.5s;
+	}
+	.image:hover:after, .image:hover:before {
+    	opacity:1;
 	}
 }
