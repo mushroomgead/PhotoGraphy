@@ -12,10 +12,10 @@
     <script src="../app/includes/script.js"></script>
     </head>
     <body>
-      <?php session_start(); 
+      <?php session_start();
       if(isset($_SESSION['UserData']['username'])){ ?>
         <div class="clearfix section-body">
-        <div>Login success</div>
+        Login success
         <a href="adminupload.php">
           <div class="clearfix block-index">
             UPLOAD
@@ -24,17 +24,16 @@
 
         <a href="../index.php">
           <div class="clearfix block-index">
-            GO TO HOME PAGE
+           GO TO HOME PAGE
           </div>
         </a>
-        
+
         <a href="logout.php">
           <div class="clearfix block-index">
-            Click to Logout
+          Click to Logout
           </div>
         </a>
-      <?php } else { 
-        // header('location:login.php'); 
+      <?php } else {
         require_once('login.php');
         } ?>
       </div>
