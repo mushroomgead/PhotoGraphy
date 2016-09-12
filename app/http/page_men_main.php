@@ -34,7 +34,7 @@
         </div>  
       </a>
 
-      <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?><&subpage=page_men_3">
+      <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_men_3">
         <div data-content="Folder 3" class="image pull-left">
           <img src="app/img/WEB/MEN/3/_MG_5694.jpg" />
         </div>
