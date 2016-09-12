@@ -27,7 +27,7 @@ session_start();
        <nav class="navbar-default">
           <div class="container-fluid"> 
            <div class="navbar-header">
-             <a class="navbar-brand" href="#"><?php echo $_SESSION['UserData']['username']; ?></a></div>
+             <a class="navbar-brand" href="index.php"><?php echo $_SESSION['UserData']['username']; ?></a></div>
                <ul class="nav navbar-nav pull-left">
                   <li class="pull-left"><a href="admin/adminupload.php">Upload</a></li>
                   <li class="pull-left"><a href="admin/logout.php">Logout</a></li>
@@ -60,9 +60,8 @@ session_start();
 
     </script>
 
-
       <div class="clearfix section-header" id="section-header">
-        <title> VV PHOTOGRAPHER </title>
+        <title> PHOTOGRAPHER </title>
 <!--         <div class="clearifx font-size-header layout-left">
           VV PHOTOGRAPHER
         </div> -->
@@ -122,7 +121,8 @@ session_start();
               break;
 
             default:
-              require_once('app/http/page_home.php');
+              // require_once('app/http/page_home.php');
+              require_once('app/http/service.php');
           }
           ?>
       </div>

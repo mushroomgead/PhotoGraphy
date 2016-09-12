@@ -15,8 +15,7 @@
     <?php
     function createdropdownlist(){
         $str = 
-        '
-        <div class="form-group" style="width:200px;padding-left:14px;">
+        '<div class="form-group" style="width:200px;padding-left:14px;">
         <label>select folder</label>
             <select name="path_name[]" class="form-control">
                         <option></option> 
@@ -54,7 +53,7 @@
                 <?php createdropdownlist(); ?>
             </div>
                 <input type="submit" class="btn" value="Upload Image" name="submit">
-                <input type="button" class="btn" value="Back" name="back">
+                <input type="button" class="btn" value="Back" name="back" onclick="history.go(-1)">
         </form>
     </div>
 </body>

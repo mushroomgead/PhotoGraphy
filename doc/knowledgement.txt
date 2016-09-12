@@ -2,3 +2,7 @@ bootstrap can use responsive images you can try it in below link ..
 http://getbootstrap.com/css/?#images
 Responsive utilities
 http://getbootstrap.com/css/#responsive-utilities
+MariaDB
+Applications/XAMPP/xamppfiles/bin/mysql -u root -p;
+MariaDB [(none)]>use photography;
+MariaDB [photography]> show columns in tphotos;
