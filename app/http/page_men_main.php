@@ -1,25 +1,24 @@
-<?php 
-  switch (isset($_GET['subpage']) ? $_GET['subpage'] : '') {
-
+<?php
+switch (isset($_GET['subpage']) ? $_GET['subpage'] : '') {
     case 'page_men_1':
-      require_once('page_men_1.php');
-      break;
-    
+        require_once 'page_men_1.php';
+        break;
+
     case 'page_men_2':
-      require_once('page_men_2.php');
-      break;   
+        require_once 'page_men_2.php';
+        break;
 
     case 'page_men_3':
-      require_once('page_men_3.php');
-      break;    
+        require_once 'page_men_3.php';
+        break;
 
     case 'page_men_4':
-      require_once('page_men_4.php');
-      break; 
+        require_once 'page_men_4.php';
+        break;
 
     case 'page_men_5':
-      require_once('page_men_5.php');
-      break; 
+        require_once 'page_men_5.php';
+        break;
 
     default: ?>
       <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_men_1">
@@ -31,7 +30,7 @@
       <a class="img-entry-vert sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_men_2">
         <div data-content="Folder 2" class="image pull-left">
           <img src="app/img/WEB/MEN/2/_N4A1421.jpg" />
-        </div>  
+        </div>
       </a>
 
       <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_men_3">
@@ -52,8 +51,8 @@
         </div>
       </a>
 
-  <?php
-      return false;
-      break;
-  }
-  ?>
+<?php
+  return false;
+  break;
+}
+?>

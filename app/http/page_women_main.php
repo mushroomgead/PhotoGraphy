@@ -1,45 +1,44 @@
-<?php 
-  switch (isset($_GET['subpage']) ? $_GET['subpage'] : '') {
-
+<?php
+switch (isset($_GET['subpage']) ? $_GET['subpage'] : '') {
     case 'page_women_1':
-      require_once('page_women_1.php');
-      break;
-    
+        require_once 'page_women_1.php';
+        break;
+
     case 'page_women_2':
-      require_once('page_women_2.php');
-      break;   
+        require_once 'page_women_2.php';
+        break;
 
     case 'page_women_3':
-      require_once('page_women_3.php');
-      break;    
+        require_once 'page_women_3.php';
+        break;
 
     case 'page_women_4':
-      require_once('page_women_4.php');
-      break; 
+        require_once 'page_women_4.php';
+        break;
 
     case 'page_women_5':
-      require_once('page_women_5.php');
-      break; 
+        require_once 'page_women_5.php';
+        break;
 
     case 'page_women_6':
-      require_once('page_women_6.php');
-      break; 
+        require_once 'page_women_6.php';
+        break;
 
     case 'page_women_7':
-      require_once('page_women_7.php');
-      break; 
+        require_once 'page_women_7.php';
+        break;
 
     case 'page_women_8':
-      require_once('page_women_8.php');
-      break;  
+        require_once 'page_women_8.php';
+        break;
 
     case 'page_women_9':
-      require_once('page_women_9.php');
-      break;
+        require_once 'page_women_9.php';
+        break;
 
     case 'page_women_10':
-      require_once('page_women_10.php');
-      break;
+        require_once 'page_women_10.php';
+        break;
 
     default: ?>
       <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_women_1">
@@ -51,7 +50,7 @@
       <a class="img-entry-horiz sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=page_women_2">
         <div data-content="Folder 2" class="image pull-left">
           <img src="app/img/WEB/WOMEN/2/_MG_3791.jpg" />
-        </div>  
+        </div>
       </a>
 
      <!-- <a class="img-entry-horiz  sub-img-folder" href="?page= --> <?php //echo $_GET['page'] ?><!--&subpage=page_women_3">
@@ -101,8 +100,8 @@
           <img src="app/img/WEB/WOMEN/10/_MG_2645.jpg" />
         </div>
       </a>
-  <?php
-      return false;
-      break;
-  }
-  ?>
+<?php
+  return false;
+  break;
+}
+?>
