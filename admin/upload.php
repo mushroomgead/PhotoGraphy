@@ -1,9 +1,10 @@
 <?php
 // print_r([$_POST]);die();
 $count_file = count($_FILES['fileToUpload']['name']);
+// echo $count_file;die();
 
 for ($i = 0; $i < $count_file; $i++) {
-    $file_path     = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/';
+    $file_path     = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
     $target_dir    = $file_path;
     $target_file   = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     $uploadOk      = 1;
