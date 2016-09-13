@@ -262,3 +262,13 @@ a.img-entry-vert .image:after {
 .ul li.nav-column{
 	width: 10%;
 }
+/*Login style*/
+.page-login{
+	padding: 20px;
+}
+.layout-login{
+	margin-bottom: 11px;
+}
+body #login{
+	background: #f5f5f5;
+}

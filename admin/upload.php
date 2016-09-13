@@ -1,4 +1,5 @@
 <?php
+// print_r([$_POST]);die();
 $count_file = count($_FILES['fileToUpload']['name']);
 
 for($i=0;$i<$count_file;$i++){
@@ -17,6 +18,10 @@ for($i=0;$i<$count_file;$i++){
             echo "File is not an image.</br>";
             $uploadOk = 0;
         }
+    }
+    // Check some field is null
+    if (isset($_POST['path_name'][$i])){
+        $checkField = 0;
     }
     // Check if file already exists
     if (file_exists($target_file)) {
@@ -45,5 +50,10 @@ for($i=0;$i<$count_file;$i++){
             echo "Sorry, there was an error uploading your file".$i.".</br>";
         }
     }
+    if($checkField == 0) {
+        echo "This field haven't img to upload";
+    }
 }
+// echo 'pass this line';
+header('location:adminupload.php');
 ?>

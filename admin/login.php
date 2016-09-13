@@ -1,17 +1,3 @@
-
-<!-- zone test css -->
-<style type="text/css">
-	.page-login{
-		padding: 20px;
-	}
-	.layout-login{
-		margin-bottom: 11px;
-	}
-	body {
-		background: #f5f5f5;
-	}
-</style>
-<!--  -->
 <body id="login">
 <div class="page-login">
 	<form action="" method="post" name="login_form">
@@ -19,7 +5,7 @@
 		<hr>
 		<div class="clearfix layout-login input-group">
 			<span class="input-group-addon"><i class="fa fa-user"></i></span>
-			<input type="text" class="form-control" name="username" id="text" placeholder="username">
+			<input type="text" class="form-control" name="username" id="username" placeholder="username">
 		</div>
 		<div class="clearfix layout-login input-group">
 			<span class="input-group-addon"><i class="fa fa-key"></i></span>
@@ -53,3 +39,8 @@ if(isset($_POST['submit'])){
 	}
 }
 ?>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById('username').focus();
+	}
+</script>

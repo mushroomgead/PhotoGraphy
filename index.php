@@ -76,7 +76,6 @@ session_start();
             <li class="clearfix nav-column pull-left"><a href="?page=personal">personal</a></li>
             <li class="clearfix nav-column pull-left"><a href="?page=etc">etc</a></li>
             <li class="clearfix nav-column pull-left"><a href="#">bio</a></li>
-            <!-- <li class="clearfix nav-column pull-left"><a href="#">contact</a></li> -->
             <li class="clearfix icon">
               <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()" id="icon-hambg">☰</a>
             </li>
@@ -99,15 +98,15 @@ session_start();
     <body>
       <div class="clearfix section-body font-size-body">
           <?php
-          switch(isset($_GET['page']) ? $_GET['page'] : ''){
-
-            case 'men' : require_once('app/http/page_men_main.php');
+          switch(isset($_GET['page']) ? $_GET['page'] : '')
+          {
+            case 'men'      : require_once('app/http/page_men_main.php');
               break;
 
-            case 'still' : require_once('app/http/page_still.php');
+            case 'still'    : require_once('app/http/page_still.php');
               break;
 
-            case 'women' : require_once('app/http/page_women_main.php');
+            case 'women'    : require_once('app/http/page_women_main.php');
               break;
 
             case 'portrait' : require_once('app/http/page_portrait.php');
@@ -116,12 +115,11 @@ session_start();
             case 'personal' : require_once('app/http/page_personal.php');
               break;
 
-            case 'etc' : require_once('app/http/page_etc.php');
+            case 'etc'      : require_once('app/http/page_etc.php');
               break;
 
             default:
               require_once('app/http/page_home.php');
-              // require_once('app/http/service.php');
           }
           ?>
       </div>
