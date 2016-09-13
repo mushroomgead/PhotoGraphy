@@ -1,0 +1,388 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clas",
+				"className"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 6068,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "au",
+		"selected_items":
+		[
+			[
+				"au",
+				"Toggle AutoSave: all files"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/img/WEB_",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes"
+	],
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/default.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/upload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/gulpfile.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/adminupload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_main.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/InformationAndBackup.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/responsive.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_main.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/logout.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_etc.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/test/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/responsiveSlider_doc.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_home.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/_layout/layout.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/knowledgement.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_6.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/favicon.ico",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_7.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_5.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_8.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_9.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_10.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_1.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"class=\"\"",
+			"_MG_7088",
+			">\n",
+			"<label>select folder</label>\n",
+			"horiz",
+			"WOMEN",
+			"page_women",
+			"page_women_1",
+			".img-entry-horiz img",
+			".img-entry-vert img",
+			"nav-column-logo",
+			"ul li.nav-column",
+			"nav-column",
+			"<<<<<<<",
+			"li.nav-column",
+			"nav-column-logo",
+			"av-column-logo",
+			"(max-width: 991px) and (min-width: 768px)",
+			"<?php create",
+			"login-txtbox",
+			"ul.topnav",
+			"ul.topnav.responsive",
+			"# code..",
+			"</option>",
+			"<option value=",
+			"<!--P",
+			"[$i]",
+			"[i]",
+			"name=\"fileToUploa",
+			"fileToUpload",
+			"tar",
+			"test1",
+			"ul li.nav-column",
+			"MenuTopNav",
+			"index-nav",
+			"menutop-nav",
+			"getMenuResp",
+			"hover",
+			"a",
+			"a {",
+			"rgba(0,0,0,.075)",
+			"background:rgba(0, 0, 0, 0.51);",
+			"img-entry-vert",
+			"img-entry-horiz",
+			"sub-img-folder",
+			"sub",
+			"sub-img-folder",
+			"mg-entry-horiz",
+			"100",
+			"hover",
+			"Joy2",
+			"Joy1",
+			"MEN/9/J",
+			"Joy2",
+			"NS3",
+			"NS1",
+			"MEN/8/",
+			"Duo3",
+			"Duo1",
+			"WOMEN/7/",
+			"JN1",
+			"_MG_2815",
+			"_MG_2782",
+			"_MG_2660",
+			"OMEN/6/_",
+			"N/5/_",
+			"MEN/5/",
+			"_MG_5206",
+			"_MG_5071",
+			"_MG_5017",
+			"_MG_5071",
+			"_MG_3885",
+			"_MG_2540",
+			"WOMEN/4/",
+			"/WOMEN/2/",
+			"_MG_3791",
+			"OMEN/1/",
+			"_MG_3791",
+			"_MG_5426",
+			"_MG_5393",
+			"_MG_5321",
+			"_MG_5283",
+			"_MG_5259",
+			"required_once",
+			"href=\"&subpa",
+			"?sub",
+			"?",
+			"page",
+			"?page=",
+			"page",
+			"women1",
+			"page_women_9",
+			"page_women_1",
+			"en_1",
+			"Different caption here...",
+			"image",
+			"<!-- <spa",
+			"200px",
+			".layout-subfolder",
+			"300",
+			"mg-entry-vert",
+			"sub-img-folder",
+			"body",
+			"500ms",
+			"SubFolder1",
+			"sub-img-folder sub-img-folder",
+			"mg-entry-vert",
+			"img-entry-horiz",
+			"_MG_2540",
+			"_MG_5426",
+			"_MG_5017",
+			"_MG_2660",
+			"Duo1",
+			"NS1",
+			"_MG_5426",
+			"_MG_5393",
+			"_MG_5321",
+			"_MG_3791",
+			"N/1",
+			"/7/",
+			"/1/",
+			"WOMEN/1/",
+			"WOMEN/1",
+			"WOMEN/1/_",
+			"_MG_5283",
+			"ul li.nav-column",
+			"nav-menu",
+			"menutop-nav"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1698,
+								1698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 335.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 212.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -6,3 +6,8 @@ http://getbootstrap.com/css/#responsive-utilities
 
 thumbnail-gallery
 https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/#
+=======
+MariaDB
+Applications/XAMPP/xamppfiles/bin/mysql -u root -p;
+MariaDB [(none)]>use photography;
+MariaDB [photography]> show columns in tphotos;
