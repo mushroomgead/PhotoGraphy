@@ -120,8 +120,8 @@ session_start();
               break;
 
             default:
-              // require_once('app/http/page_home.php');
-              require_once('app/http/service.php');
+              require_once('app/http/page_home.php');
+              // require_once('app/http/service.php');
           }
           ?>
       </div>

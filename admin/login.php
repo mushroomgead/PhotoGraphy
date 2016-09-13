@@ -43,8 +43,7 @@ if(isset($_POST['submit'])){
 	if(isset($logins[$username]) && $logins[$username] == $password){
 		// Success : Set session variable and redirect to Protected page
 		$_SESSION['UserData']['username'] = $logins[$username];
-		// header('location:../index.php');
-		require_once('index.php');
+		header('location:../index.php');
 		exit;
 	}
 	// Unsuccess : Set error msg
