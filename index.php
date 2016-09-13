@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 //require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
@@ -46,12 +46,16 @@ session_start();
 
     </script>
 
-    <?php 
+    <?php
     if(isset($_SESSION['UserData']['username'])){
       echo 'MODE:'.$_SESSION['UserData']['username']; ?>
       </br>
-      <a href="admin/index.php">admin</a></br>
-      <a href="admin/logout.php">Logout</a>
+      <div>
+        <a href="admin/index.php">admin</a>
+      </div>
+      <div>
+        <a href="admin/logout.php">Logout</a>
+      </div>
     <?php } ?>
 
       <div class="clearfix section-header" id="section-header">
@@ -61,7 +65,7 @@ session_start();
         </div> -->
 
         <ul class="clearfix font-size-body layout-right topnav" id="myTopnav">
-  
+
             <li class="nav-column-logo pull-left font-size-header ">VV PHOTOGRAPHER</li>
             <li class="clearfix nav-column pull-left"><a href="#">news</a></li>
             <li class="clearfix nav-column pull-left"><a href="?page=men">men</a></li>
@@ -71,7 +75,7 @@ session_start();
             <li class="clearfix nav-column pull-left"><a href="?page=personal">personal</a></li>
             <li class="clearfix nav-column pull-left"><a href="?page=etc">etc</a></li>
             <li class="clearfix nav-column pull-left"><a href="#">bio</a></li>
-            <li class="clearfix nav-column pull-left"><a href="#">contact</a></li>
+            <!-- <li class="clearfix nav-column pull-left"><a href="#">contact</a></li> -->
             <li class="clearfix icon">
               <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()" id="icon-hambg">☰</a>
             </li>
@@ -86,7 +90,7 @@ session_start();
           } else {
             x.className = 'topnav';
           }
-        }  
+        }
       </script>
 
     </head>

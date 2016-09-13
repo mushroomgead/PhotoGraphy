@@ -2,7 +2,6 @@
 <style type="text/css">
 	.page-login{
 		padding: 20px;
-		/*border:1px solid #000;*/
 	}
 	.layout-login{
 		margin-bottom: 11px;
@@ -17,10 +16,12 @@
 	<form action="" method="post" name="login_form">
 		<div class="head-login"><label><h3>Log in</h3></label></div>
 		<hr>
-		<div class="clearfix layout-login">
+		<div class="clearfix layout-login input-group">
+			<span class="input-group-addon"><i class="fa fa-user"></i></span>
 			<input type="text" class="form-control" name="username" id="text" placeholder="username">
 		</div>
-		<div class="clearfix layout-login">
+		<div class="clearfix layout-login input-group">
+			<span class="input-group-addon"><i class="fa fa-key"></i></span>
 			<input type="password" class="form-control" name="password" id="password" placeholder="password">
 		</div>
 		<div class="clearfix layout-btn">
@@ -41,7 +42,8 @@ if(isset($_POST['submit'])){
 	if(isset($logins[$username]) && $logins[$username] == $password){
 		// Success : Set session variable and redirect to Protected page
 		$_SESSION['UserData']['username'] = $logins[$username];
-		header('location:../index.php');
+		// header('location:../index.php');
+		require_once('index.php');
 		exit;
 	}
 	// Unsuccess : Set error msg

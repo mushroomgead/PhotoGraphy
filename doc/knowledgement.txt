@@ -1,4 +1,8 @@
 bootstrap can use responsive images you can try it in below link ..
 http://getbootstrap.com/css/?#images
+
 Responsive utilities
 http://getbootstrap.com/css/#responsive-utilities
+
+thumbnail-gallery
+https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/#
