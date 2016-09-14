@@ -11,3 +11,6 @@ MariaDB
 Applications/XAMPP/xamppfiles/bin/mysql -u root -p;
 MariaDB [(none)]>use photography;
 MariaDB [photography]> show columns in tphotos;
+--
+Scroll top
+http://jsfiddle.net/yeyene/J3zyq/3/
