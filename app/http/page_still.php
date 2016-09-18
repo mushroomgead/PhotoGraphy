@@ -5,7 +5,7 @@ $result = selectData($query);
 // print_r($result);die();
 foreach ($result as $key => $value) {
 
-  $file_path  = 'app/img/WEB_/'.$value['category'].'/'.$value['filename'];
+  $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['filename'];
   $btn_delete = '';
   $btn_submit = '';
 

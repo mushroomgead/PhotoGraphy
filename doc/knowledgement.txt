@@ -17,6 +17,9 @@ Applications/XAMPP/xamppfiles/bin/mysql -u gead -p
 Applications/XAMPP/xamppfiles/bin/mysql -u photography -p
 1234
 --
+dump_file
+Applications/XAMPP/xamppfiles/bin/mysqldump -u photography -p photography
+--
 MariaDB [(none)]>use photography;
 MariaDB [photography]> show columns in tphotos;
 =======
