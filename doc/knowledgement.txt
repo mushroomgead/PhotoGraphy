@@ -23,5 +23,14 @@ Applications/XAMPP/xamppfiles/bin/mysqldump -u photography -p photography
 MariaDB [(none)]>use photography;
 MariaDB [photography]> show columns in tphotos;
 =======
+Set permission in folders
+User: rwx (read, write and execute)
+Group: r-x (read and execute)
+Others: r-x (read and execute)
+:. r=4;w=2;x=1;
+ls -l
+chmod -R 777 <dirname>
+PS. -R mean recursive.
+--
 Scroll top
 http://jsfiddle.net/yeyene/J3zyq/3/
