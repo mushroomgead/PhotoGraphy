@@ -20,28 +20,28 @@ function createdropdownlist()
         <label>select folder</label>
             <select name="path_name[]" class="form-control">
                         <option></option>
-                        <optgroup label="men">men
-                            <option value="1" >1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <optgroup label="men" name="men">men
+                            <option name="men1" value="men1">1</option>
+                            <option name="men2" value="men2">2</option>
+                            <option name="men3" value="men3">3</option>
+                            <option name="men4" value="men4">4</option>
+                            <option name="men5" value="men5">5</option>
                         </optgroup>
-                        <option value="still">still</option>
-                        <optgroup label="women">women
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                        <option name="" value="still">still</option>
+                        <optgroup label="women" name="women">women
+                            <option name="women1" value="women1">1</option>
+                            <option name="women2" value="women2">2</option>
+                            <option name="women3" value="women3">3</option>
+                            <option name="women4" value="women4">4</option>
+                            <option name="women5" value="women5">5</option>
+                            <option name="women6" value="women6">6</option>
+                            <option name="women7" value="women7">7</option>
+                            <option name="women8" value="women8">8</option>
+                            <option name="women9" value="women9">9</option>
+                            <option name="women10" value="women10">10</option>
                         </optgroup>
-                        <option value="portrait">portrait</option>
-                        <option value="personal">personal</option>
+                        <option name="portrait" value="portrait">portrait</option>
+                        <option name="personal" value="personal">personal</option>
                     </select>
         </div>';
     echo $str;
@@ -52,11 +52,11 @@ function createdropdownlist()
         <?php $block = 2; // $block should be less then 20;
         for ($i = 1; $i <= $block; $i++) {?>
             <div class="block-upload">
+                <input type="text" name="caption" value=""/>
                 <input class="btn" type="file" name="fileToUpload[]" id="fileToUpload">
                 <?php createdropdownlist();?>
             </div>
             <?php }?>
-            <!-- <div id="block-upload">55555555555555555</div> -->
                 <input type="submit" class="btn" value="Upload Image" name="submit">
                 <input type="button" class="btn" value="Back" name="back" onclick="history.go(-1)">
                 <button type="button" class="btn btn-info" name='gead' value='gead' onclick="addBlockUpload()">

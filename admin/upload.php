@@ -1,7 +1,5 @@
 <?php
-// print_r([$_POST]);die();
 $count_file = count($_FILES['fileToUpload']['name']);
-// echo $count_file;die();
 
 for ($i = 0; $i < $count_file; $i++) {
     $file_path     = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
@@ -9,6 +7,11 @@ for ($i = 0; $i < $count_file; $i++) {
     $target_file   = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     $uploadOk      = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+    // set values for insert into database.
+    $category      = $_POST['path_name'][$i];
+    $subcatagory   = '';
+    $caption       = '';//$_POST['caption'][$i];
+    $filename      = $_FILES["fileToUpload"]["name"][$i];
 
     // Check if image file is a actual image or fake image
     if (isset($_POST["submit"])) {
@@ -50,6 +53,12 @@ for ($i = 0; $i < $count_file; $i++) {
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
             echo "The file " . $i . basename($_FILES["fileToUpload"]["name"][$i]) . " has been uploaded.</br>";
+            // hard code for insert values into database.
+            require_once('../app/database/conn_db.php');
+            $query = "INSERT INTO TPHOTOS (category, subcatagory, caption, filename)
+                      VALUES ('".$category."','".$subcatagory."','".$caption."','".$filename."')";
+            queryData($query);
+
         } else {
             echo "Sorry, there was an error uploading your file" . $i . ".</br>";
         }
@@ -59,4 +68,4 @@ for ($i = 0; $i < $count_file; $i++) {
     }
 }
 
-header('location:adminupload.php');
+// header('location:adminupload.php');

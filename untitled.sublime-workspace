@@ -12,11 +12,27 @@
 	"buffers":
 	[
 		{
-			"file": "index.php",
+			"file": "admin/upload.php",
 			"settings":
 			{
-				"buffer_size": 6068,
+				"buffer_size": 2714,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/database/conn_db.php",
+			"settings":
+			{
+				"buffer_size": 469,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/http/service.php",
+			"settings":
+			{
+				"buffer_size": 195,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -40,7 +56,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -64,19 +80,21 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/img/WEB_",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes"
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/database",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/img"
 	],
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/knowledgement.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/database/conn_db.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/adminupload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/default.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/login.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/upload.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/index.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/index.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/gulpfile.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/adminupload.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_main.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_3.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/InformationAndBackup.txt",
@@ -90,7 +108,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/responsiveSlider_doc.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_home.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/_layout/layout.txt",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/knowledgement.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/login.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_6.php",
@@ -122,6 +139,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'",
 			"class=\"\"",
 			"_MG_7088",
 			">\n",
@@ -248,8 +266,7 @@
 			"WOMEN/1/_",
 			"_MG_5283",
 			"ul li.nav-column",
-			"nav-menu",
-			"menutop-nav"
+			"nav-menu"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -272,32 +289,89 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.php",
+					"file": "admin/upload.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6068,
+						"buffer_size": 2714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1698,
-								1698
+								2436,
+								2436
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 335.0,
+						"translation.y": 487.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/database/conn_db.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/http/service.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

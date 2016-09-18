@@ -1,6 +1,6 @@
 <?php
 session_start();
-//require_once('app/database/conn_db.php'); ?>
+require_once('app/database/conn_db.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
