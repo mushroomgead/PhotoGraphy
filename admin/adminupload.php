@@ -45,23 +45,32 @@ function createdropdownlist()
                     </select>
         </div>';
     echo $str;
-}?>
+}
+if(isset($_SESSION['UserData']['username'])){
+?>
     <div class="container">
     <h3>Upload</h3>
         <form action="upload.php" method="post" enctype="multipart/form-data">
         <?php $block = 2; // $block should be less then 20;
         for ($i = 1; $i <= $block; $i++) {?>
             <div class="block-upload">
-                <input type="text" name="caption" value=""/>
+                <!-- <input type="text" name="caption" value=""/> -->
                 <input class="btn" type="file" name="fileToUpload[]" id="fileToUpload">
                 <?php createdropdownlist();?>
             </div>
             <?php }?>
                 <input type="submit" class="btn" value="Upload Image" name="submit">
                 <input type="button" class="btn" value="Back" name="back" onclick="history.go(-1)">
-                <button type="button" class="btn btn-info" name='gead' value='gead' onclick="addBlockUpload()">
+                <!-- <button type="button" class="btn btn-info" name='gead' value='gead' onclick="addBlockUpload()"> -->
         </form>
     </div>
+<?php   
+}else{
+    header('location:index.php');
+}
+?>
+
+
 <!-- javascript -->
 <script type="text/javascript">
 var clicks = 0;

@@ -12,26 +12,27 @@
 	"buffers":
 	[
 		{
-			"file": "admin/upload.php",
+			"contents": "when deleted reload windows and dont show confirm",
 			"settings":
 			{
-				"buffer_size": 2714,
+				"buffer_size": 49,
+				"line_ending": "Unix",
+				"name": "when deleted reload windows and dont show confirm"
+			}
+		},
+		{
+			"file": "app/http/page_men_main.php",
+			"settings":
+			{
+				"buffer_size": 1758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/database/conn_db.php",
+			"file": "app/http/page_men_1.php",
 			"settings":
 			{
-				"buffer_size": 469,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/http/service.php",
-			"settings":
-			{
-				"buffer_size": 195,
+				"buffer_size": 1695,
 				"line_ending": "Windows"
 			}
 		}
@@ -56,7 +57,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 485.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -81,46 +82,58 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/database",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/img"
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http"
 	],
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_5.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_etc.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/knowledgement.txt",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/sub_dropdownlist.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/BUG.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/IndexMyCss.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/database/sqldump.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_7.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_6.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_8.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_9.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_10.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_5.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_main.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_personal.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_portrait.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/InformationAndBackup.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/database/conn_db.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/adminupload.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/upload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/photography_notuse.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_still_bkk.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/service.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/default.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/login.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/upload.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/gulpfile.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_main.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_3.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/InformationAndBackup.txt",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_1.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/style.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/responsive.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_main.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/admin/logout.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_etc.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/test/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/responsiveSlider_doc.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_home.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/doc/_layout/layout.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/login.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/includes/index.html",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_6.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/favicon.ico",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_men_4.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_7.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_5.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_8.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_9.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_10.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_3.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_2.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/app/http/page_women_1.php"
+		"/Applications/XAMPP/xamppfiles/htdocs/PhotoGraphy/favicon.ico"
 	],
 	"find":
 	{
@@ -139,6 +152,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"VALUES",
+			"NA1",
+			"--",
+			"app/img/WEB/STILL/",
+			" />",
+			"<img src=\"app/img/WEB/STILL/",
+			" />",
+			"src=\"app/img/WEB/STILL",
+			"src=\"app/img/WEB/STILL/",
+			"result",
+			"[",
+			"value=\"",
+			"name=\"",
+			"]",
+			"[",
+			"value",
+			"value=",
 			"'",
 			"class=\"\"",
 			"_MG_7088",
@@ -249,24 +279,7 @@
 			"mg-entry-vert",
 			"img-entry-horiz",
 			"_MG_2540",
-			"_MG_5426",
-			"_MG_5017",
-			"_MG_2660",
-			"Duo1",
-			"NS1",
-			"_MG_5426",
-			"_MG_5393",
-			"_MG_5321",
-			"_MG_3791",
-			"N/1",
-			"/7/",
-			"/1/",
-			"WOMEN/1/",
-			"WOMEN/1",
-			"WOMEN/1/_",
-			"_MG_5283",
-			"ul li.nav-column",
-			"nav-menu"
+			"_MG_5426"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -274,6 +287,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\nINSERT INTO TPHOTOS (category, subcatagory, caption, filename)\n		     VALUES ('men','5','','P1.jpg');"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -284,59 +298,59 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "admin/upload.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2714,
+						"buffer_size": 49,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2436,
-								2436
+								13,
+								19
+							]
+						],
+						"settings":
+						{
+							"auto_name": "when deleted reload windows and dont show confirm",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/http/page_men_main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 487.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/database/conn_db.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 469,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								339,
-								339
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -347,31 +361,32 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/http/service.php",
+					"file": "app/http/page_men_1.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 195,
+						"buffer_size": 1695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								186,
-								186
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -454,7 +469,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 212.0,
+	"side_bar_width": 310.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

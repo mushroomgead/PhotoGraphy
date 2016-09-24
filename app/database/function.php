@@ -1,13 +1,12 @@
 <?php
-$query = "select * 
-            from tphotos
-           where category     = 'women'
-             and subcategory  = '8';";
+function genImageBlock($category, $subcategory){
+  $query = 'select * 
+            from tphotos 
+            where category = "'.$category.'"'.(isset($subcategory) ? 'and subcategory = "'.$subcategory.'"' : '');
 
-$result = selectData($query);
+  $result = selectData($query);
 
-foreach ($result as $key => $value) {
-
+  foreach ($result as $key => $value) {
   $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
   $btn_delete = '';
   $btn_submit = '';
@@ -40,15 +39,14 @@ foreach ($result as $key => $value) {
           echo 'file does not exists.';
       }
   }
-  ?>
-
-  <form method="post">
-    <?php echo $btn_submit; ?>
-    <div class="photo-list container" id="<?php echo $check; ?>">
-     <?php echo $btn_delete; ?>
-      <a class="img-entry-horiz" href="<?php echo $file_path; ?>">
-        <img src="<?php echo $file_path; ?>" />
-      </a>
-    </div>
-  </form>
-<?php } ?>
+  $str = "<form method='post'>".$btn_submit."
+			<div class='photo-list container' id=".$check.">".$btn_delete."
+			  <a class='img-entry-horiz' href=".$file_path.">
+			    <img src=".$file_path." />
+			  </a>
+			</div>
+		</form>";
+  echo $str;
+	}
+}
+?>

@@ -2,8 +2,7 @@
 $count_file = count($_FILES['fileToUpload']['name']);
 
 for ($i = 0; $i < $count_file; $i++) {
-    $file_path     = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
-    $target_dir    = $file_path;
+    $target_dir    = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
     $target_file   = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     $uploadOk      = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -67,5 +66,3 @@ for ($i = 0; $i < $count_file; $i++) {
         echo "This field haven't img to upload";
     }
 }
-
-// header('location:adminupload.php');

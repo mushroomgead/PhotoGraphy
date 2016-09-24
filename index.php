@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once('app/database/conn_db.php'); ?>
+require_once('app/database/conn_db.php');
+require_once('app/database/function.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,13 +101,13 @@ require_once('app/database/conn_db.php'); ?>
           <?php
           switch(isset($_GET['page']) ? $_GET['page'] : '')
           {
-            case 'men'      : require_once('app/http/page_men_main.php');
+            case 'men'      : require_once('app/http/page_men.php');
               break;
 
             case 'still'    : require_once('app/http/page_still.php');
               break;
 
-            case 'women'    : require_once('app/http/page_women_main.php');
+            case 'women'    : require_once('app/http/page_women.php');
               break;
 
             case 'portrait' : require_once('app/http/page_portrait.php');
