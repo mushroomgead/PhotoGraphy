@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username 	= "photography";
 $password 	= "1234";
@@ -14,6 +15,7 @@ mysqli_set_charset($conn, "utf8");
 
 function queryData($query){
 global $conn;
+print($query);
 	if(mysqli_query($conn, $query)){
 		echo 'had been updated.';
 	}else{

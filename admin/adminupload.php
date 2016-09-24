@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="../app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css">
 <body>
 <?php
+session_start();
 function createdropdownlist()
 {
     $str =

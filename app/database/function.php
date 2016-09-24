@@ -29,12 +29,7 @@ function genImageBlock($category, $subcategory){
       $filename = $_POST['filename'];
 
       if (file_exists($filepath)) {
-          unlink($filepath);
-          $query = "DELETE FROM tphotos
-                     WHERE category = '".$category."'
-                       AND filename = '".$filename."'";
-          queryData($query);
-          echo 'file has been deleted.';
+          deleteImage($filepath,$category,$filename);
       } else {
           echo 'file does not exists.';
       }
@@ -48,5 +43,14 @@ function genImageBlock($category, $subcategory){
 		</form>";
   echo $str;
 	}
+}
+
+function deleteImage($filepath,$category,$filename){
+  unlink($filepath);
+  $query = "DELETE FROM tphotos
+           WHERE category = '".$category."'
+             AND filename = '".$filename."'";
+  queryData($query);
+  echo 'file has been deleted.';
 }
 ?>

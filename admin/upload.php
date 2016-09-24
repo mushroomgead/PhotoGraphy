@@ -2,13 +2,13 @@
 $count_file = count($_FILES['fileToUpload']['name']);
 
 for ($i = 0; $i < $count_file; $i++) {
-    $target_dir    = '../app/img/WEB_/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
+    $target_dir    = '../app/img/WEB/' . strtoupper($_POST['path_name'][$i]) . '/'; //Hard code path, Dont forget to change.
     $target_file   = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     $uploadOk      = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
     // set values for insert into database.
     $category      = $_POST['path_name'][$i];
-    $subcatagory   = '';
+    $subcategory   = '';
     $caption       = '';//$_POST['caption'][$i];
     $filename      = $_FILES["fileToUpload"]["name"][$i];
 
@@ -54,8 +54,8 @@ for ($i = 0; $i < $count_file; $i++) {
             echo "The file " . $i . basename($_FILES["fileToUpload"]["name"][$i]) . " has been uploaded.</br>";
             // hard code for insert values into database.
             require_once('../app/database/conn_db.php');
-            $query = "INSERT INTO TPHOTOS (category, subcatagory, caption, filename)
-                      VALUES ('".$category."','".$subcatagory."','".$caption."','".$filename."')";
+            $query = "INSERT INTO TPHOTOS (category, subcategory, caption, filename)
+                      VALUES ('".$category."','".$subcategory."','".$caption."','".$filename."')";
             queryData($query);
 
         } else {
