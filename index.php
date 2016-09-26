@@ -1,4 +1,6 @@
 <?php
+if ((!isset($_SESSION)) ? session_start() : '');
+
 require_once('app/database/conn_db.php');
 require_once('app/database/function.php'); ?>
 <!DOCTYPE html>
@@ -7,6 +9,7 @@ require_once('app/database/function.php'); ?>
     <?php
     require_once('library.php');
     require_once('default.js');
+
     if(isset($_SESSION['UserData']['username'])){ ?>
        <nav class="navbar-default">
           <div class="container-fluid">

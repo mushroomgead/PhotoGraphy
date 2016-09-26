@@ -13,7 +13,8 @@
 <link rel="stylesheet" type="text/css" href="../app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css">
 <body>
 <?php
-session_start();
+// session_start();
+if ((!isset($_SESSION)) ? session_start() : '');
 function createdropdownlist()
 {
     $str =
@@ -65,7 +66,7 @@ if(isset($_SESSION['UserData']['username'])){
                 <!-- <button type="button" class="btn btn-info" name='gead' value='gead' onclick="addBlockUpload()"> -->
         </form>
     </div>
-<?php   
+<?php
 }else{
     header('location:index.php');
 }

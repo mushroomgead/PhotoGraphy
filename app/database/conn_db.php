@@ -1,9 +1,8 @@
 <?php
-session_start();
 $servername = "localhost";
-$username 	= "photography";
-$password 	= "1234";
-$dbname 	= "photography";
+$username 	= 'root';//"photography";
+$password 	= "password";
+$dbname 	= 'test1';//"photography";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -15,7 +14,6 @@ mysqli_set_charset($conn, "utf8");
 
 function queryData($query){
 global $conn;
-print($query);
 	if(mysqli_query($conn, $query)){
 		echo 'had been updated.';
 	}else{
@@ -35,5 +33,4 @@ $rownum = mysqli_num_rows($result);
 		return $data;
 	}
 }
-
 // mysqli_close($conn);
