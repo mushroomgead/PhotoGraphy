@@ -9,7 +9,6 @@ require_once('app/database/function.php'); ?>
     <?php
     require_once('library.php');
     require_once('default.js');
-
     if(isset($_SESSION['UserData']['username'])){ ?>
        <nav class="navbar-default">
           <div class="container-fluid">
@@ -28,14 +27,14 @@ require_once('app/database/function.php'); ?>
         <title> PHOTOGRAPHER </title>
         <ul class="clearfix font-size-body layout-right topnav" id="myTopnav">
             <li class="nav-column-logo pull-left font-size-header ">VV PHOTOGRAPHER</li>
-            <li class="clearfix nav-column pull-left"><a href="#">news</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=men">men</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=still">still</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=women">women</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=portrait">portrait</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=personal">personal</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=etc">etc</a></li>
-            <li class="clearfix nav-column pull-left"><a href="#">bio</a></li>
+            <li class="clearfix nav-column pull-left"><a href="#" id="#" >news</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=men" id="men">men</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=still" id="still">still</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=women" id="women">women</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=portrait" id="portrait">portrait</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=personal" id="personal">personal</a></li>
+            <li class="clearfix nav-column pull-left"><a href="?page=etc" id="etc">etc</a></li>
+            <li class="clearfix nav-column pull-left"><a href="#" id="bio">bio</a></li>
             <li class="clearfix icon">
               <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()" id="icon-hambg">☰</a>
             </li>

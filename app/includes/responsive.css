@@ -2,7 +2,7 @@
 @media (min-width: 1200px) {
 	ul li.nav-column {
 		float: left;
-		width: 10%;
+		width: 11.5%;
 		text-align: center;
 	}
 }
@@ -260,8 +260,8 @@
 	}
 	ul.topnav.responsive li.icon{
 		position: absolute;
-		right: 0;
-		top: 0;
+		/*right: -3px;*/
+		top: 14px;
 	}
 	ul.topnav.responsive li {
 		float: left;
@@ -271,7 +271,7 @@
 		display: block;
 		text-align: left;
 		/*text-align: center;*/
-		padding: 5px 17px;
+		padding: 0px 17px;
 	}
 	#text-footer{
 		display: none;
@@ -282,7 +282,7 @@
 	.nav-column-logo{
 		display: block;
 		text-align: center;
-		font-size: 15px;
+		font-size: 13px;
 		width: 50% !important;
 		padding-top: 13px;
 	}

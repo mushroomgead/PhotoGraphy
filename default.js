@@ -1,5 +1,6 @@
-<script type="text/javascript">
+<script type='text/javascript'>
   $(document).ready(function() {
+    $('a#<?php echo $_GET['page']; ?>').addClass("active-page");
     $('#aniimated-thumbnials').lightGallery({
         thumbnail:true,
         download:false,
@@ -8,11 +9,10 @@
   });
 
   function myFunction() {
-    var x = document.getElementById('myTopnav');
-    if (x.className === 'topnav'){
-        x.className += ' responsive';
-    } else {
-      x.className = 'topnav';
+    if($('#myTopnav').hasClass('responsive')){
+      $("#myTopnav").removeClass("responsive");
+    }else{
+      $("#myTopnav").addClass("responsive");
     }
   }
 </script>

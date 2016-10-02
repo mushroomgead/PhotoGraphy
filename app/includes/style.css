@@ -33,7 +33,8 @@
 }
 /*-- Font*/
 .font-style{
-	font-family: "Lucida Console", Monaco, monospace;
+	/*font-family: "Lucida Console", Monaco, monospace;*/
+	font-family: lato,sans-serif;
 }
 .font-size-header{
 	font-size:34px;
@@ -41,6 +42,7 @@
 
 .font-size-body{
 	font-size:16px;
+	letter-spacing: 2px;
 }
 
 /*-- Sticky*/
@@ -115,17 +117,13 @@ ul.topnav li.icon {display: none;}
 ul li.nav-column:hover{
 	color: #000;
 	font-weight: bold;
-	/*border-bottom: 1px solid #000;*/
-	/*background: #000000;*/
 	text-decoration: none;
 	color: #000;
 }
+
 ul.topnav li a:hover{
 	color: #000 !important;
 	text-decoration: none;
-}
-li .nav-column :active {
-	color: #ffffff;
 }
 
 /*- Hamberger Menu*/
@@ -268,6 +266,10 @@ a.img-entry-vert .image:after {
 }
 .layout-login{
 	margin-bottom: 11px;
+}
+.active-page{
+	font-weight: bold;
+	text-transform: uppercase;
 }
 body #login{
 	background: #f5f5f5;
