@@ -37,11 +37,11 @@
 	font-family: lato,sans-serif;
 }
 .font-size-header{
-	font-size:34px;
+	font-size:17px;
 }
 
 .font-size-body{
-	font-size:16px;
+	font-size:10px;
 	letter-spacing: 2px;
 }
 
@@ -95,9 +95,9 @@ ul.topnav li a{
 	/*height: 100%;*/
 	/*width: 100%;*/
 	padding: 14px 16px;
-  text-decoration: none;
-  transition: 0.3s;
-  /*font-size: 17px;*/
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 14px;
 }
 li .nav-column{
 	width: 11%;
@@ -268,8 +268,9 @@ a.img-entry-vert .image:after {
 	margin-bottom: 11px;
 }
 .active-page{
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-transform: uppercase;
+	/*text-decoration: underline;*/
 }
 body #login{
 	background: #f5f5f5;

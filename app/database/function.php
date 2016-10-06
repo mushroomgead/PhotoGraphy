@@ -12,7 +12,7 @@ function genImageBlock($category, $subcategory){
 
   if (isset($_SESSION['UserData']['username'])) {
     $check = '';
-    $btn_submit = '<input type="submit" value="Delete img"/>';
+    $btn_submit = '<div class=""><input type="submit" value="Delete img"/>';
 
     if (array_key_exists('delete_file', $_POST)) {
       $filepath = $_POST['delete_file'];
@@ -24,10 +24,8 @@ function genImageBlock($category, $subcategory){
   } else {
     $check = 'aniimated-thumbnials';
   }
-
   echo "  <form method='post'>".$btn_submit."
   <div class='photo-list container' id=".$check.">";
-
 
     foreach ($result as $key => $value) {
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
@@ -35,18 +33,14 @@ function genImageBlock($category, $subcategory){
       if (isset($_SESSION['UserData']['username'])) {
         $btn_delete = '<label class="checkbox-inline"><input type="checkbox" name="delete_file" value="' . $file_path . '">
         <input type="hidden" name="category" value="'.$value['category'].'">
-        <input type="hidden" name="filename" value="'.$value['filename'].'"></label>
-        ';
+        <input type="hidden" name="filename" value="'.$value['filename'].'"></label>';
       }
-
-
-
       $str =  $btn_delete."<a class='img-entry-horiz' href=".$file_path.">
       <img src=".$file_path." />
     </a>";
     echo $str;
   }
-  echo "</div>
+  echo "</div></div>
 </form>";
 }
 

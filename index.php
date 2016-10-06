@@ -8,7 +8,8 @@ require_once('app/database/function.php'); ?>
   <head>
     <?php
     require_once('library.php');
-    require_once('default.js');
+    require_once('default.js.php');
+    
     if(isset($_SESSION['UserData']['username'])){ ?>
        <nav class="navbar-default">
           <div class="container-fluid">
@@ -26,22 +27,21 @@ require_once('app/database/function.php'); ?>
       <div class="clearfix section-header" id="section-header">
         <title> PHOTOGRAPHER </title>
         <ul class="clearfix font-size-body layout-right topnav" id="myTopnav">
-            <li class="nav-column-logo pull-left font-size-header ">VV PHOTOGRAPHER</li>
-            <li class="clearfix nav-column pull-left"><a href="#" id="#" >news</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=men" id="men">men</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=still" id="still">still</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=women" id="women">women</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=portrait" id="portrait">portrait</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=personal" id="personal">personal</a></li>
-            <li class="clearfix nav-column pull-left"><a href="?page=etc" id="etc">etc</a></li>
-            <li class="clearfix nav-column pull-left"><a href="#" id="bio">bio</a></li>
+            <li class="pull-left font-size-header"><a href="./">VV PHOTOGRAPHER</a></li>
+            <li class="clearfix nav-column pull-right"><a href="#" id="bio">bio</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=etc" id="etc">etc</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=personal" id="personal">personal</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=portrait" id="portrait">portrait</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=women" id="women">women</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=still" id="still">still</a></li>
+            <li class="clearfix nav-column pull-right"><a href="?page=men" id="men">men</a></li>
+            <li class="clearfix nav-column pull-right"><a href="#" id="#" >news</a></li>
             <li class="clearfix icon">
               <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()" id="icon-hambg">☰</a>
             </li>
         </ul>
       </div>
     </head>
-
     <body>
       <div class="clearfix section-body font-size-body">
           <?php

@@ -5,7 +5,3 @@ When deleted redirect windows make sure dont have show confirm.
 Sub dropdown menu.
 Couldn't upload sub-folder.
 Change ui and improve ux in sub folder page.
-- admin mode
-Check privilage before redirect to these page.
-|-> upload
-|-> delete

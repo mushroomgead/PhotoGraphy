@@ -11,6 +11,7 @@
     }
 </style>
 <link rel="stylesheet" type="text/css" href="../app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
 <body>
 <?php
 // session_start();
@@ -53,7 +54,7 @@ if(isset($_SESSION['UserData']['username'])){
     <div class="container">
     <h3>Upload</h3>
         <form action="upload.php" method="post" enctype="multipart/form-data">
-        <?php $block = 2; // $block should be less then 20;
+        <?php $block = 4; // $block should be less then 20;
         for ($i = 1; $i <= $block; $i++) {?>
             <div class="block-upload">
                 <!-- <input type="text" name="caption" value=""/> -->
@@ -63,7 +64,7 @@ if(isset($_SESSION['UserData']['username'])){
             <?php }?>
                 <input type="submit" class="btn" value="Upload Image" name="submit">
                 <input type="button" class="btn" value="Back" name="back" onclick="history.go(-1)">
-                <!-- <button type="button" class="btn btn-info" name='gead' value='gead' onclick="addBlockUpload()"> -->
+                <!-- <div class="" onclick="addBlockUpload()"><i class="fa fa-plus"></i></div> -->
         </form>
     </div>
 <?php
@@ -78,9 +79,8 @@ if(isset($_SESSION['UserData']['username'])){
 var clicks = 0;
 function addBlockUpload(){
     clicks += 1;
-    console.log(clicks);
-
     var a = document.getElementById("block-upload");
+    console.log(a);
     a.value = clicks;
 }
 </script>
