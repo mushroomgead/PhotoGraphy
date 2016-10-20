@@ -9,7 +9,7 @@ require_once('app/database/function.php'); ?>
     <?php
     require_once('library.php');
     require_once('default.js.php');
-    
+
     if(isset($_SESSION['UserData']['username'])){ ?>
        <nav class="navbar-default">
           <div class="container-fluid">
