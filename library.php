@@ -1,10 +1,7 @@
 <link rel="icon" type="image/png" href="favicon.png" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="app/includes/style.css">
 <!-- Section include -->
 <script src="app/includes/jquery.min.js"></script>
-<!-- <link rel="stylesheet" type="text/css" href="app/includes/bootstrap-3.3.6-dist/css/bootstrap.min.css"> -->
-<!-- <script src="app/includes/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link type="text/css" rel="stylesheet" href="app/includes/responsive.css">

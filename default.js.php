@@ -1,16 +1,49 @@
 <script type='text/javascript'>
   $(window).load(function(){
-    $('#loader').delay(500).fadeOut(150);
-  })
+    $('#loader').delay(50).fadeOut(150);
+  });
+  
   $(document).ready(function() {
+      
 
-    $('a#<?php echo isset($_GET['page'])? $_GET['page'] : '99'; ?>').addClass("active-page");
-    $('#aniimated-thumbnials').lightGallery({
-        thumbnail:true,
-        download:false,
-        showThumbByDefault: false
+      $('a#<?php echo isset($_GET['page'])? $_GET['page'] : '99'; ?>').addClass("active-page");
+      $('#aniimated-thumbnials').lightGallery({
+          thumbnail:true,
+          download:false,
+          showThumbByDefault: false
+      });
+
+      var $grid = $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 200
+      });
+
+<?php
+if (isset($_SESSION['UserData']['username'])) {
+?>
+
+      $grid.on('click','.grid-item',function(event){
+        
+        event.preventDefault()
+        // remove clicked element
+        $grid.masonry( 'remove', this )
+        // layout remaining item elements
+        .masonry('layout');
+        
+      })
+
+<?php
+}
+?>
+    $(window).on('load',function() {
+
+      $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 200
+      });
     });
-
   });
 
   // $(window).scroll(function() {
@@ -23,7 +56,7 @@
   //   }
   // });
   
-  function myFunction() {
+  function HambergerMenu() {
     if($('#myTopnav').hasClass('responsive')){
       $("#myTopnav").removeClass("responsive");
     }else{

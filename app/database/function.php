@@ -1,7 +1,7 @@
 <?php
 function genImageBlock($category, $subcategory){
   $btn_delete = '';
-  $btn_submit = '';
+  // $btn_submit = '';
   $str = ''; 
 
   $query = 'select * 
@@ -12,7 +12,7 @@ function genImageBlock($category, $subcategory){
 
   if (isset($_SESSION['UserData']['username'])) {
     $check = '';
-    $btn_submit = '<div class=""><input type="submit" value="Delete img"/>';
+    // $btn_submit = '<div class=""><input type="submit" value="Delete img"/>';
 
     if (array_key_exists('delete_file', $_POST)) {
       $filepath = $_POST['delete_file'];
@@ -24,24 +24,28 @@ function genImageBlock($category, $subcategory){
   } else {
     $check = 'aniimated-thumbnials';
   }
-  echo "  <form method='post'>".$btn_submit."
-  <div class='photo-list container' id=".$check.">";
+  echo "<div class='photo-list grid container' id='".$check."' data-masonry='{ \"itemSelector\": \"a .grid-item\", \"columnWidth\": 200 }'>";
 
     foreach ($result as $key => $value) {
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
 
       if (isset($_SESSION['UserData']['username'])) {
-        $btn_delete = '<label class="checkbox-inline"><input type="checkbox" name="delete_file" value="' . $file_path . '">
-        <input type="hidden" name="category" value="'.$value['category'].'">
-        <input type="hidden" name="filename" value="'.$value['filename'].'"></label>';
+        $btn_delete = 
+        '   <button id="deleteItem">
+            <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
+            <input type="hidden" name="category" id="category" value="'.$value['category'].'">
+            <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">
+            </button>';
       }
-      $str =  $btn_delete."<a class='img-entry-horiz' href=".$file_path.">
-      <img src=".$file_path." />
-    </a>";
+      $str =  "
+      <a href=".$file_path.">
+        <div class='grid-item'>
+          <img src=".$file_path." />
+        </div>
+      </a>";
     echo $str;
   }
-  echo "</div></div>
-</form>";
+  echo "</div>";
 }
 
 function checktodelete($filepath,$category,$filename){
@@ -58,3 +62,23 @@ function checktodelete($filepath,$category,$filename){
 }
 
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#deleteItem').click(function () {
+        if (confirm('Are you sure you want to delete this?')) {
+
+          $.ajax({
+              method:'POST',
+              data:{
+                  filepath :  $('#filepath').val()
+              },
+              success: function(){
+                  alert('3333');
+              }
+          });
+      }
+      alert('BYE');
+  });
+});
+
+</script>

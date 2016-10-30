@@ -1,5 +1,17 @@
-/*-Page Style Index*/
-/*-- Section*/
+/* 
+	Table of Contents
+	update on Sat Oct 29 2016 7:43PM.
+	I. General
+	II.
+	III. 
+
+*/
+
+
+/*--------------------------------------------------------*\
+
+/*--------------------------------------------------------*/
+
 .section-nav{
 	border-bottom:1px solid #000000;
 	margin-bottom: 17px !important;
@@ -33,7 +45,6 @@
 }
 /*-- Font*/
 .font-style{
-	/*font-family: "Lucida Console", Monaco, monospace;*/
 	font-family: lato,sans-serif;
 }
 .font-size-header{
@@ -76,18 +87,14 @@ ul.topnav {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	/*background-color: #333;*/
 }
 ul.topnav li{
 	float: left;
-	/*width: 9.58%;*/
 }
 ul.topnav li a{
 	display: inline-block;
 	color: #000000;
 	text-align: center;
-	/*height: 100%;*/
-	/*width: 100%;*/
 	padding: 14px 16px;
 	text-decoration: none;
 	transition: 0.3s;
@@ -102,11 +109,6 @@ li .nav-column.sticky{
 	width: 11%;
 	text-align: center;
 }
-
-/*ul.topnav li.icon{
-	display: none;
-	float: left;
-}*/
 ul.topnav li.icon {display: none;}
 ul li.nav-column:hover{
 	color: #000;
@@ -121,13 +123,6 @@ ul.topnav li a:hover{
 }
 
 /*- Hamberger Menu*/
-/*.menutop-nav{
-	width:125px;
-}
-.index-nav{
-	margin-left: 250px;
-	background:rgba(0,0,0,0.4);
-}*/
 
 /*- Page Style Detail*/
 .photo-list{
@@ -149,11 +144,9 @@ ul.topnav li a:hover{
 }
 
 /*Admin Login*/
-
 .page-login{
 	width: 300px;
 	margin: 0 auto;
-	/*border: 1px solid #000000;*/
 }
 .head-login{
 	padding: 16px 16px 0 16px;
@@ -174,7 +167,7 @@ ul.topnav li a:hover{
 	padding-bottom: 15px;
 }
 body {
-	/*background-color: #333 !important;*/
+
 }
 /*- Style Plugin*/
 /*-- Gellery silder*/
@@ -200,7 +193,6 @@ li {
     width:auto;
     height:auto;
     padding: 5px;
-    /*border: 1px solid #000;*/
 }
 .image:after, .image:before {
     position:absolute;
@@ -240,7 +232,6 @@ a.img-entry-vert .image:after {
     opacity:1;
 }
 .img-entry-vert, .img-entry-horiz{
-	/*margin: 15px;*/
 }
 /**/
 .block-index{
@@ -262,22 +253,21 @@ a.img-entry-vert .image:after {
 	margin-bottom: 11px;
 }
 .active-page{
-	/*font-weight: bold;*/
 	text-transform: uppercase;
-	/*text-decoration: underline;*/
 }
 body #login{
 	background: #f5f5f5;
 }
+
 /*loader*/
 #loader{
-	position: absolute;
+	position: fixed;
 	width:100%;
 	height: 100%;
 	background: #ffffff;
 	z-index: 9999;
+	overflow: hidden;
 }
-
 .cssload-spinner {
     position: absolute;
     width: 33px;
@@ -402,3 +392,6 @@ body #login{
 		-moz-transform: rotate(-360deg);
 	}
 }
+/*grid*/ 
+.grid-item, .grid-item img{ width: 200px; }
+.grid-item--width2, .grid-item--width2 img{ width: 400px; }
