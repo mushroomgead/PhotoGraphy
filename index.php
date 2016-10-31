@@ -32,9 +32,6 @@
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');
-
-        if ((!isset($_SESSION)) ? session_start() : '');
-
         require_once('default.js.php');
     ?>
     </head>

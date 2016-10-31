@@ -4,6 +4,7 @@ $username 	= "photography";
 $password 	= "1234";
 $dbname 	= "photography";
 
+if ((!isset($_SESSION)) ? session_start() : '');
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if (!$conn) {

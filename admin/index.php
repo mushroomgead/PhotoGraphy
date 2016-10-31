@@ -10,7 +10,6 @@
     <meta name="author" content="mushroomgead" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link type="text/css" rel="stylesheet" href="../app/includes/style.css">
-
     <!-- Section include -->
     <script src="../app/includes/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -31,7 +30,7 @@
     <body>
       <div class="clearfix container font-style">
       <?php
-      session_start();
+      require_once('../app/database/conn_db.php');
       if (isset($_SESSION['UserData']['username'])) {
           header('location:../index.php');
       } else {
