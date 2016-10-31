@@ -9,8 +9,8 @@
       <script src="https://use.fontawesome.com/a3968c3586.js"></script>
       <script src="../app/includes/script.js"></script>
     </head>
-    <div class="clearfix container font-style">
     <body>
+      <div class="clearfix container font-style">
       <?php
       session_start();
       if (isset($_SESSION['UserData']['username'])) {
@@ -18,6 +18,6 @@
       } else {
           require_once 'login.php';
       }?>
+      </div>
     </body>
-  </div>
 </html>

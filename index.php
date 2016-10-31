@@ -28,19 +28,22 @@
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
-    <?php 
+    <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');
 
-        if ((!isset($_SESSION)) ? session_start() : ''); 
-        
-        require_once('default.js.php'); 
+        if ((!isset($_SESSION)) ? session_start() : '');
+
+        require_once('default.js.php');
     ?>
     </head>
     <body>
         <div id="loader">
             <div class="cssload-spinner"></div>
         </div>
+        <!-- BackToTop Button -->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+        <!-- End of BackToTop Button -->
         <?php if(isset($_SESSION['UserData']['username'])){ ?>
             <nav class="navbar-default">
                 <div class="container-fluid">
@@ -85,27 +88,27 @@
                 <div class="clearfix section-body font-size-body" id="page_index">
                     <?php
                         switch(isset($_GET['page']) ? $_GET['page'] : '') {
-                            case 'men'      : 
-                                require_once('app/http/page_men.php'); 
+                            case 'men'      :
+                                require_once('app/http/page_men.php');
                                 break;
 
-                            case 'still'    : 
+                            case 'still'    :
                                 require_once('app/http/page_still.php');
                                 break;
 
-                            case 'women'    : 
+                            case 'women'    :
                                 require_once('app/http/page_women.php');
                                 break;
 
-                            case 'portrait' : 
+                            case 'portrait' :
                                 require_once('app/http/page_portrait.php');
                                 break;
 
-                            case 'personal' : 
+                            case 'personal' :
                                 require_once('app/http/page_personal.php');
                                 break;
 
-                            case 'etc'      : 
+                            case 'etc'      :
                                 require_once('app/http/page_etc.php');
                                 break;
 

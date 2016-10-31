@@ -72,18 +72,5 @@ if(isset($_SESSION['UserData']['username'])){
     header('location:index.php');
 }
 ?>
-
-
-<!-- javascript -->
-<script type="text/javascript">
-var clicks = 0;
-function addBlockUpload(){
-    clicks += 1;
-    var a = document.getElementById("block-upload");
-    console.log(a);
-    a.value = clicks;
-}
-</script>
-
 </body>
 </html>

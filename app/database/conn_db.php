@@ -25,7 +25,6 @@ function selectData($query){
 global $conn;
 $result = mysqli_query($conn, $query);
 $rownum = mysqli_num_rows($result);
-
 	if($rownum >0){
 		while($row = mysqli_fetch_assoc($result)){
 			$data[] = $row;

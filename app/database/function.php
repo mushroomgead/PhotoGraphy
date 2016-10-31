@@ -2,17 +2,15 @@
 function genImageBlock($category, $subcategory){
   $btn_delete = '';
   // $btn_submit = '';
-  $str = ''; 
+  $str = '';
 
-  $query = 'select * 
-  from tphotos 
+  $query = 'select *
+  from tphotos
   where category = "'.$category.'"'.(isset($subcategory) ? 'and subcategory = "'.$subcategory.'"' : '');
-
   $result = selectData($query);
 
   if (isset($_SESSION['UserData']['username'])) {
     $check = '';
-    // $btn_submit = '<div class=""><input type="submit" value="Delete img"/>';
 
     if (array_key_exists('delete_file', $_POST)) {
       $filepath = $_POST['delete_file'];
@@ -30,13 +28,14 @@ function genImageBlock($category, $subcategory){
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
 
       if (isset($_SESSION['UserData']['username'])) {
-        $btn_delete = 
+        $btn_delete =
         '   <button id="deleteItem">
             <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
             <input type="hidden" name="category" id="category" value="'.$value['category'].'">
             <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">
             </button>';
       }
+
       $str =  "
       <a href=".$file_path.">
         <div class='grid-item'>
