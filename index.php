@@ -14,7 +14,8 @@
     <!-- Section include -->
     <script src="app/includes/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
     <link type="text/css" rel="stylesheet" href="app/includes/responsive.css">
     <!-- <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css"> -->
     <script src="https://use.fontawesome.com/a3968c3586.js"></script>
@@ -38,24 +39,24 @@
     ?>
     </head>
     <body>
-        <div id="loader">
-            <div class="cssload-spinner"></div>
-        </div>
         <!-- BackToTop Button -->
-        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+        <a href="#" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
         <!-- End of BackToTop Button -->
         <?php if(isset($_SESSION['UserData']['username'])){ ?>
             <nav class="navbar-default">
                 <div class="container-fluid">
                 <div class="navbar-header"><a class="navbar-brand" href="index.php"><?php echo $_SESSION['UserData']['username']; ?></a></div>
                     <ul class="nav navbar-nav pull-left">
-                        <li class="pull-left"><a href="admin/adminupload.php">Upload</a></li>
-                        <li class="pull-left"><a href="admin/logout.php">Logout</a></li>
+                        <li class="pull-left">
+                            <a href="?page=adminupload" id="adminupload">Upload</a>
+                        </li>
+                        <li class="pull-left">
+                            <a href="admin/logout.php">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         <?php } ?>
-        <main>
             <div class="clearfix container font-style font-size-body">
                 <nav class="clearfix section-header" id="section-header">
                     <ul class="clearfix font-size-body layout-right topnav" id="myTopnav">
@@ -85,40 +86,48 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="clearfix section-body font-size-body" id="page_index">
-                    <?php
-                        switch(isset($_GET['page']) ? $_GET['page'] : '') {
-                            case 'men'      :
-                                require_once('app/http/page_men.php');
-                                break;
+                <main>
+                    <div class="clearfix section-body font-size-body" id="page_index">        
+                        <div id="loader">
+                            <div class="cssload-spinner"></div>
+                        </div>
+                        <?php
+                            switch(isset($_GET['page']) ? $_GET['page'] : '') {
+                                case 'men'      :
+                                    require_once('app/http/page_men.php');
+                                    break;
 
-                            case 'still'    :
-                                require_once('app/http/page_still.php');
-                                break;
+                                case 'still'    :
+                                    require_once('app/http/page_still.php');
+                                    break;
 
-                            case 'women'    :
-                                require_once('app/http/page_women.php');
-                                break;
+                                case 'women'    :
+                                    require_once('app/http/page_women.php');
+                                    break;
 
-                            case 'portrait' :
-                                require_once('app/http/page_portrait.php');
-                                break;
+                                case 'portrait' :
+                                    require_once('app/http/page_portrait.php');
+                                    break;
 
-                            case 'personal' :
-                                require_once('app/http/page_personal.php');
-                                break;
+                                case 'personal' :
+                                    require_once('app/http/page_personal.php');
+                                    break;
 
-                            case 'etc'      :
-                                require_once('app/http/page_etc.php');
-                                break;
+                                case 'etc'      :
+                                    require_once('app/http/page_etc.php');
+                                    break;
 
-                            default:
-                            require_once('app/http/page_home.php');
-                        }
-                    ?>
-                </div>
+                                case 'adminupload':
+                                    require_once('admin/adminupload.php');
+                                    break;
+
+                                default:
+                                require_once('app/http/page_home.php');
+                            }
+                        ?>
+                    </div>
+                </main>
             </div>
-        </main>
         <?php require_once('footer.php'); ?>
     </body>
 </html>

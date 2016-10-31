@@ -1,7 +1,6 @@
 <?php
 function genImageBlock($category, $subcategory){
   $btn_delete = '';
-  // $btn_submit = '';
   $str = '';
 
   $query = 'select *

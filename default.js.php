@@ -1,22 +1,9 @@
 <script type='text/javascript'>
+
     $(document).ready(function() {
-        // window.load
-        $(window).load(function(){
-            $('#loader').delay(50).fadeOut(150);
-        });
-        // scroll to top.
-        $(window).scroll(function(){
-            if($(this).scrollTop() > 100){
-            $('#scroll').fadeIn();
-            }else{
-            $('#scroll').fadeOut();
-            }
-        });
-        // click for scroll to top page.
-        $('#scroll').click(function(){
-            $('html body').animate({ scrollTop: 0}, 600);
-            return false;
-        });
+        // $('html body').animate({ scrollTop: 0}, 600);
+
+        $('html').addClass('fix-scroll');
         //Page active
         $('a#<?php echo isset($_GET['page'])? $_GET['page'] : '99'; ?>').addClass("active-page");
         $('#aniimated-thumbnials').lightGallery({
@@ -48,15 +35,29 @@
         <?php } ?>
         //waiting for loading photo.
         $(window).on('load',function() {
+            $('#loader').delay(50).fadeOut(150);
             $('.grid').masonry({
             // options
             itemSelector: '.grid-item',
             columnWidth: 200
             });
+            $("html").removeClass('fix-scroll');
         });
-
     });
 
+        // scroll to top.
+        $(document).scroll(function(){
+            if($(this).scrollTop() > 100){
+            $('#scroll').fadeIn();
+            }else{
+            $('#scroll').fadeOut();
+            }
+        });
+        // click for scroll to top page.
+        $('#scroll').click(function(){
+            $('html body').animate({ scrollTop: 0}, 600);
+            return false;
+        });
 
     // Sticky
     // $(window).scroll(function() {
