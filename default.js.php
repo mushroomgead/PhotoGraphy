@@ -23,13 +23,31 @@
         ?>
 
         $grid.on('click','.grid-item',function(event){
+            if (confirm('Delete ?')){
+                event.preventDefault();
 
-            event.preventDefault()
-            // remove clicked element
-            $grid.masonry( 'remove', this )
-            // layout remaining item elements
-            .masonry('layout');
-
+                $.ajax({
+                    url  : 'app/database/ajaxcenter.php',
+                    type :'POST',
+                    // case: 'deletePhoto',
+                    data: {
+                        case     : 'deletePhoto',
+                        filepath : $('#filepath').val(),
+                        category : $('#category').val(),
+                        filename : $('#filename').val()
+                    },
+                    success: function(result){
+                        console.log(result);
+                    },
+                    error: function(result){
+                        alert('Error!!!!!!!!!!!!!!');
+                    }
+                });
+                // remove clicked element
+                $grid.masonry( 'remove', this )
+                // layout remaining item elements
+                .masonry('layout');
+            }
         })
 
         <?php } ?>

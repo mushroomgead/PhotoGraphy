@@ -27,12 +27,10 @@ function genImageBlock($category, $subcategory){
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
 
       if (isset($_SESSION['UserData']['username'])) {
-        $btn_delete =
-        '   <button id="deleteItem">
-            <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
+        $hidden_value =
+        '   <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
             <input type="hidden" name="category" id="category" value="'.$value['category'].'">
-            <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">
-            </button>';
+            <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">';
       }
 
       $str =  "
@@ -40,7 +38,7 @@ function genImageBlock($category, $subcategory){
         <div class='grid-item'>
           <img src=".$file_path." />
         </div>
-      </a>";
+      </a>".$hidden_value;
     echo $str;
   }
   echo "</div>";
@@ -48,35 +46,14 @@ function genImageBlock($category, $subcategory){
 
 function checktodelete($filepath,$category,$filename){
   if (file_exists($filepath)) {
-    unlink($filepath);
-    $query = "DELETE FROM tphotos
-    WHERE category = '".$category."'
-    AND filename = '".$filename."'";
-    queryData($query);
+    // unlink($filepath);
+    // $query = "DELETE FROM tphotos
+    // WHERE category = '".$category."'
+    // AND filename = '".$filename."'";
+    // queryData($query);
     echo 'file has been deleted.';
   } else {
     echo 'file does not exists.';
   }
 }
-
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('#deleteItem').click(function () {
-        if (confirm('Are you sure you want to delete this?')) {
-
-          $.ajax({
-              method:'POST',
-              data:{
-                  filepath :  $('#filepath').val()
-              },
-              success: function(){
-                  alert('3333');
-              }
-          });
-      }
-      alert('BYE');
-  });
-});
-
-</script>
