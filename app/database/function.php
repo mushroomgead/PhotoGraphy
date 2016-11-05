@@ -1,15 +1,19 @@
 <?php
 function genImageBlock($category, $subcategory){
-  $btn_delete = '';
+  $hidden_value = '';
   $str = '';
-
+  $check = '';
+  $str_delete = '';
   $query = 'select *
   from tphotos
   where category = "'.$category.'"'.(isset($subcategory) ? 'and subcategory = "'.$subcategory.'"' : '');
   $result = selectData($query);
 
   if (isset($_SESSION['UserData']['username'])) {
-    $check = '';
+   $str_delete = '<div class="section-info">
+                    <div class="tag-delete">DELETE</div>
+                    <div class="text-delete">CLICK AT THE PHOTO TO DELETE.</div>
+                    </div>';
 
     if (array_key_exists('delete_file', $_POST)) {
       $filepath = $_POST['delete_file'];
@@ -21,7 +25,7 @@ function genImageBlock($category, $subcategory){
   } else {
     $check = 'aniimated-thumbnials';
   }
-  echo "<div class='photo-list grid container' id='".$check."' data-masonry='{ \"itemSelector\": \"a .grid-item\", \"columnWidth\": 200 }'>";
+  echo $str_delete."<div class='photo-list grid container' id='".$check."' data-masonry='{ \"itemSelector\": \"a .grid-item\", \"columnWidth\": 200 }'>";
 
     foreach ($result as $key => $value) {
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
@@ -42,6 +46,29 @@ function genImageBlock($category, $subcategory){
     echo $str;
   }
   echo "</div>";
+}
+function resizeImage($filepath){
+
+ /* $thumbnial_width    = '300';
+  $thumbnial_height   = '300';
+
+  $actual_size        = getimagesize($filepath);
+  $actual_size_width  = $actual_size[0];
+  $actual_size_height = $actual_size[1];
+
+  if($actual_size_width > $actual_size_height){
+    //Horizontal
+    $new_width  = $thumbnial_width;
+    $new_height = intval(($actual_size_height*$new_width)/$actual_size_width);
+    
+  }else{
+    //Vertical
+    $new_height = $thumbnial_height;
+    $new_width  = intval($actual_size_width*$new_height/$actual_size_height);
+  }
+  $original_image = $filepath
+  $thumb_image = imagecreatetruecolor($thumbnial_width, $thumbnial_height);
+  // imagecopyresized($thumb_image, src_image, dst_x, dst_y, src_x, src_y, dst_w, dst_h, src_w, src_h)*/
 }
 
 function checktodelete($filepath,$category,$filename){

@@ -1,5 +1,5 @@
-/*
-	Table of Contents
+
+/*	Table of Contents
 	update on Sat Oct 29 2016 7:43PM.
 	I. General
 	II.
@@ -393,40 +393,52 @@ body #login{
 		-moz-transform: rotate(-360deg);
 	}
 }
+/*text warning*/
+.text-delete{
+    display: inline-block;
+    margin-right: 13px;
+    color: #777676;
+}
+/*section*/
+.section-info{
+    padding: 0 0 10px 0px;
+    margin-bottom: 27px;
+}
+.tag-delete{
+	background: #f44336;
+	display: inline-block;
+	font-size: 10px;
+	width: 76px;
+	height: 32px;
+	text-align: center;
+	padding-top: 8px;
+	color: #ffffff;
+	border-radius: 15px;
+	margin: 0 10px 0 0;
+}
 /*grid*/
 .grid-item, .grid-item img{ width: 200px; }
 .grid-item--width2, .grid-item--width2 img{ width: 400px; }
 
 /*scroll top*/
-#scroll {
+#goTop{
+    padding:5px;
     position:fixed;
-    right:30px;
-    bottom:10px;
+    right:3%;
+    bottom: -100px;
+    z-index: 999;
+    border-radius: 3px;
+    width:35px; 
+    height: 40px;
+    text-align: center;
+    background:rgba(158, 158, 158, 0.18);
+    color: #B3B3B3;
+    padding-top: 8px;
     cursor:pointer;
-    width:40px;
-    height:40px;
-    background-color:rgba(158, 158, 158, 0.7);
-    text-indent:-9999px;
-    display:none;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    border-radius:3px;
-}
-#scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff
-}
-#scroll:hover {
-    background-color:rgba(158, 158, 158, 0.9);
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
+ }
+#goTop:hover{
+    background:rgba(158, 158, 158, 0.56);
+    color: #565656;
 }
 .fix-scroll{
 	overflow: hidden;

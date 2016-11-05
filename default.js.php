@@ -1,7 +1,27 @@
 <script type='text/javascript'>
 
     $(document).ready(function() {
-        // $('html body').animate({ scrollTop: 0}, 600);
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 200){
+                $('#goTop').stop().animate({
+                    bottom: '60px'
+                    }, 100);
+            }
+            else{
+                $('#goTop').stop().animate({
+                   bottom: '-100px'
+                }, 100);
+            }
+        });
+        $('#goTop').click(function() {
+            $('html, body').stop().animate({
+               scrollTop: 0
+            }, 100, function() {
+               $('#goTop').stop().animate({
+                   bottom: '-100px'  
+               }, 100);
+            });
+        });
 
         $('html').addClass('fix-scroll');
         //Page active
@@ -17,7 +37,6 @@
             itemSelector: '.grid-item',
             columnWidth: 200
         });
-
         <?php
         if (isset($_SESSION['UserData']['username'])) {
         ?>
@@ -54,28 +73,38 @@
         //waiting for loading photo.
         $(window).on('load',function() {
             $('#loader').delay(50).fadeOut(150);
+
             $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200
+                // options
+                itemSelector: '.grid-item',
+                columnWidth: 200
             });
+
             $("html").removeClass('fix-scroll');
+
+            $grid.imagesLoaded().progress(function(){
+                $grid.masonry('layout');
+            });
         });
     });
 
         // scroll to top.
-        $(document).scroll(function(){
-            if($(this).scrollTop() > 100){
-            $('#scroll').fadeIn();
-            }else{
-            $('#scroll').fadeOut();
-            }
-        });
+        // $(document).scroll(function(){
+        //     if($(this).scrollTop() > 100){
+        //     $('#scroll').fadeIn();
+        //     }else{
+        //     $('#scroll').fadeOut();
+        //     }
+        // });
         // click for scroll to top page.
-        $('#scroll').click(function(){
-            $('html body').animate({ scrollTop: 0}, 600);
-            return false;
-        });
+        // $('#scroll').click(function(){
+        //     $('html body').animate({ scrollTop: 0}, 600);
+        //     return false;
+        // });
+
+        // $(document).on('click','#scroll',function(){
+        //     alert('555555');
+        // });
 
     // Sticky
     // $(window).scroll(function() {
@@ -94,9 +123,6 @@
         }else{
           $("#myTopnav").addClass("responsive");
         }
-
-        //test use shorthand
-        // if($('#myTopnav').hasClass('responsive')) ? $("#myTopnav").removeClass("responsive") : $("#myTopnav").addClass("responsive");
 
     }
 </script>
