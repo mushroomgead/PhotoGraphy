@@ -28,6 +28,7 @@ function genImageBlock($category, $subcategory){
   echo $str_delete."<div class='photo-list grid container' id='".$check."' data-masonry='{ \"itemSelector\": \"a .grid-item\", \"columnWidth\": 200 }'>";
 
     foreach ($result as $key => $value) {
+      
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
       $file_path_thumb  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
@@ -62,4 +63,5 @@ function checktodelete($filepath,$category,$filename){
     echo 'file does not exists.';
   }
 }
+
 ?>

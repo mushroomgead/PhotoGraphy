@@ -54,7 +54,7 @@ for ($i = 0; $i < $count_file; $i++) {
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
 
-            resizeImage($target_dir,$filename);
+            thumbnail_photo($target_dir,$filename);
 
             echo "The file " . $i . basename($_FILES["fileToUpload"]["name"][$i]) . " has been uploaded.</br>";
             // hard code for insert values into database.
@@ -72,7 +72,7 @@ for ($i = 0; $i < $count_file; $i++) {
     }
 }
 
-function resizeImage($target_dir,$filename){
+function thumbnail_photo($target_dir,$filename){
 
   $thumbnial_width    = '800';
   $thumbnial_height   = '800';

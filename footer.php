@@ -1,4 +1,4 @@
-<div class="container font-style font-size-body clearfix section-footer">
+<div class="font-style font-size-body section-footer">
   <div class="section-left">© COPYRIGHT 2016 BY VV PHOTOGRAPHER</div>
   <div class="section-right">
     <div class="pull-left nav-footer">

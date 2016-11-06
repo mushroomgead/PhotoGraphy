@@ -15,11 +15,11 @@ if(isset($_GET['subpage'])){
     </div>
   </a>
 
- <!-- <a class="img-entry-horiz  sub-img-folder" href="?page= --> <?php //echo $_GET['page'] ?><!--&subpage=3">
+<!--   <a class="img-entry-horiz  sub-img-folder" href="?page=<?php //echo $_GET['page'] ?>&subpage=3">
     <div data-content="Folder 3" class="image pull-left">
       <img src="app/img/WEB/WOMEN/3/_MG_2946.jpg" />
     </div>
-  </a>-->
+  </a> -->
 
   <a class="img-entry-horiz sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=4">
     <div data-content="Folder 4" class="image pull-left">

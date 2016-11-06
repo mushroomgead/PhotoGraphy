@@ -85,7 +85,7 @@
 	}
 
 	.section-body{
-		min-height: 400px;
+		/*min-height: 400px;*/
 	}
 	.section-header{
 		width:100%;
@@ -103,6 +103,9 @@
 	.section-right{
 		float: left;
 	    padding-left: 40px;
+	}
+	.section-footer{
+    	position: absolute;
 	}
 }
 
@@ -171,13 +174,15 @@
 	}
 
 	.section-body{
-		min-height: 400px;
+		/*min-height: 400px;*/
 		padding-top: 30px;
 	}
 	.nav-column-logo {
      width: 50%; 
 	}
-
+	.section-footer{
+    	position: absolute;
+	}
 }
 
 /* Portrait phones and smaller */
@@ -200,7 +205,7 @@
 		background:#fff;
 	}
 	.section-body{
-		min-height: 354px;
+		/*min-height: 354px;*/
 		padding-top: 30px;
 	}
 	.font-size-header {
@@ -343,5 +348,8 @@
 	}
 	.image:hover:after, .image:hover:before {
     	opacity:1;
+	}
+	.section-footer{
+    	position: absolute;
 	}
 }

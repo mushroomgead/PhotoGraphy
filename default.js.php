@@ -76,45 +76,23 @@
             $('.grid').masonry({
                 // options
                 itemSelector: '.grid-item',
-                columnWidth: 200
+                columnWidth: 280
             });
 
             $("html").removeClass('fix-scroll');
-
-            $grid.imagesLoaded().progress(function(){
-                $grid.masonry('layout');
-            });
         });
     });
 
-        // scroll to top.
-        // $(document).scroll(function(){
-        //     if($(this).scrollTop() > 100){
-        //     $('#scroll').fadeIn();
-        //     }else{
-        //     $('#scroll').fadeOut();
-        //     }
-        // });
-        // click for scroll to top page.
-        // $('#scroll').click(function(){
-        //     $('html body').animate({ scrollTop: 0}, 600);
-        //     return false;
-        // });
-
-        // $(document).on('click','#scroll',function(){
-        //     alert('555555');
-        // });
-
     // Sticky
-    // $(window).scroll(function() {
-    //   if ($(this).scrollTop() > 1){
-    //     $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 30){
+        $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').addClass("sticky");
 
-    //   }
-    //   else{
-    //     $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
-    //   }
-    // });
+      }
+      else{
+        $('#section-header,.layout-left,.layout-right,.font-size-header,.nav-column').removeClass("sticky");
+      }
+    });
 
     function HambergerMenu() {
         if($('#myTopnav').hasClass('responsive')){

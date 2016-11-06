@@ -9,26 +9,21 @@
     <meta name="keywords" content="vv photographer,photography,vv,photographer" />
     <meta name="author" content="mushroomgead" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link type="text/css" rel="stylesheet" href="app/includes/style.css">
-
+    <link rel="stylesheet" href="app/includes/style.css">
     <!-- Section include -->
     <script src="app/includes/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link type="text/css" rel="stylesheet" href="app/includes/responsive.css">
-    <!-- <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css"> -->
-    <script src="https://use.fontawesome.com/a3968c3586.js"></script>
+    <link rel="stylesheet" href="app/includes/responsive.css">
+    <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/includes/bootstrap-3.3.7-dist/css/bootstrap.css">
     <!-- lightslider -->
     <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
     <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
     <!-- lightGallery -->
     <link type="text/css" rel="stylesheet" href="app/includes/lightGallery/dist/css/lightgallery.min.css" />
     <script src="app/includes/lightGallery/dist/js/lightGallery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
     <script src="app/includes/masonry.pkgd.min.js"></script>
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');

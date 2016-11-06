@@ -11,21 +11,27 @@
 /*--------------------------------------------------------*\
 
 /*--------------------------------------------------------*/
-
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
 .section-nav{
 	border-bottom:1px solid #000000;
 	margin-bottom: 17px !important;
 }
 .section-body{
+	min-height: 100%;
 	position: relative;
 
 }
 .section-footer{
-	position: relative;
-	border-top: 1px solid #9c9b9b;
-	margin: 15px 0 5px 0;
-	padding: 10px;
-	color: #565656;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: rgba(204, 204, 204, 0.38);
+    padding: 12px 0 0 20px;
 }
 .section-left{
 	float: left;
@@ -36,7 +42,7 @@
 }
 /*original*/
 .section-header{
-	width: 1141px;
+	/*width: 1141px;*/
 	text-align: center;
 	line-height: 70px;
 	color: #000000;
@@ -66,12 +72,12 @@
 	font-size:24px;
 }
 .section-header.sticky {
-	position: fixed;
-	font-size: 16px;
-	width: 1141px;
-	border-bottom: 1px solid #fff;
-	background:#fff;
-	margin-top: -16px;
+    position: fixed;
+    font-size: 16px;
+    width: 90%;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    display: inline-block;
 }
 /*-- Top Navigate*/
 #page_index{
@@ -253,7 +259,7 @@ a.img-entry-vert .image:after {
 	margin-bottom: 11px;
 }
 .active-page{
-	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0.1);
 }
 body #login{
 	background: #f5f5f5;
@@ -417,7 +423,7 @@ body #login{
 	margin: 0 10px 0 0;
 }
 /*grid*/
-.grid-item, .grid-item img{ width: 200px; }
+.grid-item, .grid-item img{ width: 275px;margin-bottom: 2px }
 .grid-item--width2, .grid-item--width2 img{ width: 400px; }
 
 /*scroll top*/
