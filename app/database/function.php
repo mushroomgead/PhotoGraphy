@@ -29,6 +29,7 @@ function genImageBlock($category, $subcategory){
 
     foreach ($result as $key => $value) {
       $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
+      $file_path_thumb  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
       if (isset($_SESSION['UserData']['username'])) {
         $hidden_value =
@@ -40,36 +41,14 @@ function genImageBlock($category, $subcategory){
       $str =  "
       <a href=".$file_path.">
         <div class='grid-item'>
-          <img src=".$file_path." />
+          <img src=".$file_path_thumb." />
         </div>
       </a>".$hidden_value;
     echo $str;
   }
   echo "</div>";
 }
-function resizeImage($filepath){
 
- /* $thumbnial_width    = '300';
-  $thumbnial_height   = '300';
-
-  $actual_size        = getimagesize($filepath);
-  $actual_size_width  = $actual_size[0];
-  $actual_size_height = $actual_size[1];
-
-  if($actual_size_width > $actual_size_height){
-    //Horizontal
-    $new_width  = $thumbnial_width;
-    $new_height = intval(($actual_size_height*$new_width)/$actual_size_width);
-    
-  }else{
-    //Vertical
-    $new_height = $thumbnial_height;
-    $new_width  = intval($actual_size_width*$new_height/$actual_size_height);
-  }
-  $original_image = $filepath
-  $thumb_image = imagecreatetruecolor($thumbnial_width, $thumbnial_height);
-  // imagecopyresized($thumb_image, src_image, dst_x, dst_y, src_x, src_y, dst_w, dst_h, src_w, src_h)*/
-}
 
 function checktodelete($filepath,$category,$filename){
   if (file_exists($filepath)) {

@@ -48,8 +48,7 @@
                 $.ajax({
                     url  : 'app/database/ajaxcenter.php',
                     type :'POST',
-                    // case: 'deletePhoto',
-                    data: {
+                    data : {
                         case     : 'deletePhoto',
                         filepath : $('#filepath').val(),
                         category : $('#category').val(),

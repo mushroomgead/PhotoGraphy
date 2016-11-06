@@ -1,5 +1,5 @@
 <div class="container font-style font-size-body clearfix section-footer">
-  <div class="section-left">© COPYRIGHT 2015 BY VV PHOTOGRAPHER</div>
+  <div class="section-left">© COPYRIGHT 2016 BY VV PHOTOGRAPHER</div>
   <div class="section-right">
     <div class="pull-left nav-footer">
       <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;<span id="text-footer">Twitter&nbsp;</span>|&nbsp;</div>
