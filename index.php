@@ -24,6 +24,7 @@
     <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
     <script src="app/includes/masonry.pkgd.min.js"></script>
+
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');

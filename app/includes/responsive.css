@@ -101,7 +101,6 @@
 		font-size: 13px;
 	}
 	.section-right{
-		float: left;
 	    padding-left: 40px;
 	}
 	.section-footer{
@@ -162,7 +161,6 @@
 		background:#fff;
 	}
 	.section-right{
-		float: left;
 	    padding-top: 5px;
 	    width: 100%;
 	}
@@ -222,7 +220,6 @@
 	    width: 100%;
 	}
 	.section-right {
-	    float: left;
 	    padding-top: 5px;
 	    font-size: 14.8px;
 	}
