@@ -2,18 +2,35 @@
 /*	Table of Contents
 	update on Sat Oct 29 2016 7:43PM.
 	I. General
-	II.
-	III.
-
+	II.Sticky
+	III. Layout Photo
+	VI. Plugin
+	VII. loader
 */
 
 
 /*--------------------------------------------------------*\
-
+	I. General
 /*--------------------------------------------------------*/
+
 html {
 	height: 100%;
 	box-sizing: border-box;
+}
+/*-- logo --*/
+.nav-column-logo{
+	width: 100%;
+}
+/*-- Font --*/
+.font-style{
+	font-family: lato,sans-serif;
+}
+.font-size-header{
+	font-size:17px;
+}
+.font-size-body{
+	font-size:10px;
+	letter-spacing: 2px;
 }
 .section-nav{
 	border-bottom:1px solid #000000;
@@ -22,7 +39,6 @@ html {
 .section-body{
 	min-height: 100%;
 	position: relative;
-
 }
 .section-footer{
     position: relative;
@@ -40,29 +56,100 @@ html {
 	float: right;
 	text-align: right;
 }
-/*original*/
 .section-header{
-	/*width: 1141px;*/
 	text-align: center;
 	line-height: 70px;
 	color: #000000;
 	background:#fff;
 	z-index: 1;
 }
-/*-- Font*/
-.font-style{
-	font-family: lato,sans-serif;
+.block-index{
+    width: 50%;
+    min-height: 100px;
+    padding: 34px;
 }
-.font-size-header{
-	font-size:17px;
+/*-- Login --*/
+.page-login{
+	padding: 20px;
+}
+.layout-login{
+	margin-bottom: 11px;
+}
+.active-page{
+	background: rgba(0, 0, 0, 0.1);
+}
+body #login{
+	background: #f5f5f5;
 }
 
-.font-size-body{
-	font-size:10px;
-	letter-spacing: 2px;
+/*-- scroll top --*/
+#goTop{
+    padding:5px;
+    position:fixed;
+    right:3%;
+    bottom: -100px;
+    z-index: 999;
+    border-radius: 3px;
+    width:35px; 
+    height: 40px;
+    text-align: center;
+    background:rgba(158, 158, 158, 0.18);
+    color: #B3B3B3;
+    padding-top: 8px;
+    cursor:pointer;
+ }
+#goTop:hover{
+    background:rgba(158, 158, 158, 0.56);
+    color: #565656;
 }
-
-/*-- Sticky*/
+.fix-scroll{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.page-login{
+	width: 300px;
+	margin: 0 auto;
+}
+.head-login{
+	padding: 16px 16px 0 16px;
+	color: #564848;
+}
+.login-txtbox{
+	border: none;
+	border-bottom: 1px solid #CCCCCC;
+	width: 300px;
+	min-height: 32px;
+	margin-bottom: 20px;
+}
+.btn-login{
+	width: 90px;
+	height: 40px;
+}
+.layout-btn{
+	padding-bottom: 15px;
+}
+.text-delete{
+    display: inline-block;
+    margin-right: 13px;
+    color: #777676;
+}
+.section-info{
+    padding: 0 0 10px 0px;
+    margin-bottom: 27px;
+}
+.tag-delete{
+	background: #f44336;
+	display: inline-block;
+	font-size: 10px;
+	width: 76px;
+	height: 32px;
+	text-align: center;
+	padding-top: 8px;
+	color: #ffffff;
+	border-radius: 15px;
+	margin: 0 10px 0 0;
+}
 .layout-left.sticky{
 	float: left;
 	width: 30%;
@@ -79,7 +166,8 @@ html {
     background: #fff;
     display: inline-block;
 }
-/*-- Top Navigate*/
+
+/*-- Top Navigate --*/
 #page_index{
 	transition: margin-left .5s;
 	padding: 16px;
@@ -87,7 +175,9 @@ html {
 .nav-menu{
 	display: none;
 }
-
+.ul li.nav-column{
+	width: 10%;
+}
 ul.topnav {
 	list-style-type: none;
 	margin: 0;
@@ -128,9 +218,10 @@ ul.topnav li a:hover{
 	text-decoration: none;
 }
 
-/*- Hamberger Menu*/
+/*--------------------------------------------------------*\
+	III. Layout Photo
+/*--------------------------------------------------------*/
 
-/*- Page Style Detail*/
 .photo-list{
 	width: 100%;
 }
@@ -148,52 +239,6 @@ ul.topnav li a:hover{
 	top: 5px;
 	margin-bottom: 9px;
 }
-
-/*Admin Login*/
-.page-login{
-	width: 300px;
-	margin: 0 auto;
-}
-.head-login{
-	padding: 16px 16px 0 16px;
-	color: #564848;
-}
-.login-txtbox{
-	border: none;
-	border-bottom: 1px solid #CCCCCC;
-	width: 300px;
-	min-height: 32px;
-	margin-bottom: 20px;
-}
-.btn-login{
-	width: 90px;
-	height: 40px;
-}
-.layout-btn{
-	padding-bottom: 15px;
-}
-body {
-
-}
-/*- Style Plugin*/
-/*-- Gellery silder*/
-.demo img{
-	width: 100%;
-}
-img{
-	position: relative;
-}
-ul {
-	list-style: none outside none;
-	padding-left: 0;
-	margin-bottom:0;
-}
-li {
-	display: block;
-	margin-right: 6px;
-	cursor:pointer;
-}
-/*img*/
 .image {
     position:relative;
     width:auto;
@@ -237,35 +282,43 @@ a.img-entry-vert .image:after {
 .image:hover:after, .image:hover:before {
     opacity:1;
 }
-.img-entry-vert, .img-entry-horiz{
-}
-/**/
-.block-index{
-    width: 50%;
-    min-height: 100px;
-    padding: 34px;
-}
-.nav-column-logo{
+
+/*--------------------------------------------------------*\
+	IIII. Plugin
+/*--------------------------------------------------------*/
+
+/*-- Gellery silder --*/
+.demo img{
 	width: 100%;
 }
-.ul li.nav-column{
-	width: 10%;
+img{
+	position: relative;
 }
-/*Login style*/
-.page-login{
-	padding: 20px;
+ul {
+	list-style: none outside none;
+	padding-left: 0;
+	margin-bottom:0;
 }
-.layout-login{
-	margin-bottom: 11px;
-}
-.active-page{
-	background: rgba(0, 0, 0, 0.1);
-}
-body #login{
-	background: #f5f5f5;
+li {
+	display: block;
+	margin-right: 6px;
+	cursor:pointer;
 }
 
-/*loader*/
+/*-- grid --*/
+.grid-item, .grid-item img{ 
+	width: 275px;
+	margin-bottom: 2px 
+}
+.grid-item--width2, .grid-item--width2 img{ 
+	width: 400px;
+}
+
+
+/*--------------------------------------------------------*\
+	I. loader
+/*--------------------------------------------------------*/
+
 #loader{
 	position: fixed;
 	width:100%;
@@ -307,8 +360,6 @@ body #login{
 		-webkit-animation: cssload-spinner2 2.88s linear infinite;
 		-moz-animation: cssload-spinner2 2.88s linear infinite;
 }
-
-
 
 @keyframes cssload-spinner1 {
 	from {
@@ -398,56 +449,4 @@ body #login{
 	to {
 		-moz-transform: rotate(-360deg);
 	}
-}
-/*text warning*/
-.text-delete{
-    display: inline-block;
-    margin-right: 13px;
-    color: #777676;
-}
-/*section*/
-.section-info{
-    padding: 0 0 10px 0px;
-    margin-bottom: 27px;
-}
-.tag-delete{
-	background: #f44336;
-	display: inline-block;
-	font-size: 10px;
-	width: 76px;
-	height: 32px;
-	text-align: center;
-	padding-top: 8px;
-	color: #ffffff;
-	border-radius: 15px;
-	margin: 0 10px 0 0;
-}
-/*grid*/
-.grid-item, .grid-item img{ width: 275px;margin-bottom: 2px }
-.grid-item--width2, .grid-item--width2 img{ width: 400px; }
-
-/*scroll top*/
-#goTop{
-    padding:5px;
-    position:fixed;
-    right:3%;
-    bottom: -100px;
-    z-index: 999;
-    border-radius: 3px;
-    width:35px; 
-    height: 40px;
-    text-align: center;
-    background:rgba(158, 158, 158, 0.18);
-    color: #B3B3B3;
-    padding-top: 8px;
-    cursor:pointer;
- }
-#goTop:hover{
-    background:rgba(158, 158, 158, 0.56);
-    color: #565656;
-}
-.fix-scroll{
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
 }
