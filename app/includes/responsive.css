@@ -5,6 +5,9 @@
 		width: 8%;
 		text-align: center;
 	}
+	.section-footer{
+		padding: 16px 0 0 20px;
+	}
 }
 
 /* Landscape tablets and medium desktops */
@@ -24,6 +27,9 @@
 		float: left;
 		width: 8.47%;
 		text-align: center;
+	}	
+	.section-footer{
+		padding: 16px 0 0 20px;
 	}
 }
 
@@ -104,7 +110,7 @@
 	    padding-left: 40px;
 	}
 	.section-footer{
-    	position: absolute;
+		padding: 16px 0 0 20px;
 	}
 }
 
@@ -177,9 +183,6 @@
 	}
 	.nav-column-logo {
      width: 50%; 
-	}
-	.section-footer{
-    	position: absolute;
 	}
 }
 
@@ -346,7 +349,7 @@
 	.image:hover:after, .image:hover:before {
     	opacity:1;
 	}
-	.section-footer{
-    	position: absolute;
+	.demo{
+		padding-top:50px;
 	}
 }

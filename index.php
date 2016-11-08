@@ -52,7 +52,7 @@
                 </div>
             </nav>
         <?php } ?>
-            <div class="clearfix container font-style font-size-body">
+            <div class="clearfix font-style font-size-body">
                 <?php include('header.php'); ?>
                 <main>
                     <div class="clearfix section-body font-size-body" id="page_index">        
@@ -95,7 +95,7 @@
                         ?>
                     </div>
                 </main>
-            </div>
-        <?php require_once('footer.php'); ?>
+            <?php require_once('footer.php'); ?>
+        </div>
     </body>
 </html>
