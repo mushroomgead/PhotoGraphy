@@ -4,7 +4,7 @@
             <a href="./">VV PHOTOGRAPHER</a>
         </li>
         <li class="clearfix nav-column pull-right">
-            <a href="?page=etc" id="etc">etc</a>
+            <a href="#" id="etc">etc</a>
         </li>
         <li class="clearfix nav-column pull-right">
             <a href="?page=personal" id="personal">personal</a>

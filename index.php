@@ -81,10 +81,6 @@
                                     require_once('app/http/page_personal.php');
                                     break;
 
-                                case 'etc'      :
-                                    require_once('app/http/page_etc.php');
-                                    break;
-
                                 case 'adminupload':
                                     require_once('admin/adminupload.php');
                                     break;

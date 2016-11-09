@@ -15,7 +15,6 @@
 
 	.font-size-header {
 		font-size: 28px;
-		/*width: 100%;*/
 	}
 	.section-header{
 		width: 100%;
@@ -30,6 +29,10 @@
 	}	
 	.section-footer{
 		padding: 16px 0 0 20px;
+	}
+
+	#block-photo{
+		margin-left: 89px;
 	}
 }
 
@@ -112,6 +115,10 @@
 	.section-footer{
 		padding: 16px 0 0 20px;
 	}
+
+	#block-photo{
+		margin: 0;
+	}
 }
 
 /* Landscape phones and portrait tablets */
@@ -183,6 +190,9 @@
 	}
 	.nav-column-logo {
      width: 50%; 
+	}
+	#block-photo{
+		margin: 0;
 	}
 }
 
@@ -351,5 +361,8 @@
 	}
 	.demo{
 		padding-top:50px;
+	}
+	#block-photo{
+		margin-left:44px;
 	}
 }

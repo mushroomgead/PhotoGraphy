@@ -41,7 +41,7 @@ html {
 	position: relative;
 }
 .section-footer{
-    /*position: relative;*/
+    position: inherit;
     bottom: 0;
     left: 0;
     right: 0;
@@ -167,11 +167,15 @@ body #login{
     background: #fff;
     display: inline-block;
 }
-
+#block-photo{
+	margin-left:85px;
+}
 /*-- Top Navigate --*/
 #page_index{
 	transition: margin-left .5s;
 	padding: 16px;
+	min-height: 100%;
+	/*margin: 0 0 0 50px;*/
 }
 .nav-menu{
 	display: none;
@@ -196,6 +200,7 @@ ul.topnav li a{
 	text-decoration: none;
 	transition: 0.3s;
 	font-size: 14px;
+	margin-left:15px;
 }
 li .nav-column{
 	width: 11%;
@@ -225,6 +230,7 @@ ul.topnav li a:hover{
 
 .photo-list{
 	width: 100%;
+	margin-left:53px !important;
 }
 .img-entry-vert img{
 	height: 358px;
