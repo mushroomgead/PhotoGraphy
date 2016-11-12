@@ -23,8 +23,10 @@
     <script src="app/includes/lightgallery/dist/js/lightGallery.min.js"></script>
     <script src="app/includes/lightgallery/dist/js/lg-thumbnail.min.js"></script>
     <script src="app/includes/lightgallery/dist/js/lg-fullscreen.min.js"></script>
+    <!-- masonry -->
     <script src="app/includes/masonry.pkgd.min.js"></script>
-
+    <!-- perfectLayout -->
+    <script src="app/includes/perfect-layout/dist/perfectLayout.min.js"></script>
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');

@@ -248,9 +248,10 @@ ul.topnav li a:hover{
 }
 .image {
     position:relative;
-    width:auto;
+    float: left;
+/*    width:auto;
     height:auto;
-    padding: 5px;
+    padding: 5px;*/
 }
 .image:after, .image:before {
     position:absolute;
