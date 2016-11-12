@@ -103,7 +103,7 @@ function genImageBlock($category, $subcategory){
     }
 
     foreach ($result as $key => $value) {
-        $file_path  = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].$value['filename'];
+        $file_path  = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
         $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
         $file_path_thumb  = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
@@ -183,8 +183,8 @@ function genCoverImageBlock($category,$flgmark){
         $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
         $file_path_thumb    = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
-        $img[$i]['src']     = $file_path_thumb;
-        $img[$i]['data']    = $file_subpage;
+        $img[$i]['data']     = $file_path_thumb;
+        $img[$i]['src']    = $file_subpage;
         $actual_size        = getimagesize($file_path_backend);
         $img_width          = $actual_size[0];
         $img_height         = $actual_size[1];

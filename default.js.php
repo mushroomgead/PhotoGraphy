@@ -128,15 +128,26 @@
             p_subcategory : subcategory
         },
         success:function(result){
-            console.log(result);
             var photos = JSON.parse(result);
 
             $.fn.perfectLayout = function (photos) {
               var node = this;
               var perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), { margin: 2 });
               node.empty();
+              var x = 0;
               perfectRows.forEach(function (row) {
-                  row.forEach(function (img) {
+                if(Object.prototype.toString.call(row)=="[object Object]"){
+                    var img = row;
+                    var imgNode = $('<a href="'+ img.src +'"><div class="image"><img src="'+img.data+'" style="display:none;"></img></div></a>');
+                      imgNode.children('.image').css({
+                          'width': img.width + 'px',
+                          'height': img.height + 'px',
+                          'background': 'url(' + img.data + ')',
+                          'background-size': 'cover'
+                      });
+                      node.append(imgNode);
+                } else if (Object.prototype.toString.call(row)=="[object Array]") {
+                    row.forEach(function (img) {
                       var imgNode = $('<a href="'+ img.src +'"><div class="image"><img src="'+img.data+'" style="display:none;"></img></div></a>');
                       imgNode.children('.image').css({
                           'width': img.width + 'px',
@@ -146,11 +157,11 @@
                       });
                       node.append(imgNode);
                   });
+                }
               });
             };
 
             var gallery = $('#gallery');
-            gallery.perfectLayout(photos);
 
             $(window).resize(function () {
                 gallery.perfectLayout(photos);
@@ -189,11 +200,11 @@
               node.empty();
               perfectRows.forEach(function (row) {
                   row.forEach(function (img) {
-                      var imgNode = $('<a href="'+ img.data +'"><div class="image"></div></a>');
+                      var imgNode = $('<a href="'+ img.src +'"><div class="image"></div></a>');
                       imgNode.children('.image').css({
                           'width': img.width + 'px',
                           'height': img.height + 'px',
-                          'background': 'url(' + img.src + ')',
+                          'background': 'url(' + img.data + ')',
                           'background-size': 'cover'
                       });
                       node.append(imgNode);
