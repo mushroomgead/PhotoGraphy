@@ -57,28 +57,7 @@ function genImageBlock($category, $subcategory){
     $str          = '';
     $check        = '';
     $i            = 0;
-    $img  = array(
-        "0" => array(
-            "src"   => '',
-            "data"  => '',
-            "ratio" => ''
-        ),
-        "1" => array(
-            "src"   => '',
-            "data"  => '',
-            "ratio" => ''
-        ),
-        "2" => array(
-            "src"   => '',
-            "data"  => '',
-            "ratio" => ''
-        ),
-        "3" => array(
-            "src"   => '',
-            "data"  => '',
-            "ratio" => ''
-        )
-    );
+    $img  = array();
 
 
     $str_delete = '';

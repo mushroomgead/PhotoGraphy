@@ -160,7 +160,6 @@
                 }
               });
             };
-
             var gallery = $('#gallery');
 
             $(window).resize(function () {
