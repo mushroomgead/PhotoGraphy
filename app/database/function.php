@@ -4,10 +4,10 @@ function genImageBlock($category, $subcategory){
   $str = '';
   $check = '';
   $str_delete = '';
-  $query = 'select *
+  $query_str = 'select *
   from tphotos
   where category = "'.$category.'"'.(isset($subcategory) ? 'and subcategory = "'.$subcategory.'"' : '');
-  $result = selectData($query);
+  $result = selectData($query_str);
 
   if (isset($_SESSION['UserData']['username'])) {
    $str_delete = '<div class="section-info">
@@ -29,13 +29,13 @@ function genImageBlock($category, $subcategory){
 
     foreach ($result as $key => $value) {
       
-      $file_path  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/'.$value['filename'];
-      $file_path_thumb  = 'app/img/WEB/'.$value['category'].'/'.$value['subcategory'].'/thumb_'.$value['filename'];
+      $file_path  = 'app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
+      $file_path_thumb  = 'app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
       if (isset($_SESSION['UserData']['username'])) {
         $hidden_value =
         '   <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
-            <input type="hidden" name="category" id="category" value="'.$value['category'].'">
+            <input type="hidden" name="category" id="category" value="'.strtoupper($value['category']).'">
             <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">';
       }
 
@@ -50,6 +50,37 @@ function genImageBlock($category, $subcategory){
   echo "</div>";
 }
 
+function GenCoverPhoto($category,$flgmark){
+$query_str = 'select * 
+              from tphotos 
+              where category = "'.$category.'" 
+              and flg_mark = "'.$flgmark.'" 
+              order by subcategory';
+
+$result = selectData($query_str);
+
+  if($flgmark == 'cover'){
+    echo ' <div id="block-photo"> ';
+      foreach ($result as $key => $value) {
+      $i =+1;
+      echo $str = ' <a class="img-entry-vert  sub-img-folder" href="?page='.$category.'&subpage='.$i.'">
+                      <div data-content="'.$value['caption'].'" class="image pull-left">
+                        <img src="app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'].'" />
+                      </div>
+                    </a>';
+      }
+    echo '</div>';
+  }else{
+    echo '<div class="demo">
+            <ul id = "imageGallery">';
+
+          foreach ($result as $key => $value) {
+            echo $str = '<img src="app/img/WEB/HOME/'.$value['filename'].'" />';
+          }
+    echo '  </ul>
+          </div>';
+  }
+}
 
 function checktodelete($filepath,$category,$filename){
   if (file_exists($filepath)) {

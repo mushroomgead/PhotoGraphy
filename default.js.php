@@ -1,6 +1,18 @@
 <script type='text/javascript'>
 
     $(document).ready(function() {
+        $('#imageGallery').lightSlider({
+            item:1,
+            loop:true,
+            slideMove:1,
+            slideMargin:5,
+            pager: false,
+            pauseOnHover: true,
+            auto: true,
+            speed: 400,
+            pause: 5000
+        });
+
         $(window).scroll(function() {
             if($(this).scrollTop() > 200){
                 $('#goTop').stop().animate({

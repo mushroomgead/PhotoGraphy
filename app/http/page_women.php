@@ -1,9 +1,13 @@
 <?php
 $category = 'women';
+$flgmark  = 'cover';
+
 if(isset($_GET['subpage'])){
   genImageBlock($category, $_GET['subpage']);
-}else{ ?>
-<div id="block-photo">
+}else{ 
+  GenCoverPhoto($category,$flgmark);
+}?>
+<!-- <div id="block-photo">
   <a class="img-entry-vert  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=1">
     <div data-content="Folder 1" class="image pull-left">
       <img src="app/img/WEB/WOMEN/1/_MG_5259.jpg" />
@@ -16,11 +20,11 @@ if(isset($_GET['subpage'])){
     </div>
   </a>
 
-<!--   <a class="img-entry-horiz  sub-img-folder" href="?page=<?php //echo $_GET['page'] ?>&subpage=3">
+ <a class="img-entry-horiz  sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=3">
     <div data-content="Folder 3" class="image pull-left">
       <img src="app/img/WEB/WOMEN/3/_MG_2946.jpg" />
     </div>
-  </a> -->
+  </a>
 
   <a class="img-entry-horiz sub-img-folder" href="?page=<?php echo $_GET['page'] ?>&subpage=4">
     <div data-content="Folder 4" class="image pull-left">
@@ -63,6 +67,4 @@ if(isset($_GET['subpage'])){
       <img src="app/img/WEB/WOMEN/10/_MG_2645.jpg" />
     </div>
   </a>
-</div>
-<?php }
-?>
+</div> -->

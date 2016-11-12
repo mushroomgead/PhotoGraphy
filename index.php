@@ -18,11 +18,11 @@
     <!-- lightslider -->
     <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
     <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
-    <!-- lightGallery -->
-    <link type="text/css" rel="stylesheet" href="app/includes/lightGallery/dist/css/lightgallery.min.css" />
-    <script src="app/includes/lightGallery/dist/js/lightGallery.min.js"></script>
-    <script src="app/includes/lightGallery/dist/js/lg-thumbnail.min.js"></script>
-    <script src="app/includes/lightGallery/dist/js/lg-fullscreen.min.js"></script>
+    <!-- lightgallery -->
+    <link type="text/css" rel="stylesheet" href="app/includes/lightgallery/dist/css/lightgallery.min.css" />
+    <script src="app/includes/lightgallery/dist/js/lightGallery.min.js"></script>
+    <script src="app/includes/lightgallery/dist/js/lg-thumbnail.min.js"></script>
+    <script src="app/includes/lightgallery/dist/js/lg-fullscreen.min.js"></script>
     <script src="app/includes/masonry.pkgd.min.js"></script>
 
     <?php
