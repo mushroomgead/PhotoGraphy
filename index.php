@@ -10,9 +10,7 @@
     <meta name="author" content="mushroomgead" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="app/includes/style.css">
-    <!-- Section include -->
     <script src="app/includes/jquery.min.js"></script>
-    <link rel="stylesheet" href="app/includes/responsive.css">
     <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/includes/bootstrap-3.3.7-dist/css/bootstrap.css">
     <!-- lightslider -->
@@ -26,17 +24,23 @@
     <!-- masonry -->
     <script src="app/includes/masonry.pkgd.min.js"></script>
     <!-- perfectLayout -->
-    <script src="app/includes/perfect-layout/dist/perfectLayout.min.js"></script>
+    <script src="app/includes/perfect-layout/dist/perfectLayout.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a#<?php echo isset($_GET['page'])? $_GET['page'] : '99'; ?>').addClass("active-page");
+        });
+    </script>
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');
-        require_once('default.js.php');
+        require_once('default.js');
     ?>
     </head>
     <body>
         <!-- BackToTop Button -->
         <a id="goTop"><i class="fa fa-chevron-up"></i></a>
-        <!-- End of BackToTop Button -->
+
         <?php if(isset($_SESSION['UserData']['username'])){ ?>
             <nav class="navbar-default">
                 <div class="container-fluid">

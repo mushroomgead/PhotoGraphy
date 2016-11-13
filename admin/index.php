@@ -13,8 +13,6 @@
     <!-- Section include -->
     <script src="../app/includes/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <link type="text/css" rel="stylesheet" href="../app/includes/responsive.css">
     <script src="https://use.fontawesome.com/a3968c3586.js"></script>
     <!-- lightslider -->
     <link type="text/css" rel="stylesheet" href="../app/includes/lightslider/dist/css/lightslider.css" />
