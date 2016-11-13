@@ -94,7 +94,8 @@ function genImageBlock($category, $subcategory){
         }
 
         $img[$i]['src']     = $file_path;
-        $img[$i]['data']    = $file_path_thumb;
+        // $img[$i]['data']    = $file_path_thumb;
+        $img[$i]['data']    = $file_path;
         $actual_size        = getimagesize($file_path_backend);
         $img_width          = $actual_size[0];
         $img_height         = $actual_size[1];
@@ -116,71 +117,61 @@ function GenCoverPhoto($category,$flgmark){
 
     if($flgmark == 'cover'){
         echo ' <div id="block-photo"> ';
+
         foreach ($result as $key => $value) {
           $i = $i+1;
           echo $str = ' <a class="img-entry-vert  sub-img-folder" href="?page='.$category.'&subpage='.$i.'">
-       
-            <img src="app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'].'" />
 
-    </a>';
-}
-echo '</div>';
-}else{
+            <img src="app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'].'" /></a>';
+        }
+        echo '</div>';
+    }else{
     echo '<div class="demo">
     <ul id = "imageGallery">';
 
       foreach ($result as $key => $value) {
         echo $str = '<img src="app/img/WEB/HOME/'.$value['filename'].'" />';
     }
-    echo '  </ul>
-</div>';
+    echo '</ul></div>';
 }
 }
 
 function genCoverImageBlock($category,$flgmark){ 
     $i = 0;
-    $query_str = 'select * 
-    from tphotos 
-    where category = "'.$category.'" 
-    and flg_mark = "'.$flgmark.'" 
-    order by subcategory';
+    $query_str = '  select * 
+                      from tphotos 
+                     where category = "'.$category.'" 
+                       and flg_mark = "'.$flgmark.'" 
+                  order by subcategory';
 
     $result = selectData($query_str);
 
     if($flgmark == 'cover'){
-    //     foreach ($result as $key => $value) {
-    //       $i = $i+1;
-    //       echo $str = ' <a class="img-entry-vert  sub-img-folder" href="?page='.$category.'&subpage='.$i.'">
-       
-    //         <img src="app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'].'" />
+        foreach ($result as $key => $value) {
+            $file_subpage       = '?page='.$value['category'].'&subpage='.($i+1).'';
+            $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
+            // $file_path_thumb    = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
+            $file_path_original    = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
 
-    // </a>';
-    // }
+            $img[$i]['data']    = $file_path_original;
+            // $img[$i]['data']    = $file_path_thumb;
+            $img[$i]['src']     = $file_subpage;
+            $actual_size        = getimagesize($file_path_backend);
+            $img_width          = $actual_size[0];
+            $img_height         = $actual_size[1];
+            $img[$i]['ratio']   = $img_width/$img_height;
+            $i = $i+1;
+        }
+        return json_encode($img);
 
-    foreach ($result as $key => $value) {
-        $file_subpage       = '?page='.$value['category'].'&subpage='.($i+1).'';
-        $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
-        $file_path_thumb    = './app/img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
-
-        $img[$i]['data']     = $file_path_thumb;
-        $img[$i]['src']    = $file_subpage;
-        $actual_size        = getimagesize($file_path_backend);
-        $img_width          = $actual_size[0];
-        $img_height         = $actual_size[1];
-        $img[$i]['ratio']   = $img_width/$img_height;
-        $i = $i+1;
-    }
-    return json_encode($img);
-    }
-    else{
+    } else {
         echo '<div class="demo">
         <ul id = "imageGallery">';
 
-          foreach ($result as $key => $value) {
+        foreach ($result as $key => $value) {
             echo $str = '<img src="app/img/WEB/HOME/'.$value['filename'].'" />';
         }
-        echo '  </ul>
-    </div>';
+        echo '</ul></div>';
     }
 }
 

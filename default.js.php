@@ -134,7 +134,7 @@
 
             $.fn.perfectLayout = function (photos) {
               var node = this;
-              var perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), { margin: 2 });
+              var perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), { margin: 5 });
               node.empty();
               var x = 0;
               perfectRows.forEach(function (row) {
@@ -197,7 +197,7 @@
 
             $.fn.perfectLayout = function (photos) {
               var node = this;
-              var perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), { margin: 2 });
+              var perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), { margin: 5 });
               node.empty();
               perfectRows.forEach(function (row) {
                   row.forEach(function (img) {
