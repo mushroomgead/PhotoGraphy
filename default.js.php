@@ -16,7 +16,7 @@
         $(window).scroll(function() {
             if($(this).scrollTop() > 200){
                 $('#goTop').stop().animate({
-                    bottom: '60px'
+                    bottom: '50px'
                     }, 100);
             }
             else{

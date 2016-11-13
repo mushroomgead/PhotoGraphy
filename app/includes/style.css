@@ -72,8 +72,9 @@ ul li.nav-column:hover{
 }
 .layout-right{
 	float: left;
-	width: 9%;
+	width: 9.27%;
 	margin-top:-11px;
+	text-align: center;
 }
 
 /* Footer */
@@ -117,8 +118,8 @@ ul li.nav-column:hover{
     width:35px; 
     height: 40px;
     text-align: center;
-    background:rgba(158, 158, 158, 0.18);
-    color: #B3B3B3;
+    background:rgba(116, 118, 119, 0.62);
+    color: #FFFFFF;
     padding-top: 8px;
     cursor:pointer;
  }
@@ -134,6 +135,7 @@ ul li.nav-column:hover{
 .image {
     position:relative;
     float: left;
+    margin: 2px;
 }
 /*--------------------------------------------------------*\
 	I. loader

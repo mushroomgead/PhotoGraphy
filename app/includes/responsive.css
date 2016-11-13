@@ -42,13 +42,13 @@
 		width: 100%;
 	}
 	.layout-left{
-		width: 50%;
+		width: 70%;
 	}
 	.layout-right{
 		float: left;
 		margin-top:0px;
 	}
-	
+
 	/* Footer */
 	#text-footer{
 		display: none;
