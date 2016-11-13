@@ -1,62 +1,7 @@
-/* Large desktops and laptops */
-/*@media (min-width: 1200px) {*/
-/*	ul li.nav-column {
-		float: left;
-		width: 8%;
-		text-align: center;
-	}
-	.section-footer{
-		padding: 16px 0 0 20px;
-	}*/
-/*}*/
-
-/* Landscape tablets and medium desktops */
-/*@media (min-width: 992px) and (max-width: 1199px) {
-
-	.font-size-header {
-		font-size: 28px;
-	}
-	.section-header{
-		width: 100%;
-		text-align: center;
-		color: #000000;
-		background:#fff;
-	}
-	ul li.nav-column {
-		float: left;
-		width: 8.47%;
-		text-align: center;
-	}	
-	.section-footer{
-		padding: 16px 0 0 20px;
-	}
-
-	#block-photo{
-		margin-left: 89px;
-	}
-}*/
-
-/* Portrait tablets and small desktops */
-/*@media (min-width: 768px) and (max-width: 991px) {
-	ul.topnav li{
-		float: left;
-		width: 35.58%;
-	}
-	.layout-left{
-		float: left;
-		width: 50%;
-	}
-	ul li.nav-column {
-		float: left;
-		width: 100%;
-		text-align: center;
-		font-size: 13px;
-	}
-	.nav-menu{
-		display: inline-block;
-	}
-	#icon_close{
-		display: none;
+@media (max-width: 991px) {	
+	/* Hamberger Menu */
+	li.icon a{
+		float: right;
 	}
 	ul.topnav li:not(:first-child){
 		display: none;
@@ -66,290 +11,54 @@
 		display: inline-block;
 		padding: 0;
 	}
-	li.icon a{
-		float: right;
-	}
 	ul.topnav.responsive {
 		position: relative;
 	}
-	ul.topnav.responsive li.icon{
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
 	ul.topnav.responsive li {
-		float: left;
-		display: inline-table;
-	}
-	ul.topnav.responsive li a {
-		display: block;
-		text-align: left;
-	}
-	.font-size-header {
-		font-size: 28px;
-	}
-	.section-header{
-		width:100%;
-	}
-	.layout-left{
-		float: left;
-		width: 40%;
-	}
-	ul li.nav-column {
-		float: left;
-		width: 100%;
-		text-align: center;
-		font-size: 13px;
-	}
-	.section-right{
-	    padding-left: 40px;
-	}
-	.section-footer{
-		padding: 16px 0 0 20px;
-	}
-
-	#block-photo{
-		margin: 0;
-	}
-}*/
-
-/* Landscape phones and portrait tablets */
-/*@media (max-width: 767px) {*/
-/*	ul.topnav li:not(:first-child){
-		display: none;
-	}
-	ul.topnav li.icon {
-		float: right;
 		display: inline-block;
-		padding: 0;
-	}
-	li.icon a{
-		float: right;
-	}
-	ul.topnav.responsive {
-		position: relative;
-	}
-	ul.topnav.responsive li.icon{
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	ul.topnav.responsive li {
-		float: left;
-		display: inline-table;
 	}
 	ul.topnav.responsive li a {
 		display: block;
 		text-align: left;
 	}
-	#text-footer{
-		display: none;
+	ul.topnav.responsive li.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 	#icon-hambg{
 		color:#777;
 	}
-	.nav-column{
-		width: 100%;
-		text-align: left;
-	}
-	.font-size-header {
-		font-size: 18px;
-	}
-	.section-header{
-		width: 100%;
-		text-align: center;
-		color: #000000;
-		background:#fff;
-	}*/
-/*	.section-right{
-	    padding-top: 5px;
-	    width: 100%;
-	}*/
-/*	.section-left {
-		font-size: 10px;
-	}*/
-/*	.section-right {
-		font-size: 12px;
-	}*/
 
-/*	.section-body{
-		padding-top: 30px;
-	}*/
-/*	.nav-column-logo {
-     width: 50%; 
-	}*/
-/*	#block-photo{
-		margin: 0;
-	}*/
-/*}*/
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-	.font-size-header {
-		font-size: 19px;
-	}
-	.img-entry-horiz img{
-		/*width: 100% !important;*/
-		height: 185px;
-	}
-	.img-entry-vert img{
-		/*width: 100% !important;*/
-		height: 307px;
-	}
+	/* Section <main> */
 	.section-header{
-		width: 100%;
-		text-align: center;
-		color: #000000;
-		background:#fff;
 		padding :25px 16px 25px 20px;
-	}
-	.section-body{
-		/*min-height: 354px;*/
-		padding-top: 30px;
+		line-height: 40px;
 	}
 	.font-size-header {
     	font-size: 15px;
 	}
-	.nav-column {
-	    width: 100%;
-	    width: 100%;
-	    text-align: center;
-	    color: #000000;
+	ul li.nav-column {
+		width: 100%;
 	}
-	.section-left {
-	    font-size: 8.80px;
-	    width: 100%;
-	}	
+	.layout-left{
+		width: 50%;
+	}
+	.layout-right{
+		float: left;
+		margin-top:0px;
+	}
+	
+	/* Footer */
+	#text-footer{
+		display: none;
+	}
 	.section-right {
 	    padding-top: 5px;
 	    font-size: 14.8px;
 	    width: 100%;
 	}
-	ul.topnav li{
-		float: left;
-		/*width: 28.58%;*/
-	}
-	.layout-left{
-		float: left;
-		width: 50%;
-	}
-	ul li.nav-column {
-		float: left;
-		width: 100%;
-		text-align: center;
-		font-size: 13px;
-	}
-	.nav-menu{
-		display: inline-block;
-	}
-	#icon_close{
-		display: none;
-	}
-	/* When the screen is less than 480 pixels wide,
-	hide all list items, except for the first one ("Home").
-	Show the list item that contains the link to open
-	and close the topnav (li.icon) */
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
-	ul.topnav li.icon {
-		float: right;
-		display: inline-block;
-		padding: 0;
-	}
-	li.icon a{
-		float: right;
-	}
-	ul.topnav.responsive {
-		position: relative;
-		/*padding: 13px 0 20px 0;*/
-	}
-	ul.topnav.responsive li.icon{
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	ul.topnav.responsive li {
-		float: left;
-		display: inline-table;
-	}
-	ul.topnav.responsive li a {
-		display: block;
-		text-align: left;
-	}
-	#text-footer{
-		display: none;
-	}
-	#icon-hambg{
-		color:#777;
-	}
-	.nav-column-logo{
-		display: block;
-		text-align: center;
-		font-size: 13px;
-		width: 50% !important;
-		padding-top: 13px;
-	}
-	/*test*/
-	/*a.img-entry-vert .image:after {
-	    height: 307px;
-	    width: 205px;
-	    top:10px;
-	    left:5px;
-	    cursor: pointer;
-	    background:rgba(0, 0, 0, 0.36);
-	}
-	a.img-entry-horiz .image:after {
-	    content:'\A';
-        height: 185px;
-	    width: 277.5px;
-	    top:10px;
-	    left:5px;
-	    cursor: pointer;
-	    background:rgba(0, 0, 0, 0.36);
-	}
-	a.img-entry-horiz .image:before {
-	    content: attr(data-content);
-	    width:100px;
-	    color:#fff;
-	    z-index:1;
-	    font-size: 20px;
-	    top: 90px;
-	    left: 90px;
-	    margin: 0 auto;
-	    text-align:center;
-	    -moz-box-sizing:border-box;
-	}
-	a.img-entry-vert .image:before {
-	    content: attr(data-content);
-	    width:100px;
-	    color:#fff;
-	    z-index:1;
-	    font-size: 20px;
-	    top: 130px;
-	    left: 55px;
-	    text-align:center;
-	    -moz-box-sizing:border-box;
-	}
-	.image {
-	    position:relative;
-	    width:auto;
-	    height:auto;
-	    padding: 5px;
-	}
-	.image:after, .image:before {
-	    position:absolute;
-	    opacity:0;
-	    transition: all 0.5s;
-	    -webkit-transition: all 0.5s;
-	}
-	.image:hover:after, .image:hover:before {
-    	opacity:1;
-	}*/
-	.demo{
-		/*padding-top:50px;*/
-	}
-	#block-photo{
-		margin-left:44px;
+	.section-footer{
+    	padding: 8px 0 0 20px;
 	}
 }

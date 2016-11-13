@@ -1,0 +1,463 @@
+
+/*	Table of Contents
+	update on Sat Nov 13 2016 7:48M.
+	I. 		General
+	II.		Sticky
+	III. 	Layout Photo
+	VI. 	Plugin
+	VII. 	loader
+*/
+
+
+/*--------------------------------------------------------*\
+	I. General
+/*--------------------------------------------------------*/
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+#etc,#personal,#portrait,#women,#still,#men {
+	padding:9px 0 6px 6px;
+}
+/*-- logo --*/
+.nav-column-logo{
+	width: 100%;
+}
+/*-- Font --*/
+.font-style{
+	font-family: lato,sans-serif;
+}
+.font-size-header{
+	font-size:17px;
+}
+.font-size-body{
+	font-size:10px;
+	letter-spacing: 2px;
+}
+.section-nav{
+	border-bottom:1px solid #000000;
+	margin-bottom: 17px !important;
+}
+.section-body{
+	min-height: 100%;
+	position: relative;
+}
+.section-footer{
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(204, 204, 204, 0.38);
+    padding: 8px 0 0 20px;
+}
+.section-left{
+	float: left;
+}
+.section-right{
+	float: right;
+	text-align: right;
+	padding-right:15px;
+}
+.section-header{
+	text-align: center;
+	line-height: 40px;
+	color: #000000;
+	background:#fff;
+	z-index: 1;
+}
+.block-index{
+    width: 50%;
+    min-height: 100px;
+    padding: 34px;
+}
+/*-- Login --*/
+.page-login{
+	padding: 20px;
+}
+.layout-login{
+	margin-bottom: 11px;
+}
+.active-page{
+	background: rgba(0, 0, 0, 0.1);
+	padding: 9px 0 6px 6px;
+}
+body #login{
+	background: #f5f5f5;
+}
+
+/*-- scroll top --*/
+#goTop{
+    padding:5px;
+    position:fixed;
+    right:3%;
+    bottom: -100px;
+    z-index: 999;
+    border-radius: 3px;
+    width:35px; 
+    height: 40px;
+    text-align: center;
+    background:rgba(158, 158, 158, 0.18);
+    color: #B3B3B3;
+    padding-top: 8px;
+    cursor:pointer;
+ }
+#goTop:hover{
+    background:rgba(158, 158, 158, 0.56);
+    color: #565656;
+}
+.fix-scroll{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.page-login{
+	width: 300px;
+	margin: 0 auto;
+}
+.head-login{
+	padding: 16px 16px 0 16px;
+	color: #564848;
+}
+.login-txtbox{
+	border: none;
+	border-bottom: 1px solid #CCCCCC;
+	width: 300px;
+	min-height: 32px;
+	margin-bottom: 20px;
+}
+.btn-login{
+	width: 90px;
+	height: 40px;
+}
+.layout-btn{
+	padding-bottom: 15px;
+}
+.text-delete{
+    display: inline-block;
+    margin-right: 13px;
+    color: #777676;
+}
+.section-info{
+    padding: 0 0 10px 0px;
+    margin-bottom: 27px;
+}
+.tag-delete{
+	background: #f44336;
+	display: inline-block;
+	font-size: 10px;
+	width: 76px;
+	height: 32px;
+	text-align: center;
+	padding-top: 8px;
+	color: #ffffff;
+	border-radius: 15px;
+	margin: 0 10px 0 0;
+}
+.layout-left.sticky{
+	float: left;
+	width: 30%;
+	text-align: left;
+}
+.font-size-header.sticky{
+	font-size:24px;
+}
+.section-header.sticky {
+    position: fixed;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    display: inline-block;
+}
+#block-photo{
+	margin-left:85px;
+}
+/*-- Top Navigate --*/
+#page_index{
+	transition: margin-left .5s;
+	padding: 16px;
+	min-height: 100%;
+	/*margin: 0 0 0 50px;*/
+}
+.nav-menu{
+	display: none;
+}
+.ul li.nav-column{
+	width: 10%;
+}
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	/*padding: 13px 0 30px 0;*/
+	overflow: hidden;
+}
+ul.topnav li{
+	float: left;
+}
+ul.topnav li a{
+	display: inline-block;
+	color: #000000;
+	text-align: center;
+	/*padding: 14px 16px;*/
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 14px;
+	margin-left:15px;
+}
+li .nav-column{
+	width: 11%;
+	text-align: center;
+	color: #000000;
+}
+li .nav-column.sticky{
+	width: 11%;
+	text-align: center;
+}
+ul.topnav li.icon {display: none;}
+ul li.nav-column:hover{
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+}
+
+ul.topnav li a:hover{
+	color: #000 !important;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------*\
+	III. Layout Photo
+/*--------------------------------------------------------*/
+
+/*.photo-list{
+	width: 100%;
+	margin-left:53px !important;
+}*/
+/*.img-entry-vert img{
+	height: 358px;
+	top: 5px;
+	margin-bottom: 9px;
+}*/
+/*.img-entry-vert, .img-entry-horiz,
+.img-entry-vert:hover, .img-entry-horiz:hover{
+	text-decoration: none;
+}*/
+/*.img-entry-horiz img{
+	height: 358px;
+	top: 5px;
+	margin-bottom: 9px;
+}*/
+.image {
+    position:relative;
+    float: left;
+}
+.image:after, .image:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+a.img-entry-horiz .image:after {
+    content:'\A';
+    height: 358px;
+    width: 537px;
+    top:10px;
+    left:5px;
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0.36);
+}
+a.img-entry-vert .image:after {
+    content:'\A';
+    height: 358px;
+    width: 238px;
+    top:10px;
+    left:5px;
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0.36);
+}
+.image:before {
+    content: attr(data-content);
+    width:100%;
+    color:#fff;
+    z-index:1;
+    font-size: 30px;
+    top: 150px;
+    text-align:center;
+    -moz-box-sizing:border-box;
+}
+.image:hover:after, .image:hover:before {
+    opacity:1;
+}
+
+/*--------------------------------------------------------*\
+	IIII. Plugin
+/*--------------------------------------------------------*/
+
+/*-- Gellery silder --*/
+.demo img{
+	width: 100%;
+}
+img{
+	position: relative;
+}
+ul {
+	list-style: none outside none;
+	padding-left: 0;
+	margin-bottom:0;
+}
+li {
+	display: block;
+	margin-right: 6px;
+	cursor:pointer;
+}
+.demo{
+	min-height: 463px;
+}
+/*-- grid --*/
+.grid-item, .grid-item img{ 
+	width: 275px;
+	margin-bottom: 2px;
+}
+.grid-item--width2, .grid-item--width2 img{ 
+	width: 100px;
+}
+
+
+/*--------------------------------------------------------*\
+	I. loader
+/*--------------------------------------------------------*/
+
+#loader{
+	position: fixed;
+	width:100%;
+	height: 100%;
+	background: #ffffff;
+	z-index: 9999;
+	overflow: hidden;
+	left: 0;
+}
+.cssload-spinner {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: 50%;
+    top: calc(40%);
+}
+.cssload-spinner:after, .cssload-spinner:before {
+	position: absolute;
+	content: "";
+	border: 2px solid rgb(161,161,161);
+	width: 31px;
+	height: 31px;
+}
+.cssload-spinner:after {
+	animation: cssload-spinner1 2.88s linear infinite;
+		-o-animation: cssload-spinner1 2.88s linear infinite;
+		-ms-animation: cssload-spinner1 2.88s linear infinite;
+		-webkit-animation: cssload-spinner1 2.88s linear infinite;
+		-moz-animation: cssload-spinner1 2.88s linear infinite;
+}
+.cssload-spinner:before {
+	width: 43px;
+	height: 43px;
+	margin-left: -6.5px;
+	margin-top: -6.5px;
+	animation: cssload-spinner2 2.88s linear infinite;
+		-o-animation: cssload-spinner2 2.88s linear infinite;
+		-ms-animation: cssload-spinner2 2.88s linear infinite;
+		-webkit-animation: cssload-spinner2 2.88s linear infinite;
+		-moz-animation: cssload-spinner2 2.88s linear infinite;
+}
+
+@keyframes cssload-spinner1 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-spinner1 {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-spinner1 {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-spinner1 {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-spinner1 {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@keyframes cssload-spinner2 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+@-o-keyframes cssload-spinner2 {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(-360deg);
+	}
+}
+
+@-ms-keyframes cssload-spinner2 {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes cssload-spinner2 {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+	}
+}
+
+@-moz-keyframes cssload-spinner2 {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(-360deg);
+	}
+}
