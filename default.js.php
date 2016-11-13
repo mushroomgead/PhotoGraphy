@@ -112,8 +112,10 @@
     function HambergerMenu() {
         if($('#myTopnav').hasClass('responsive')){
           $("#myTopnav").removeClass("responsive");
+          $('.demo').css('padding-top','50');
         }else{
           $("#myTopnav").addClass("responsive");
+          $('.demo').removeAttr('padding-top');
         }
 
     }

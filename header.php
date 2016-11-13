@@ -4,9 +4,6 @@
             <a href="./">VV PHOTOGRAPHER</a>
         </li>
         <li class="clearfix nav-column pull-right">
-            <a href="#" id="etc">etc</a>
-        </li>
-        <li class="clearfix nav-column pull-right">
             <a href="?page=personal" id="personal">personal</a>
         </li>
         <li class="clearfix nav-column pull-right">
@@ -21,8 +18,11 @@
         <li class="clearfix nav-column pull-right">
             <a href="?page=men" id="men">men</a>
         </li>
+        <li class="clearfix nav-column pull-right">
+            <a href="#" id="etc">etc</a>
+        </li>
         <li class="clearfix icon">
-            <a href="javascript:void(0);" style="font-size:15px;" onclick="HambergerMenu()" id="icon-hambg">☰</a>
+            <a href="javascript:void(0);" style="" onclick="HambergerMenu()" id="icon-hambg">☰</a>
         </li>
     </ul>
 </nav>
