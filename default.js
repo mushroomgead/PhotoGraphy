@@ -1,6 +1,16 @@
-<script type='text/javascript'>
-
 $(document).ready(function() {
+    /** Fixed footer always bottom of page **/
+    $(window).trigger('resize');
+
+    $(window).resize(function () {
+        var screen_height = $(document).height();
+        var header_height = $('#section-header').outerHeight();
+        var footer_height = $('footer').outerHeight();
+        var body_height   = screen_height-header_height-footer_height;
+
+        $('#page_index').css('min-height',body_height);
+    });
+    /** Fixed scroll while loading **/
     $('html').addClass('fix-scroll');
 
     /** Used for Show Photo Slider in Index.php **/
@@ -57,7 +67,7 @@ $(document).ready(function() {
     });
 
     /** Used for Mode ADMIN :: Delete Photo. **/
-    <?php if (isset($_SESSION['UserData']['username'])) { ?>
+    // <?php if (isset($_SESSION['UserData']['username'])) { ?>
 
     $grid.on('click','.grid-item',function(event){
         if (confirm('Delete ?')){
@@ -86,7 +96,7 @@ $(document).ready(function() {
         }
     })
 
-    <?php } ?>
+    // <?php } ?>
 });
 
 /** Function HambergerMenu Used for show tab menu list when responsive screen **/
@@ -197,4 +207,3 @@ function setLayout(photos, isCover){
         });
     }
 }
-</script>

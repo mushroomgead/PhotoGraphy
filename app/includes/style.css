@@ -1,6 +1,6 @@
 
 /*	Table of Contents
-	update on Sat Nov 13 2016 8:14 PM.
+	update on Sat Nov 14 2016 10:06 PM.
 	I. 		General
 	II.		Admin Mode
 	III. 	Plugin
@@ -25,7 +25,6 @@ body #login{
 }
 #page_index{
 	padding: 16px;
-	min-height: 500px;
 }
 .fix-scroll{
 	overflow: hidden;
@@ -72,7 +71,7 @@ ul li.nav-column:hover{
 
 /*-- All Section --*/
 .section-header{
-	padding :25px 16px 25px 20px;
+	padding :33px 16px 25px 20px;
 	line-height: 40px;
 }
 .section-nav{
@@ -370,7 +369,7 @@ li {
 
 	/*-- All Section <main> --*/
 	.section-header{
-		padding :25px 16px 25px 20px;
+		padding :33px 16px 25px 20px;
 		line-height: 40px;
 	}
 	.font-size-header {

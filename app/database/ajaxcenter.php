@@ -14,14 +14,14 @@ switch ($case_name) {
     checktodelete($filepath,$category,$filename);
     break;
 
-    case 'GenImage' :
+  case 'GenImage' :
     $category    = $_POST['p_category'];
     $subcategory = $_POST['p_subcategory'];
 
     echo genImageBlock($category, $subcategory);
     break;
 
-    case 'GenCoverImage' :
+  case 'GenCoverImage' :
     $category    = $_POST['p_category'];
     $flgmark     = $_POST['p_flgmark'];
 

@@ -25,6 +25,7 @@
     <script src="app/includes/masonry.pkgd.min.js"></script>
     <!-- perfectLayout -->
     <script src="app/includes/perfect-layout/dist/perfectLayout.js"></script>
+    <script src="default.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -34,7 +35,6 @@
     <?php
         require_once('app/database/conn_db.php');
         require_once('app/database/function.php');
-        require_once('default.js');
     ?>
     </head>
     <body>
