@@ -3,11 +3,12 @@ $(document).ready(function() {
     $(window).trigger('resize');
 
     $(window).resize(function () {
-        var screen_height = $(document).height();
+        var screen_height = $(window).height();
         var header_height = $('#section-header').outerHeight();
         var footer_height = $('footer').outerHeight();
         var body_height   = screen_height-header_height-footer_height;
 
+        $('#page_index').css('min-height','');
         $('#page_index').css('min-height',body_height);
     });
     /** Fixed scroll while loading **/
