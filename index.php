@@ -9,23 +9,24 @@
     <meta name="keywords" content="vv photographer,photography,vv,photographer" />
     <meta name="author" content="mushroomgead" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="app/includes/style.css">
-    <script src="app/includes/jquery.min.js"></script>
-    <link rel="stylesheet" href="app/includes/font-awesome-4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="app/includes/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- lightslider -->
-    <link type="text/css" rel="stylesheet" href="app/includes/lightslider/dist/css/lightslider.css" />
-    <script src="app/includes/lightslider/dist/js/lightslider.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/lightslider.min.css" />
+    <script src="js/lightslider.min.js"></script>
     <!-- lightgallery -->
-    <link type="text/css" rel="stylesheet" href="app/includes/lightgallery/dist/css/lightgallery.min.css" />
-    <script src="app/includes/lightgallery/dist/js/lightGallery.min.js"></script>
-    <script src="app/includes/lightgallery/dist/js/lg-thumbnail.min.js"></script>
-    <script src="app/includes/lightgallery/dist/js/lg-fullscreen.min.js"></script>
-    <!-- masonry -->
-    <script src="app/includes/masonry.pkgd.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.min.css" />
+    <script src="js/lightGallery.min.js"></script>
+    <script src="js/lg-thumbnail.min.js"></script>
+    <script src="js/lg-fullscreen.min.js"></script>
     <!-- perfectLayout -->
-    <script src="app/includes/perfect-layout/dist/perfectLayout.js"></script>
-    <script src="default.js"></script>
+    <script src="js/perfectLayout.min.js"></script>
+    <!-- masonry -->
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -59,7 +60,7 @@
             </nav>
         <?php } ?>
             <div class="clearfix font-style font-size-body">
-                <?php include('header.php'); ?>
+                <?php include('src/header.php'); ?>
                 <main>
                     <div class="clearfix section-body font-size-body" id="page_index">        
                         <div id="loader">
@@ -68,23 +69,23 @@
                         <?php
                             switch(isset($_GET['page']) ? $_GET['page'] : '') {
                                 case 'men'      :
-                                    require_once('app/http/page_men.php');
+                                    require_once('src/page_men.php');
                                     break;
 
                                 case 'still'    :
-                                    require_once('app/http/page_still.php');
+                                    require_once('src/page_still.php');
                                     break;
 
                                 case 'women'    :
-                                    require_once('app/http/page_women.php');
+                                    require_once('src/page_women.php');
                                     break;
 
                                 case 'portrait' :
-                                    require_once('app/http/page_portrait.php');
+                                    require_once('src/page_portrait.php');
                                     break;
 
                                 case 'personal' :
-                                    require_once('app/http/page_personal.php');
+                                    require_once('src/page_personal.php');
                                     break;
 
                                 case 'adminupload':
@@ -92,12 +93,12 @@
                                     break;
 
                                 default:
-                                require_once('app/http/page_home.php');
+                                require_once('src/page_home.php');
                             }
                         ?>
                     </div>
                 </main>
-            <?php require_once('footer.php'); ?>
+            <?php require_once('src/footer.php'); ?>
         </div>
     </body>
 </html>
