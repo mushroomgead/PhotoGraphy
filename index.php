@@ -61,7 +61,7 @@
             <div class="clearfix font-style font-size-body">
                 <?php include('src/header.php'); ?>
                 <main>
-                    <div class="clearfix section-body font-size-body" id="page_index">        
+                    <div class="clearfix section-body font-size-body" id="page_index">
                         <div id="loader">
                             <div class="cssload-spinner"></div>
                         </div>
