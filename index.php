@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- lightslider -->
-    <link type="text/css" rel="stylesheet" href="css/lightslider.min.css" />
-    <script src="js/lightslider.min.js"></script>
     <!-- lightgallery -->
     <link type="text/css" rel="stylesheet" href="css/lightgallery.min.css" />
     <script src="js/lightGallery.min.js"></script>
@@ -24,8 +21,10 @@
     <script src="js/lg-fullscreen.min.js"></script>
     <!-- perfectLayout -->
     <script src="js/perfectLayout.min.js"></script>
-    <!-- masonry -->
+    <!-- Responsive Slider -->
+    <script src="js/responsiveslides.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <!--  -->
     <script src="js/main.js"></script>
 
     <script type="text/javascript">

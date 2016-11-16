@@ -72,13 +72,13 @@ function GenCoverPhoto($category,$flgmark){
         echo '</div>';
 
     } else {
-        echo   '<div class="demo">
-                <ul id = "imageGallery">';
+        echo   '<ul class="rslides" id="imageGallery">';
 
-                foreach ($result as $key => $value) {
-                    echo $str = '<img src="img/WEB/HOME/'.$value['filename'].'" />';
-                }
-    echo '</ul></div>';
+        foreach ($result as $key => $value) {
+             
+            echo $str = '<li><img src="img/WEB/HOME/'.$value['filename'].'" alt=""></li>';
+        }
+        echo '</ul>';
     }
 }
 
@@ -115,13 +115,13 @@ function genCoverImageBlock($category,$flgmark){
         return json_encode($img);
 
     } else {
-        echo   '<div class="demo">
-                ul id = "imageGallery">';
+        echo   '<ul class="rslides" id="imageGallery">';
 
         foreach ($result as $key => $value) {
-            echo $str = '<img src="app/img/WEB/HOME/'.$value['filename'].'" />';
+             
+            echo $str = '<li><img src="app/img/WEB/HOME/'.$value['filename'].'" alt=""></li>';
         }
-        echo '</ul></div>';
+        echo '</ul>';
     }
 }
 

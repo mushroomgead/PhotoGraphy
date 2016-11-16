@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    /** Fixed footer always bottom of page **/
-    $(window).trigger('resize');
 
     $(window).resize(function () {
         var screen_height = $(window).height();
@@ -11,21 +9,19 @@ $(document).ready(function() {
         $('#page_index').css('min-height','');
         $('#page_index').css('min-height',body_height);
     });
+
     /** Fixed scroll while loading **/
     $('html').addClass('fix-scroll');
 
+    /** Fixed footer always bottom of page **/
+    $(window).trigger('resize');
+
     /** Used for Show Photo Slider in Index.php **/
-    $('#imageGallery').lightSlider({
-        item:1,
-        loop:true,
-        slideMove:1,
-        slideMargin:5,
-        pager: false,
-        pauseOnHover: true,
-        auto: true,
-        speed: 400,
-        pause: 5000
+    $(".rslides").responsiveSlides({
+        auto  : true,
+        speed : 1000
     });
+
 
     $(window).scroll(function() {
         if($(this).scrollTop() > 200){
