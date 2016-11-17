@@ -29,7 +29,7 @@ function genImageBlock($category, $subcategory){
 
     foreach ($result as $key => $value) {
         $file_path          = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
-        $file_path_backend  = '../../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
+        $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
         $file_path_thumb    = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
         if (isset($_SESSION['UserData']['username'])) {
@@ -76,7 +76,7 @@ function GenCoverPhoto($category,$flgmark){
 
         foreach ($result as $key => $value) {
              
-            echo $str = '<li><img src="img/WEB/HOME/'.$value['filename'].'" alt=""></li>';
+            echo $str = ' <li><a href="#"><img src="img/WEB/HOME/'.$value['filename'].'" alt=""></a></li>';
         }
         echo '</ul>';
     }
@@ -95,7 +95,7 @@ function genCoverImageBlock($category,$flgmark){
     if($flgmark == 'cover'){
         foreach ($result as $key => $value) {
             $file_subpage       = '?page='.$value['category'].'&subpage='.($i+1).'';
-            $file_path_backend  = '../../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
+            $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
             $file_path_thumb    = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
             $file_path_original = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
 
@@ -119,7 +119,10 @@ function genCoverImageBlock($category,$flgmark){
 
         foreach ($result as $key => $value) {
              
-            echo $str = '<li><img src="app/img/WEB/HOME/'.$value['filename'].'" alt=""></li>';
+            echo $str = '
+            <a href="#">
+            <li><img src="app/img/WEB/HOME/'.$value['filename'].'" alt="">
+            </li></a>';
         }
         echo '</ul>';
     }

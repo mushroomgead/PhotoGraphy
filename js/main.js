@@ -71,7 +71,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         $.ajax({
-            url  : 'app/database/ajaxcenter.php',
+            url  : 'database/ajaxcenter.php',
             type :'POST',
             data : {
               case     : 'deletePhoto',
@@ -83,7 +83,7 @@ $(document).ready(function() {
               console.log(result);
             },
             error: function(result){
-              alert('AJAX Error!');
+              console.log('AJAX Error!');
             }
         });
         // remove clicked element
@@ -110,7 +110,7 @@ function HambergerMenu() {
 /** Function GetImageFromDB Used for Get Value From Database **/
 function GetImageFromDB(category, subcategory){
     $.ajax({
-        url  : 'app/database/ajaxcenter.php',
+        url  : 'database/ajaxcenter.php',
         type :'POST',
         data:{
             case          : 'GenImage',
@@ -124,7 +124,7 @@ function GetImageFromDB(category, subcategory){
           setLayout(photos, isCover);
         },
         error:function(text,err){
-          alert(text.responseText);
+          console.log(text.responseText);
         }
     });
 }
@@ -132,7 +132,7 @@ function GetImageFromDB(category, subcategory){
 /** Function GetCoverImageFromDB Used for Get Value From Database **/
 function GetCoverImageFromDB(category,flgmark){
     $.ajax({
-        url  : 'app/database/ajaxcenter.php',
+        url  : 'database/ajaxcenter.php',
         type :'POST',
         data:{
             case          : 'GenCoverImage',
@@ -146,7 +146,7 @@ function GetCoverImageFromDB(category,flgmark){
             setLayout(photos, isCover);
         },
         error:function(text,err){
-            alert(text.responseText);
+            console.log(text.responseText);
         }
     });
 }

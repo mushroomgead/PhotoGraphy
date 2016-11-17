@@ -23,36 +23,44 @@ body #login{
 #etc,#personal,#portrait,#women,#still,#men {
 	padding:9px 0 6px 6px;
 }
-#page_index{
+#page_index {
 	padding: 16px;
 }
-.fix-scroll{
+.fix-scroll {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
 }
+::moz-selection {
+	color: #ffffff;
+	background: #000000;
+}
+::selection {
+	color: #ffffff;
+	background: #000000;
+}
 
 /*-- Font Style --*/
-.font-style{
+.font-style {
 	font-family: lato,sans-serif;
 }
-.font-size-header{
+.font-size-header {
 	font-size:17px;
 }
-.font-size-body{
+.font-size-body {
 	font-size:10px;
 	letter-spacing: 2px;
 }
 
 /*-- Navigator Top --*/
-ul.topnav li.icon {display: none;}
+ul.topnav li.icon { display: none; }
 ul.topnav {
 	list-style-type: none;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
 }
-ul.topnav li a{
+ul.topnav li a {
 	display: inline-block;
 	color: #000000;
 	text-decoration: none;
@@ -61,35 +69,35 @@ ul.topnav li a{
 	margin-left:3px;
 	padding-left: 7px;
 }
-ul li.nav-column:hover{
+ul li.nav-column:hover {
 	color: #000;
 	font-weight: bold;
 	text-decoration: none;
 }
-.active-page{
+.active-page {
 	border-bottom:1px solid rgba(0, 0, 0, 0.21);
 	padding: 9px 0 6px 6px;
 }
 
 /*-- All Section --*/
-.section-header{
+.section-header {
 	padding :33px 16px 25px 20px;
 	line-height: 40px;
 }
-.section-nav{
+.section-nav {
 	border-bottom:1px solid #000000;
 	margin-bottom: 17px !important;
 }
-.section-right{
+.section-right {
 	float: right;
 	text-align: right;
 	padding-right:15px;
 }
-.layout-left{
+.layout-left {
 	float: left;
 	width: 40%;
 }
-.layout-right{
+.layout-right {
 	float: left;
 	width: 9.27%;
 	margin-top:-11px;
@@ -97,17 +105,17 @@ ul li.nav-column:hover{
 }
 
 /*-- Footer --*/
-.section-footer{
+.section-footer {
     height: 50px;
     background: rgba(204, 204, 204, 0.38);
     padding: 18px 0 0 20px;
 }
-footer{
+footer {
 	position: relative;
 }
 
 /*-- GoTop Button--*/
-#goTop{
+#goTop {
     padding:5px;
     position:fixed;
     right:3%;
@@ -122,7 +130,7 @@ footer{
     padding-top: 8px;
     cursor:pointer;
  }
-#goTop:hover{
+#goTop:hover {
     background:rgba(158, 158, 158, 0.56);
     color: #565656;
 }
@@ -133,7 +141,7 @@ footer{
     float: left;
     margin: 2px;
 }
-.cover-img{
+.cover-img {
 	color: red;
 	text-transform: uppercase;
 }
@@ -143,23 +151,23 @@ footer{
 /*--------------------------------------------------------*/
 
 /*-- Login --*/
-.layout-login{
+.layout-login {
 	margin-bottom: 11px;
 }
-.page-login{
+.page-login {
 	width: 300px;
 	margin: 0 auto;
 }
-.text-delete{
+.text-delete {
     display: inline-block;
     margin-right: 13px;
     color: #777676;
 }
-.section-info{
+.section-info {
     padding: 0 0 10px 0px;
     margin-bottom: 27px;
 }
-.tag-delete{
+.tag-delete {
 	background: #f44336;
 	display: inline-block;
 	font-size: 10px;
@@ -176,26 +184,6 @@ footer{
 	III. Plugin
 /*--------------------------------------------------------*/
 
-/*-- Gellery silder --*/
-/*.demo{
-	min-height: 463px;
-}
-.demo img{
-	width: 100%;
-}
-img{
-	position: relative;
-}
-ul {
-	list-style: none outside none;
-	padding-left: 0;
-	margin-bottom:0;
-}
-li {
-	display: block;
-	margin-right: 6px;
-	cursor:pointer;
-}*/
 /*-- Responsive Slider --*/
 
 .rslides {
@@ -233,7 +221,7 @@ li {
 	VI. loader
 /*--------------------------------------------------------*/
 
-#loader{
+#loader {
 	position: fixed;
 	width:100%;
 	height: 100%;
@@ -371,7 +359,7 @@ li {
 
 @media (max-width: 991px) {	
 	/*-- Navigator Top --*/
-	li.icon a{
+	li.icon a {
 		float: right;
 	}
 	ul.topnav li:not(:first-child){
@@ -393,17 +381,17 @@ li {
 		text-align: left;
 		padding-left: 7px;
 	}
-	ul.topnav.responsive li.icon{
+	ul.topnav.responsive li.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
-	#icon-hambg{
+	#icon-hambg {
 		color:#777;
 	}
 
 	/*-- All Section <main> --*/
-	.section-header{
+	.section-header {
 		padding :33px 16px 25px 20px;
 		line-height: 40px;
 	}
@@ -413,16 +401,16 @@ li {
 	ul li.nav-column {
 		width: 100%;
 	}
-	.layout-left{
+	.layout-left {
 		width: 70%;
 	}
-	.layout-right{
+	.layout-right {
 		float: left;
 		margin-top:0px;
 	}
 
 	/*-- Footer --*/
-	#text-footer{
+	#text-footer {
 		display: none;
 	}
 	.section-right {
@@ -430,7 +418,7 @@ li {
 	    font-size: 14.8px;
 	    width: 100%;
 	}
-	.section-footer{
+	.section-footer {
     	padding: 8px 0 0 20px;
 	}
 }

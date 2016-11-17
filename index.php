@@ -33,8 +33,8 @@
         });
     </script>
     <?php
-        require_once('app/database/conn_db.php');
-        require_once('app/database/function.php');
+        require_once('database/conn_db.php');
+        require_once('database/function.php');
     ?>
     </head>
     <body>
