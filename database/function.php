@@ -5,6 +5,7 @@ function genImageBlock($category, $subcategory){
     $str            = '';
     $check          = '';
     $str_delete     = '';
+    $flg_admin      = '';
     $i              = 0;
     $img            = array();
     $query_str      =  'select *
@@ -13,6 +14,7 @@ function genImageBlock($category, $subcategory){
     $result         = selectData($query_str);
 
     if (isset($_SESSION['UserData']['username'])) {
+        $flg_admin  = 'Y';
         $str_delete = ' <div class="section-info">
                             <div class="tag-delete">DELETE</div>
                             <div class="text-delete">CLICK AT THE PHOTO TO DELETE.</div>
@@ -32,22 +34,32 @@ function genImageBlock($category, $subcategory){
         $file_path_backend  = '../img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
         $file_path_thumb    = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
 
-        if (isset($_SESSION['UserData']['username'])) {
-            $hidden_value   = ' <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
-                                <input type="hidden" name="category" id="category" value="'.strtoupper($value['category']).'">
-                                <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">';
-        }
+        // if (isset($_SESSION['UserData']['username'])) {
+        //     $hidden_value   = ' <input type="hidden" name="filepath" id="filepath" value="'.$file_path.'">
+        //                         <input type="hidden" name="category" id="category" value="'.strtoupper($value['category']).'">
+        //                         <input type="hidden" name="filename" id="filename" value="'.$value['filename'].'">';
+        // }
 
         $img[$i]['src']     = $file_path;
-        // $img[$i]['data']    = $file_path_thumb;
-        $img[$i]['data']    = $file_path;
-        $actual_size        = getimagesize($file_path_backend);
-        $img_width          = $actual_size[0];
-        $img_height         = $actual_size[1];
-        $img[$i]['ratio']   = $img_width/$img_height;
-        $img[$i]['caption'] = $value['caption'];
+        // $img[$i]['data']['file_thumb']    = $file_path_thumb;
+        $img[$i]['data']['file_thumb']  = $file_path;
+        $img[$i]['data']['admin_mode']  = $flg_admin;
+        $img[$i]['data']['delete']      = $hidden_value;
+        $img[$i]['data']['caption']     = $value['caption'];
+        $img[$i]['data']['filename']    = $value['filename'];
+        $img[$i]['data']['file_path_backend']    = $file_path_backend;
+        $img[$i]['data']['category']    = strtoupper($value['category']);
+
+        $actual_size                    = getimagesize($file_path_backend);
+        $img_width                      = $actual_size[0];
+        $img_height                     = $actual_size[1];
+        $img[$i]['ratio']              = $img_width/$img_height;
         $i = $i+1;
     }
+
+    // print_r($img);
+    // print(json_encode($img));
+    // die();
     return json_encode($img);
 }
 
@@ -56,8 +68,7 @@ function GenCoverPhoto($category,$flgmark){
     $i          = 0;
     $query_str  = ' select * 
                       from tphotos 
-                     where category = "'.$category.'" 
-                       and flg_mark = "'.$flgmark.'" 
+                     where flg_mark = "'.$flgmark.'" 
                   order by subcategory';
     $result = selectData($query_str);
 
@@ -85,12 +96,17 @@ function GenCoverPhoto($category,$flgmark){
 /** Used for generate Cover Photo from Database **/
 function genCoverImageBlock($category,$flgmark){ 
     $i = 0;
+    $flg_admin = '';
     $query_str =   'select * 
                       from tphotos 
                      where category = "'.$category.'" 
                        and flg_mark = "'.$flgmark.'" 
                   order by subcategory';
     $result = selectData($query_str);
+
+    if(isset($_SESSION['UserData']['username'])){
+        $flg_admin = 'Y';
+    }
 
     if($flgmark == 'cover'){
         foreach ($result as $key => $value) {
@@ -99,16 +115,28 @@ function genCoverImageBlock($category,$flgmark){
             $file_path_thumb    = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/thumb_'.$value['filename'];
             $file_path_original = 'img/WEB/'.strtoupper($value['category']).'/'.$value['subcategory'].'/'.$value['filename'];
 
-            $img[$i]['data']    = $file_path_original;
-            // $img[$i]['data']    = $file_path_thumb;
+            // $img[$i]['data']    = $file_path_original;
+            // // $img[$i]['data']    = $file_path_thumb;
+            // $img[$i]['src']     = $file_subpage;
+            // $actual_size        = getimagesize($file_path_backend);
+
+            // $img_width          = $actual_size[0];
+            // $img_height         = $actual_size[1];
+
+            // $img[$i]['ratio']   = $img_width/$img_height;
+            // $img[$i]['caption'] = $value['caption'];
+
+
             $img[$i]['src']     = $file_subpage;
-            $actual_size        = getimagesize($file_path_backend);
+            // $img[$i]['data']['file_thumb']    = $file_path_thumb;
+            $img[$i]['data']['file_thumb']  = $file_path_original;
+            $img[$i]['data']['admin_mode']  = $flg_admin;
+            $img[$i]['data']['caption']     = $value['caption'];
 
-            $img_width          = $actual_size[0];
-            $img_height         = $actual_size[1];
-
-            $img[$i]['ratio']   = $img_width/$img_height;
-            $img[$i]['caption'] = $value['caption'];
+            $actual_size                    = getimagesize($file_path_backend);
+            $img_width                      = $actual_size[0];
+            $img_height                     = $actual_size[1];
+            $img[$i]['ratio']              = $img_width/$img_height;
 
             $i = $i+1;
         }
@@ -129,13 +157,14 @@ function genCoverImageBlock($category,$flgmark){
 }
 
 /** Used for Delete Photo from Database **/
-function checktodelete($filepath,$category,$filename){
-    if (file_exists($filepath)) {
-        unlink($filepath);
+function checktodelete($filepath,$category,$filename,$file_path_backend){
+    if (file_exists($file_path_backend)) {
+        unlink($file_path_backend);
 
         $query = "DELETE FROM tphotos
         WHERE category = '".$category."'
         AND filename = '".$filename."'";
+
         queryData($query);
         
         echo 'file has been deleted.';

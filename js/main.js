@@ -22,29 +22,21 @@ $(document).ready(function() {
         speed : 1000
     });
 
-
     $(window).scroll(function() {
-        if($(this).scrollTop() > 200){
-        $('#goTop').stop().animate({
-          bottom: '50px'
-        }, 100);
-        }
-        else{
-        $('#goTop').stop().animate({
-         bottom: '-100px'
-        }, 100);
+        if($(this).scrollTop() > 200) {
+            $('#goTop').stop().animate({
+              bottom: '50px'
+            }, 100);
+        } else { 
+            $('#goTop').stop().animate({
+             bottom: '-100px'
+            }, 100);
         }
     });
 
     $(window).on('load',function() {
         $("html").removeClass('fix-scroll');
         $('#loader').delay(50).fadeOut(150);
-
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 280
-        });
     });
 
     /** Used for Click it's go to the top of page. **/
@@ -57,43 +49,6 @@ $(document).ready(function() {
         });
     });
 
-    /** Used for Show Photo to screen. **/
-    var $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 200
-    });
-
-    /** Used for Mode ADMIN :: Delete Photo. **/
-    // <?php if (isset($_SESSION['UserData']['username'])) { ?>
-
-    $grid.on('click','.grid-item',function(event){
-        if (confirm('Delete ?')){
-        event.preventDefault();
-
-        $.ajax({
-            url  : 'database/ajaxcenter.php',
-            type :'POST',
-            data : {
-              case     : 'deletePhoto',
-              filepath : $('#filepath').val(),
-              category : $('#category').val(),
-              filename : $('#filename').val()
-            },
-            success: function(result){
-              console.log(result);
-            },
-            error: function(result){
-              console.log('AJAX Error!');
-            }
-        });
-        // remove clicked element
-        $grid.masonry( 'remove', this )
-        // layout remaining item elements
-        .masonry('layout');
-        }
-    })
-
-    // <?php } ?>
 });
 
 /** Function HambergerMenu Used for show tab menu list when responsive screen **/
@@ -112,16 +67,17 @@ function GetImageFromDB(category, subcategory){
     $.ajax({
         url  : 'database/ajaxcenter.php',
         type :'POST',
-        data:{
-            case          : 'GenImage',
-            p_category    : category,
-            p_subcategory : subcategory
+        data : {
+                case          : 'GenImage',
+                p_category    : category,
+                p_subcategory : subcategory
         },
         success:function(result){
-          var photos = JSON.parse(result);
-          var isCover = false;
+            var photos = JSON.parse(result);
+            var isCover = false;
 
-          setLayout(photos, isCover);
+            setLayout(photos, isCover);
+            checkAdminMode(photos);
         },
         error:function(text,err){
           console.log(text.responseText);
@@ -134,21 +90,56 @@ function GetCoverImageFromDB(category,flgmark){
     $.ajax({
         url  : 'database/ajaxcenter.php',
         type :'POST',
-        data:{
-            case          : 'GenCoverImage',
-            p_flgmark     : flgmark,
-            p_category    : category
+        data: {
+                case          : 'GenCoverImage',
+                p_flgmark     : flgmark,
+                p_category    : category
         },
         success:function(result){
             var photos = JSON.parse(result);
             var isCover = true;
 
             setLayout(photos, isCover);
+            checkAdminMode(photos);
         },
         error:function(text,err){
             console.log(text.responseText);
         }
     });
+}
+
+/**-- Function for Check Admin Mode --**/
+function checkAdminMode(photos){
+    if(photos[0].data.admin_mode == 'Y'){
+        $('#info-delete').append('<i class="fa fa-remove"></i> click on the photo for remove.');
+
+        $('#gallery a#img_').click(function(){
+            var filepath = $(this).attr('filepath');
+            var category = $(this).attr('category');
+            var filename = $(this).attr('filename');
+            var file_path_backend = $(this).attr('file_path_backend');
+
+            $.ajax({
+                type: 'post',
+                url : 'database/ajaxcenter.php',
+                data: {
+                    'case'     : 'deletePhoto',
+                    'filepath' : filepath,
+                    'category' : category,
+                    'file_path_backend' : file_path_backend,
+                    'filename' : filename
+                },
+                success:function(result){
+                    alert('Deleted !!');
+                    console.log(result);
+                    location.reload();
+                },
+                error:function(msg, err){
+                    alert(msg.responseText);
+                }
+            })
+        });
+    }
 }
 
 /**-- Function SetLayout Used for Set Photo Layout from Database to Screen. --**/
@@ -163,15 +154,19 @@ function setLayout(photos, isCover){
             if(!isCover) {
                 var caption = "";
             }else{
-                var caption = '<span class="cover-img">'+img.caption+'</span>';
+                var caption = '<span class="cover-img">'+img.data.caption+'</span>';
             }
 
-            var imgNode = $('<a href="'+ img.src +'"><div class="image">'+caption+'<img src="'+img.data+'" style="display:none;"></img></div></a>');
+            if(img.data.admin_mode == 'Y' && !isCover){
+                var imgNode = $('<a id="img_" href="javascript:void(0)" filepath="'+img.data.file_thumb+'" file_path_backend="'+img.data.file_path_backend+'" category="'+img.data.category+'" filename="'+img.data.filename+'"><div class="image">'+caption+'<img src="'+img.data.file_thumb+'" style="display:none;"></img></div></a>');
+            }else{
+                var imgNode = $('<a id="folder" href="'+ img.src +'"  class="gead"><div class="image">'+caption+'<img src="'+img.data.file_thumb+'" style="display:none;"></img></div></a>');
+            }
 
             imgNode.children('.image').css({
                 'width': img.width + 'px',
                 'height': img.height + 'px',
-                'background': 'url(' + img.data + ')',
+                'background': 'url(' + img.data.file_thumb + ')',
                 'background-size': 'cover'
             });
             return imgNode;
@@ -197,10 +192,12 @@ function setLayout(photos, isCover){
     $(window).trigger('resize');
 
     if(!isCover){
-        gallery.lightGallery({
-            thumbnail:true,
-            download:false,
-            showThumbByDefault: false
-        });
+        if(!($('#nav-admin').hasClass('nav-admin'))){
+            gallery.lightGallery({
+                thumbnail:true,
+                download:false,
+                showThumbByDefault: false
+            });
+        }
     }
 }

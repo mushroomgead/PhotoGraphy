@@ -1,5 +1,2 @@
-<?php 
-$category = 'home';
-$flgmark  = 'slider';
-
-GenCoverPhoto($category,$flgmark); ?>
+<span id="info-delete"></span>
+<?php  GenCoverPhoto('home','slider'); ?>

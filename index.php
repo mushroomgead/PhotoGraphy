@@ -23,8 +23,7 @@
     <script src="js/perfectLayout.min.js"></script>
     <!-- Responsive Slider -->
     <script src="js/responsiveslides.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <!--  -->
+    <!-- main.js -->
     <script src="js/main.js"></script>
 
     <script type="text/javascript">
@@ -42,7 +41,7 @@
         <a id="goTop"><i class="fa fa-chevron-up"></i></a>
 
         <?php if(isset($_SESSION['UserData']['username'])){ ?>
-            <nav class="navbar-default">
+            <nav class="navbar-default nav-admin" id="nav-admin">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.php"><?php echo $_SESSION['UserData']['username']; ?></a>
@@ -65,6 +64,7 @@
                         <div id="loader">
                             <div class="cssload-spinner"></div>
                         </div>
+                        <span id="info-delete"></span>
                         <?php
                             switch(isset($_GET['page']) ? $_GET['page'] : '') {
                                 case 'men'      :
@@ -85,6 +85,10 @@
 
                                 case 'personal' :
                                     require_once('src/page_personal.php');
+                                    break;
+
+                                case 'bio' :
+                                    require_once('src/page_bio.php');
                                     break;
 
                                 case 'adminupload':

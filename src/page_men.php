@@ -1,21 +1,11 @@
-<?php
-$category = 'men';
-$flgmark  = 'cover';
+<div id='gallery'></div>
 
-if(isset($_GET['subpage'])){
-  $subcategory = $_GET['subpage']; ?>
-  <div id='gallery'></div>
-  <script type='text/javascript'>
+<script type='text/javascript'>
     $(document).ready(function () {
-      GetImageFromDB('MEN',<?php echo "'".$subcategory."'"; ?>);
+        <?php if(isset($_GET['subpage'])) { ?>
+            GetImageFromDB('MEN',<?php echo $_GET['subpage']; ?>);
+        <?php }else{ ?>
+            GetCoverImageFromDB('MEN','cover');
+        <?php } ?>
     });
-  </script>
-
-<?}else{ ?>
-	<div id='gallery'></div>
-  	<script type='text/javascript'>
-    $(document).ready(function () {
-      GetCoverImageFromDB('MEN','cover');
-    });
-  </script>
-<?php } ?>
+</script>

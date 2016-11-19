@@ -19,7 +19,7 @@
             <a href="?page=men" id="men">men</a>
         </li>
         <li class="clearfix nav-column layout-right">
-            <a href="#" id="etc">etc</a>
+            <a href="?page=bio" id="bio">bio</a>
         </li>
         <li class="clearfix icon">
             <a href="javascript:void(0);" style="" onclick="HambergerMenu()" id="icon-hambg">☰</a>

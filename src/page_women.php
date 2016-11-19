@@ -1,39 +1,11 @@
-<!-- <?php
-$category = 'women';
-$flgmark  = 'cover';
+<div id='gallery'></div>
 
-if(isset($_GET['subpage'])){
-  $subcategory = $_GET['subpage']; ?>
-  <div id='gallery'></div>
-  <script type='text/javascript'>
+<script type='text/javascript'>
     $(document).ready(function () {
-      GetImageFromDB('WOMEN',<?php echo "'".$subcategory."'"; ?>);
+        <?php if(isset($_GET['subpage'])) { ?>
+            GetImageFromDB('WOMEN',<?php echo $_GET['subpage']; ?>);
+        <?php }else{ ?>
+            GetCoverImageFromDB('WOMEN','cover');
+        <?php } ?>
     });
-  </script>
-
-<?}else{ 
-  GenCoverPhoto($category,$flgmark);
-}
-?> -->
-
-<?php
-$category = 'women';
-$flgmark  = 'cover';
-
-if(isset($_GET['subpage'])){
-  $subcategory = $_GET['subpage']; ?>
-  <div id='gallery'></div>
-  <script type='text/javascript'>
-    $(document).ready(function () {
-      GetImageFromDB('WOMEN',<?php echo "'".$subcategory."'"; ?>);
-    });
-  </script>
-
-<?}else{ ?>
-	<div id='gallery'></div>
-  	<script type='text/javascript'>
-    $(document).ready(function () {
-      GetCoverImageFromDB('WOMEN','cover');
-    });
-  </script>
-<?php } ?>
+</script>

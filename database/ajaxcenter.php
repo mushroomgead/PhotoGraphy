@@ -9,9 +9,10 @@ switch ($case_name) {
 
   	$filepath = $_POST['filepath'];
   	$category = $_POST['category'];
-  	$filename = $_POST['filename'];
+    $filename = $_POST['filename'];
+  	$file_path_backend = $_POST['file_path_backend'];
 
-    checktodelete($filepath,$category,$filename);
+    checktodelete($filepath,$category,$filename,$file_path_backend);
     break;
 
   case 'GenImage' :
@@ -31,5 +32,5 @@ switch ($case_name) {
   default:
     # code...
     break;
-}
+  }
 ?>
