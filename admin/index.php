@@ -20,9 +20,9 @@
             <?php
                 require_once('../database/conn_db.php');
                 if (isset($_SESSION['UserData']['username'])) {
-                  header('location:../index.php');
+                    header('location:../index.php');
                 } else {
-                  require_once 'login.php';
+                    require_once 'login.php';
                 }
             ?>
         </div>

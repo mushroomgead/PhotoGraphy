@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- lightgallery -->

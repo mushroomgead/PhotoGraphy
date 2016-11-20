@@ -5,31 +5,38 @@ include('conn_db.php');
 $case_name = $_POST['case'];
 
 switch ($case_name) {
-  case 'deletePhoto' :
-
-  	$filepath = $_POST['filepath'];
-  	$category = $_POST['category'];
+    case 'deletePhoto' :
+    $filepath = $_POST['filepath'];
+    $category = $_POST['category'];
     $filename = $_POST['filename'];
-  	$file_path_backend = $_POST['file_path_backend'];
+    $file_path_backend = $_POST['file_path_backend'];
 
     checktodelete($filepath,$category,$filename,$file_path_backend);
     break;
 
-  case 'GenImage' :
+    case 'GenImage' :
     $category    = $_POST['p_category'];
     $subcategory = $_POST['p_subcategory'];
 
     echo genImageBlock($category, $subcategory);
     break;
 
-  case 'GenCoverImage' :
+    case 'GenCoverImage' :
     $category    = $_POST['p_category'];
     $flgmark     = $_POST['p_flgmark'];
 
     echo genCoverImageBlock($category, $flgmark);
     break;
-  
-  default:
+
+    case 'changeFlgPhoto' :
+    $category = $_POST['category'];
+    $filename = $_POST['filename'];
+    $flg      = $_POST['flg'];
+
+    changeFlg($filepath,$category,$filename,$flg);
+    break;
+
+    default:
     # code...
     break;
   }

@@ -16,6 +16,12 @@ $(document).ready(function() {
     /** Fixed footer always bottom of page **/
     $(window).trigger('resize');
 
+    /** When click upload button **/
+    $('.upload').click(function(){
+        // console.log(this);
+        $(this).parent('div').children('.file').click();
+    });
+
     /** Used for Show Photo Slider in Index.php **/
     $(".rslides").responsiveSlides({
         auto  : true,
@@ -111,7 +117,7 @@ function GetCoverImageFromDB(category,flgmark){
 /**-- Function for Check Admin Mode --**/
 function checkAdminMode(photos){
     if(photos[0].data.admin_mode == 'Y'){
-        $('#info-delete').append('<i class="fa fa-remove"></i> click on the photo for remove.');
+        $('#info-delete').append('<i class="fa fa-remove"></i> Click on the photo to remove.');
 
         $('#gallery a#img_').click(function(){
             var filepath = $(this).attr('filepath');
@@ -137,9 +143,59 @@ function checkAdminMode(photos){
                 error:function(msg, err){
                     alert(msg.responseText);
                 }
-            })
+            });
         });
     }
+}
+
+/**-- Function Delete Photo--*/
+function deletePhoto(){
+    var filepath = $(this).attr('filepath');
+    var category = $(this).attr('category');
+    var filename = $(this).attr('filename');
+    var file_path_backend = $(this).attr('file_path_backend');
+
+    $.ajax({
+        type: 'post',
+        url : 'database/ajaxcenter.php',
+        data: {
+            'case'     : 'deletePhoto',
+            'filepath' : filepath,
+            'category' : category,
+            'file_path_backend' : file_path_backend,
+            'filename' : filename
+        },
+        success:function(result){
+            alert('Deleted !!');
+            console.log(result);
+            location.reload();
+        },
+        error:function(msg, err){
+            alert(msg.responseText);
+        }
+    });
+}
+
+/**-- Function to change flg status --*/
+function changeFlgStatus(flg){
+    var category = $(this).attr('category');
+    var filename = $(this).attr('filename');
+    $.ajax({
+        type: 'post',
+        url:'database/ajaxcenter.php',
+        data:{
+            'case'     : 'changeFlgPhoto',
+            'category' : category,
+            'filename' : filename,
+            'flg'      : flg
+        },
+        success:function(result){
+            alert('changed to'+flg);
+        },
+        error:function(msg, err){
+            alert(msg.responseText);
+        }
+    });
 }
 
 /**-- Function SetLayout Used for Set Photo Layout from Database to Screen. --**/

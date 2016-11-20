@@ -174,4 +174,13 @@ function checktodelete($filepath,$category,$filename,$file_path_backend){
     }
 }
 
+/** **/
+function changeFlg($category,$filename,$flg){
+    $flg == 'slider' ? $field_flg = 'flg_slider' : $field_flg = 'flg_cover';
+    $query = 'update tphotos set "'.$field_flg.'" =  "'.$flg.'" where category = "'.$category.'" and filename = "'.$filename.'" ';
+
+    queryData($query);
+    echo 'updated flg!';
+}
+
 ?>
